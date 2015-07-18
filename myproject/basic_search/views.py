@@ -16,3 +16,7 @@ class IndexView(generic.ListView):
 
     def get_queryset(self):
         return Influenza_AA;
+
+
+def indexView(request):
+    return render(request, 'basic_search/index.html')
