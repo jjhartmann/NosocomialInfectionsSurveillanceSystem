@@ -1,4 +1,5 @@
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 from django.core.urlresolvers import reverse
 from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render, render_to_response
@@ -16,9 +17,16 @@ def indexview(request):
 
 
 def loginview(request):
-    return render(request, 'index/login.html')
+    if not request.user.is_authenticated():
+        return render(request, 'index/login.html')
+
+    else:  # user is already logged in. Redirect to secure site
+        # TODO: Change http redirect to base user webspace
+        username = request.user.username
+        return HttpResponseRedirect(reverse('basic_search:index', kwargs={'username': username}))
 
 
+@login_required
 def doctor_logout(request):
     logout(request)
     return HttpResponseRedirect(reverse('index:index'))

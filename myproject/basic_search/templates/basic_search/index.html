@@ -6,7 +6,7 @@
 
         <p> Prepare for the search!</p>
 
-        <form class="form-horizontal" method="post" action="">
+        <form class="form-horizontal" method="post" action="{% url 'basic_search:process'  username=user.username %}">
             {% csrf_token %}
             <fieldset>
 
