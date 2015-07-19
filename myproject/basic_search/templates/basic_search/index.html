@@ -6,7 +6,7 @@
 
         <p> Prepare for the search!</p>
 
-        <form class="form-horizontal" method="post" action="{% url 'basic_search:process'  username=user.username %}">
+        <form class="form-horizontal" method="post" action="{% url 'basic_search:details'  username=user.username %}">
             {% csrf_token %}
             <fieldset>
 
@@ -17,7 +17,45 @@
             <div class="form-group">
               <label class="col-md-4 control-label" for="genbank_an">GenBank Accession Number</label>
               <div class="col-md-4">
-                <input id="genbank_an" name="genbank_an" type="search" placeholder="GBA Number" class="form-control input-md">
+                <input id="genbank_an" name="genbank_na_accnum" type="search" placeholder="GBA Number" class="form-control input-md">
+
+              </div>
+            </div>
+
+             <!-- Multiple Radios -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="virus_type">Virus Type</label>
+              <div class="col-md-4">
+              <div class="radio">
+                <label for="virus_type-0">
+                  <input type="radio" name="virus_type" id="virus_type-0" value="0" checked="checked">
+                  All
+                </label>
+                </div>
+              <div class="radio">
+                <label for="virus_type-1">
+                  <input type="radio" name="virus_type" id="virus_type-1" value="1">
+                  A
+                </label>
+                </div>
+              <div class="radio">
+                <label for="virus_type-2">
+                  <input type="radio" name="virus_type" id="virus_type-2" value="2">
+                  B
+                </label>
+              </div>
+              <div class="radio">
+                <label for="virus_type-3">
+                  <input type="radio" name="virus_type" id="virus_type-3" value="3">
+                  C
+                </label>
+              </div>
+              <div class="radio">
+                <label for="virus_type-4">
+                  <input type="radio" name="virus_type" id="virus_type-4" value="4">
+                  Provisional Influenza D
+                </label>
+              </div>
 
               </div>
             </div>
@@ -26,33 +64,12 @@
             <div class="form-group">
               <label class="col-md-4 control-label" for="genome_portein_seg">Genome or Protein Segments</label>
               <div class="col-md-4">
-                <select id="genome_portein_seg" name="genome_portein_seg" class="form-control" multiple="multiple">
-                  <option value="">4</option>
-                  <option value="">5</option>
-                  <option value="">6</option>
-                  <option value="">7</option>
-                  <option value="">8</option>
-                  <option value="">BM2</option>
-                  <option value="">CM2</option>
-                  <option value="">HA</option>
-                  <option value="">HE</option>
-                  <option value="">M1</option>
-                  <option value="">M2</option>
-                  <option value="">M42</option>
-                  <option value="">N40</option>
-                  <option value="">NA</option>
-                  <option value="">NB</option>
-                  <option value="">ND</option>
-                  <option value="">NS1</option>
-                  <option value="">NS2</option>
-                  <option value="">NS3</option>
-                  <option value="">P3</option>
-                  <option value="">P43</option>
-                  <option value="">PA</option>
-                  <option value="">PA-X</option>
-                  <option value="">PB1</option>
-                  <option value="">PB1-F2</option>
-                  <option value="">PB2</option>
+                <select id="genome_portein_seg" name="genomesegment_or_proteinname" class="form-control" multiple="multiple">
+                  <option value="0" class="default" selected >ALL</option>
+                  {% for segment in segments %}
+                      <option value="{{ forloop.counter }}">{{ segment.1 }}</option>
+                  {% endfor %}
+
                 </select>
               </div>
             </div>
@@ -61,7 +78,7 @@
             <div class="form-group">
               <label class="col-md-4 control-label" for="strain_name">Strain Name</label>
               <div class="col-md-4">
-                <input id="strain_name" name="strain_name" type="search" placeholder="i.e. B/Alaska/16/2000" class="form-control input-md">
+                <input id="strain_name" name="virus_name" type="search" placeholder="i.e. B/Alaska/16/2000" class="form-control input-md">
                 <p class="help-block">* use comma to separate mutliple</p>
               </div>
             </div>
@@ -80,6 +97,10 @@
               <label class="col-md-4 control-label" for="country">Country</label>
               <div class="col-md-4">
                 <select id="country" name="country" class="form-control" multiple="multiple">
+                  <option value="ALL" class="default" selected >ALL</option>
+                  {% for country in countries %}
+                      <option value="{{ country.0 }}">{{ country.1 }}</option>
+                  {% endfor %}
                 </select>
               </div>
             </div>
@@ -90,25 +111,25 @@
               <div class="col-md-4">
               <div class="radio">
                 <label for="complete_seq-0">
-                  <input type="radio" name="complete_seq" id="complete_seq-0" value="" checked="checked">
+                  <input type="radio" name="complete_seq" id="complete_seq-0" value="0" checked="checked">
                   All
                 </label>
                 </div>
               <div class="radio">
                 <label for="complete_seq-1">
-                  <input type="radio" name="complete_seq" id="complete_seq-1" value="">
+                  <input type="radio" name="complete_seq" id="complete_seq-1" value="1">
                   Only Complete
                 </label>
                 </div>
               <div class="radio">
                 <label for="complete_seq-2">
-                  <input type="radio" name="complete_seq" id="complete_seq-2" value="">
+                  <input type="radio" name="complete_seq" id="complete_seq-2" value="2">
                   Nearly Complete
                 </label>
                 </div>
               <div class="radio">
                 <label for="complete_seq-3">
-                  <input type="radio" name="complete_seq" id="complete_seq-3" value="">
+                  <input type="radio" name="complete_seq" id="complete_seq-3" value="3">
                   Partially Complete
                 </label>
                 </div>
@@ -126,9 +147,9 @@
 
             <!-- Search input-->
             <div class="form-group">
-              <label class="col-md-4 control-label" for="searchinput">To Year:</label>
+              <label class="col-md-4 control-label" for="toyear">To Year:</label>
               <div class="col-md-4">
-                <input id="searchinput" name="searchinput" type="search" placeholder="YYYY" class="form-control input-md">
+                <input id="toyear" name="toyear" type="search" placeholder="YYYY" class="form-control input-md">
 
               </div>
             </div>

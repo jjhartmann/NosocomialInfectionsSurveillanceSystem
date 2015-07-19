@@ -7,5 +7,5 @@ from . import views
 
 urlpatterns = [
     url(r'^$', views.indexView, name='index'),
-    url(r'^process/$', views.process_search, name='process')
+    url(r'^details/$', views.process_search, name='details')
 ]

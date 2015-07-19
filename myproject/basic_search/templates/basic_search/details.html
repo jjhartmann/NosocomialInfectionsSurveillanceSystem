@@ -1,0 +1,84 @@
+{% extends "secure/base.html" %}
+
+    {% block maincontent%}
+
+    <h1> This is the details page!!</h1>
+
+       <div class="container">
+            <h2 class="text-muted">Influenza NA</h2>
+            <table class="table table-stripes">
+                <thead>
+                    <tr>
+                        <td>Genbank Accession Number</td>
+                        <td>Host</td>
+                        <td>Genome Segment</td>
+                        <td>Country</td>
+                        <td>Date</td>
+                        <td>Length</td>
+                        <td>Virus Name</td>
+                        <td>Age</td>
+                        <td>Gender</td>
+                        <td>Completeness</td>
+                        <td>Description</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in queryEntriesNA %}
+                        <tr>
+                            <td>{{ row.genbank_accession_number }}</td>
+                            <td>{{ row.host }}</td>
+                            <td>{{ row.genomesegment_or_proteinname }}</td>
+                            <td>{{ row.country }}</td>
+                            <td>{{ row.date_discovered }}</td>
+                            <td>{{ row.sequence_length }}</td>
+                            <td>{{ row.virus_name }}</td>
+                            <td>{{ row.age }}</td>
+                            <td>{{ row.gender }}</td>
+                            <td>{{ row.completeness }}</td>
+                            <td>{{ row.influenza_fna.description }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+       </div>
+        <br>
+        <hr class="fade"/>
+        <div class="container">
+            <h2 class="text-muted">Influenza AA</h2>
+            <table class="table table-stripes">
+                <thead>
+                    <tr>
+                        <td>Genbank Accession Number</td>
+                        <td>Host</td>
+                        <td>Genome Segment</td>
+                        <td>Country</td>
+                        <td>Date</td>
+                        <td>Length</td>
+                        <td>Virus Name</td>
+                        <td>Age</td>
+                        <td>Gender</td>
+                        <td>Completeness</td>
+                        <td>Description</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in queryEntriesAA %}
+                        <tr>
+                            <td>{{ row.genbank_accession_number }}</td>
+                            <td>{{ row.host }}</td>
+                            <td>{{ row.genomesegment_or_proteinname }}</td>
+                            <td>{{ row.country }}</td>
+                            <td>{{ row.date_discovered }}</td>
+                            <td>{{ row.sequence_length }}</td>
+                            <td>{{ row.virus_name }}</td>
+                            <td>{{ row.age }}</td>
+                            <td>{{ row.gender }}</td>
+                            <td>{{ row.completeness }}</td>
+                            <td>{{ row.influenza_fna.description }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+       </div>
+
+    {% endblock %}
