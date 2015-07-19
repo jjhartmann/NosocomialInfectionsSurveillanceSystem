@@ -1,24 +1,19 @@
-<div class="navbar navbar-fixed-top">
+<div class="nnavbar navbar-inverse  navbar-fixed-top">
     <div class="navbar-inner">
-        <div class="container">
-            <a class="brand" href="{% url 'index:index' %}">DNA-Somthing</a>
-            <ul class="nav">
+            <ul class="nav navbar-nav">
                 <li><a href="#" class="">Home</a></li>
                 <li><a href="#">Somthing...</a></li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Features<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a class="nav" href="#?layout=vertical">Feature A</a></li>
-                        <li><a href="#?layout=horizontal">Feature B</a></li>
-                        <li><a href="#?layout=inline">....</a></li>
-                        <li><a href="#?layout=search">....</a></li>
-                        <li><a href="#?layout=horizontal">Using ....</a></li>
-                    </ul>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                  </ul>
                 </li>
                 <li><a href="#">About</a></li>
                 <li><a href="{% url 'index:login' %}">Login</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
-        </div>
     </div>
 </div>

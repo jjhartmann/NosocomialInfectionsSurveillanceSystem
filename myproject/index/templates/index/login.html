@@ -2,17 +2,43 @@
 
 {% block maincontent%}
     <h1>Login to System:</h1>
-
-    <form id="login_from" method="post" action="{% url 'index:verifycredentials' %}">
+    
+    <form class="form-horizontal"  method="post" action="{% url 'index:verifycredentials' %}">
         {% csrf_token %}
+        <fieldset>
 
-        Username: <input type="text" name="username" value="admin" size="50" />
-        <br>
-        Password: <input type="text" name="password" value="cmpt47009" size="50"/>
-        <br>
+        <!-- Form Name -->
+        <legend>Login:</legend>
 
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="username">Username</label>
+          <div class="col-md-4">
+          <input id="username" name="username" type="text" placeholder="Username" class="form-control input-md" required="">
+          <span class="help-block">* Your username. </span>
+          </div>
+        </div>
 
-        <input type="submit" value="Log In"/>
+        <!-- Password input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="password">Password</label>
+          <div class="col-md-4">
+            <input id="password" name="password" type="password" placeholder="Password" class="form-control input-md" required="">
+            <span class="help-block">* enter in the password the administrator has provided. </span>
+          </div>
+        </div>
+
+        <!-- Button -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="submit"></label>
+          <div class="col-md-4">
+            <input type="submit" name="submit" value="Login" class="btn btn-primary"/>
+          </div>
+        </div>
+
+        </fieldset>
     </form>
+
+
 {% endblock %}
 
