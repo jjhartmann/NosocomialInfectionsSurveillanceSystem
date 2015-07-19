@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<h1>Login to System:</h1>
+
+<form id="login_from" method="post" action="{% url 'index:verifycredentials' %}">
+    {% csrf_token %}
+
+    Username: <input type="text" name="username" value="Username" size="50" />
+    <br>
+    Password: <input type="text" name="password" value="Password" size="50"/>
+    <br>
+
+
+    <input type="submit" value="Log In"/>
+</form>
+
+
+
+</body>
+</html>
