@@ -1,17 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
-  <h1>Hello this is the main page template....</h1>
+{% extends "public/base.html" %}
+
+  {% block maincontent%}
+     <h1>Hello this is the main page template....</h1>
 
     <br>
 
-  <!-- TODO: Need to create CSS to formate links to buttons. Needs to create base class and template. -->
+    <!-- TODO: Need to create CSS to formate links to buttons. Needs to create base class and template. -->
 
     <a href="{% url 'index:login' %}">Log In</a>
+  {% endblock %}
 
-</body>
-</html>

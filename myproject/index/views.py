@@ -1,8 +1,9 @@
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.core.urlresolvers import reverse
 from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render, render_to_response
 from django.template import RequestContext
+
 
 # Create your views here.
 
@@ -16,6 +17,11 @@ def indexview(request):
 
 def loginview(request):
     return render(request, 'index/login.html')
+
+
+def doctor_logout(request):
+    logout(request)
+    return HttpResponseRedirect(reverse('index:index'))
 
 
 def doctor_login(request):
