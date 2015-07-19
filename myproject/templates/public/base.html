@@ -13,8 +13,8 @@
       }
       {% block css %}{% endblock %}
     </style>
-    <link href="{%  static 'css/stickyfooter.css' %}" rel="stylesheet"/>
-
+    <link href="{% static 'css/stickyfooter.css' %}" rel="stylesheet"/>
+    <link href="{% static 'css/navbarstyle.css' %}" rel="stylesheet"/>
 
 </head>
 <body>
@@ -23,7 +23,7 @@
 <div id="wrap">
     <div class="container-fluid">
         {% block maincontent %}
-            <p><hr></p>
+
 
         {% endblock %}
     </div> <!--maincontainer -->
