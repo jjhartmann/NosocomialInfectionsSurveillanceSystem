@@ -4,7 +4,6 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render, render_to_response
 from django.template import RequestContext
 
-
 # Create your views here.
 
 
@@ -37,7 +36,8 @@ def doctor_login(request):
                 login(request, userprofile)
 
                 # TODO: Change http redirect to base user webspace
-                return HttpResponseRedirect(reverse('index:index'))
+                return HttpResponseRedirect(reverse('basic_search:index', kwargs={'username': username})
+                                            )
             else:
                 # TODO: Inactive: Reutrn template ??
                 return HttpResponse("Your account is disablied, please contact the system administrator")
