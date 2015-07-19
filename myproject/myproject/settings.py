@@ -112,5 +112,5 @@ TEMPLATE_DIRS = (
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
     '/var/www/static/',
-    os.path.join(BASE_DIR, "bower_components/bootstrap-css"),
+    os.path.join(BASE_DIR, "bower_components"),
 )

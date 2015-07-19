@@ -6,7 +6,143 @@
 
         <p> Prepare for the search!</p>
 
+        <form class="form-horizontal" method="post" action="">
+            {% csrf_token %}
+            <fieldset>
 
+            <!-- Form Name -->
+            <legend>Search</legend>
+
+            <!-- Search input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="genbank_an">GenBank Accession Number</label>
+              <div class="col-md-4">
+                <input id="genbank_an" name="genbank_an" type="search" placeholder="GBA Number" class="form-control input-md">
+
+              </div>
+            </div>
+
+            <!-- Select Multiple -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="genome_portein_seg">Genome or Protein Segments</label>
+              <div class="col-md-4">
+                <select id="genome_portein_seg" name="genome_portein_seg" class="form-control" multiple="multiple">
+                  <option value="">4</option>
+                  <option value="">5</option>
+                  <option value="">6</option>
+                  <option value="">7</option>
+                  <option value="">8</option>
+                  <option value="">BM2</option>
+                  <option value="">CM2</option>
+                  <option value="">HA</option>
+                  <option value="">HE</option>
+                  <option value="">M1</option>
+                  <option value="">M2</option>
+                  <option value="">M42</option>
+                  <option value="">N40</option>
+                  <option value="">NA</option>
+                  <option value="">NB</option>
+                  <option value="">ND</option>
+                  <option value="">NS1</option>
+                  <option value="">NS2</option>
+                  <option value="">NS3</option>
+                  <option value="">P3</option>
+                  <option value="">P43</option>
+                  <option value="">PA</option>
+                  <option value="">PA-X</option>
+                  <option value="">PB1</option>
+                  <option value="">PB1-F2</option>
+                  <option value="">PB2</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Search input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="strain_name">Strain Name</label>
+              <div class="col-md-4">
+                <input id="strain_name" name="strain_name" type="search" placeholder="i.e. B/Alaska/16/2000" class="form-control input-md">
+                <p class="help-block">* use comma to separate mutliple</p>
+              </div>
+            </div>
+
+            <!-- Search input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="subtype">SUB TYPE</label>
+              <div class="col-md-4">
+                <input id="subtype" name="subtype" type="search" placeholder="i.e. H1N1" class="form-control input-md">
+                <p class="help-block">* use comma to separate multiple entries</p>
+              </div>
+            </div>
+
+            <!-- Select Multiple -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="country">Country</label>
+              <div class="col-md-4">
+                <select id="country" name="country" class="form-control" multiple="multiple">
+                </select>
+              </div>
+            </div>
+
+            <!-- Multiple Radios -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="complete_seq">Sequence Completion</label>
+              <div class="col-md-4">
+              <div class="radio">
+                <label for="complete_seq-0">
+                  <input type="radio" name="complete_seq" id="complete_seq-0" value="" checked="checked">
+                  All
+                </label>
+                </div>
+              <div class="radio">
+                <label for="complete_seq-1">
+                  <input type="radio" name="complete_seq" id="complete_seq-1" value="">
+                  Only Complete
+                </label>
+                </div>
+              <div class="radio">
+                <label for="complete_seq-2">
+                  <input type="radio" name="complete_seq" id="complete_seq-2" value="">
+                  Nearly Complete
+                </label>
+                </div>
+              <div class="radio">
+                <label for="complete_seq-3">
+                  <input type="radio" name="complete_seq" id="complete_seq-3" value="">
+                  Partially Complete
+                </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Search input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="fromyear">From Year:</label>
+              <div class="col-md-4">
+                <input id="fromyear" name="fromyear" type="search" placeholder="YYYY" class="form-control input-md">
+
+              </div>
+            </div>
+
+            <!-- Search input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="searchinput">To Year:</label>
+              <div class="col-md-4">
+                <input id="searchinput" name="searchinput" type="search" placeholder="YYYY" class="form-control input-md">
+
+              </div>
+            </div>
+
+            <!-- Button -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="search"></label>
+              <div class="col-md-4">
+                <button id="search" name="search" class="btn btn-primary">Search</button>
+              </div>
+            </div>
+
+            </fieldset>
+        </form>
 
 
     {% endblock %}
