@@ -23,7 +23,7 @@ def loginview(request):
     else:  # user is already logged in. Redirect to secure site
         # TODO: Change http redirect to base user webspace
         username = request.user.username
-        return HttpResponseRedirect(reverse('basic_search:index', kwargs={'username': username}))
+        return HttpResponseRedirect(reverse('secure:index', kwargs={'username': username}))
 
 
 @login_required
@@ -50,7 +50,7 @@ def doctor_login(request):
                 login(request, userprofile)
 
                 # TODO: Change http redirect to base user webspace
-                return HttpResponseRedirect(reverse('basic_search:index', kwargs={'username': username})
+                return HttpResponseRedirect(reverse('secure:index', kwargs={'username': username})
                                             )
             else:
                 # TODO: Inactive: Reutrn template ??

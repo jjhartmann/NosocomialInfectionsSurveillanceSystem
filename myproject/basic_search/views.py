@@ -19,7 +19,7 @@ def indexView(request, username):
     user = request.user;
     countries = COUNTRIES;
     segments = SEGMENTS;
-    return render(request, 'basic_search/index.html', {'user': user, 'countries': countries, 'segments': segments})
+    return render(request, 'basic_search/index.html', {'user': user, 'countries': countries, 'segments': segments, 'username': username})
 
 
 def find_complete_segment(x):
@@ -108,7 +108,7 @@ def process_search(request, username):
         query_entries_aa = Influenza_AA.objects.filter(**keywordlist)
 
 
-        return render(request, "basic_search/details.html", {'queryEntriesNA': query_entries_na, 'queryEntriesAA': query_entries_aa})
+        return render(request, "basic_search/details.html", {'queryEntriesNA': query_entries_na, 'queryEntriesAA': query_entries_aa, 'username': username})
     else:
         return render_to_response(reverse('basic_search:index'), {}, context)
 
