@@ -34,5 +34,13 @@ class Hsp(object):
         """Input sequence is divided on smaller non-overlapping sequences with set length.  """
         return [sequence[i:i + limit_length] for i in range(0, len(sequence), limit_length)]
 
-    
+    def chop_query(self):
+        """Query sequence is divided on smaller non-overlapping sequences with set length.  """
+        return self.chop_sequence(self.query, self.limit_length)
+
+    def chop_match(self):
+        """Match sequence is divided on smaller non-overlapping sequences with set length.  """
+        return self.chop_sequence(self.match, self.limit_length)
+
+
 
