@@ -40,7 +40,11 @@ class Hsp(object):
 
     def chop_match(self):
         """Match sequence is divided on smaller non-overlapping sequences with set length.  """
-        return self.chop_sequence(self.query, len(sequence))
+        return self.chop_sequence(self.match, self.limit_length)
+
+    def chop_sbjct(self):
+        """Subject sequence is divided on smaller non-overlapping sequences with set length.  """
+        return self.chop_sequence(self.sbjct, self.limit_length)
 
 
 
