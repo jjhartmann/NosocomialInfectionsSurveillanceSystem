@@ -1,8 +1,10 @@
+
 import tempfile
 import os
 from Bio.Application import ApplicationError
 
 from features.record import Alignment, BlastRecord, Hsp
+#fo = open("/home/hamza/Pictures/myproject/nocoblast/utilspy.txt", "a")
 
 def get_sample_data(sample_file):
     """Read and returns sample data to fill form with default sample sequence.  """
@@ -64,3 +66,29 @@ def blast_records_to_object(blast_records):
     return blast_objects_list
 
 
+def run_blast_commands(ncbicommandline_method, **keywords):
+    """Runs nocoblast/tblastn search, collects result and pass as a xml temporary file.  """
+    #fo.write(str(ncbicommandline_method))
+    # temporary files for output
+    blast_out_tmp = tempfile.NamedTemporaryFile(delete=False)
+    keywords['out'] = blast_out_tmp.name
+
+    # unpack query temp file object
+    query_file_object_tmp = keywords['query']
+    keywords['query'] = query_file_object_tmp.name
+
+    stderr = ''
+    error_string = ''
+    try:
+        # formating nocoblast command
+        nocoblastx_cline = ncbicommandline_method(**keywords)
+        #fo.write(str(nocoblastx_cline))
+        stdout, stderr = nocoblastx_cline()
+
+    except ApplicationError as e:
+        error_string = "Runtime error: " + stderr + "\n" + e.cmd
+
+    # remove query temp file
+    os.remove(query_file_object_tmp.name)
+
+    return blast_out_tmp, error_string
