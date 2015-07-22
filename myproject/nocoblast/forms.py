@@ -58,3 +58,54 @@ class TBlastnForm(forms.Form):
         word_size_in_form = self.cleaned_data['word_size_in_form']
         return validate_word_size(word_size_in_form, blast_settings.TBLASTN_MIN_INT_WORD_SIZE, blast_settings.TBLASTN_MAX_INT_WORD_SIZE,
                                   blast_settings.TBLASTN_WORD_SIZE_ERROR)
+
+logger = get_task_logger(__name__)
+
+if settings.USE_CACHE:
+    LOCK_EXPIRE = 30
+    LOCK_ID = 'task_list_cache_lock'
+    CACHE_ID = 'task_list_cache'
+    acquire_lock = lambda: cache.add(LOCK_ID, 'true', LOCK_EXPIRE)
+    release_lock = lambda: cache.delete(LOCK_ID)
+
+@shared_task() # ignore_result=True
+def run_blast_task(task_id, args_list, file_prefix, blast_info):
+    import django
+    django.setup()
+    
+    logger.info("blast_task_id: %s" % (task_id,))
+
+    # update dequeue time
+    record = BlastQueryRecord.objects.get(task_id__exact=task_id)
+    record.dequeue_date = datetime.utcnow().replace(tzinfo=utc)
+    record.save()
+
+    # update status from 'pending' to 'running' for frontend
+    with open(path.join(path.dirname(file_prefix), 'status.json'), 'r') as f:
+        statusdata = json.load(f)
+        statusdata['status'] = 'running'
+
+    with open(path.join(path.dirname(file_prefix), 'status.json'), 'w') as f:
+        json.dump(statusdata, f)
+
+def validate_word_size(word_size, blast_min_int_word_size, blast_max_int_word_size, blast_word_size_error):
+    """Validate word size in blast/tblastn form.  """
+
+    # int_word_size = 0
+
+    try:
+        if len(word_size) <= 0:
+            raise forms.ValidationError(blast_word_size_error)
+
+        int_word_size = int(word_size)
+
+        if int_word_size < blast_min_int_word_size:
+            raise forms.ValidationError(blast_word_size_error)
+
+        if int_word_size >= blast_max_int_word_size:
+            raise forms.ValidationError(blast_word_size_error)
+
+    except:
+        raise forms.ValidationError(blast_word_size_error)
+
+    return int_word_size
