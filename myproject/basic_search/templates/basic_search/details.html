@@ -1,15 +1,16 @@
 {% extends "secure/base.html" %}
 
+
+    {% block maincontent%}
+
+
     <style type="text/css">
         .mygrid-wrapper-div {
            border: solid red 5px;
            overflow: scroll;
            height: 70%;
-}       }
+        }
     </style>
-
-    {% block maincontent%}
-
 
     <h1> This is the details page!!</h1>
 
@@ -21,6 +22,7 @@
                         <td>Genbank Accession Number</td>
                         <td>Host</td>
                         <td>Genome Segment</td>
+                        <td>Subtype</td>
                         <td>Country</td>
                         <td>Date</td>
                         <td>Length</td>
@@ -37,6 +39,7 @@
                             <td>{{ row.genbank_accession_number }}</td>
                             <td>{{ row.host }}</td>
                             <td>{{ row.genomesegment_or_proteinname }}</td>
+                            <td>{{ row.subtype }}</td>
                             <td>{{ row.country }}</td>
                             <td nowrap>{{ row.date_discovered }}</td>
                             <td>{{ row.sequence_length }}</td>
@@ -64,6 +67,7 @@
                         <td>Genbank Accession Number</td>
                         <td>Host</td>
                         <td>Genome Segment</td>
+                        <td>Subtype</td>
                         <td>Country</td>
                         <td nowrap>Date</td>
                         <td>Length</td>
@@ -80,8 +84,9 @@
                             <td>{{ row.genbank_accession_number }}</td>
                             <td>{{ row.host }}</td>
                             <td>{{ row.genomesegment_or_proteinname }}</td>
+                            <td>{{ row.subtype }}</td>
                             <td>{{ row.country }}</td>
-                            <td>{{ row.date_discovered }}</td>
+                            <td nowrap>{{ row.date_discovered }}</td>
                             <td>{{ row.sequence_length }}</td>
                             <td>{{ row.virus_name }}</td>
                             <td>{{ row.age }}</td>

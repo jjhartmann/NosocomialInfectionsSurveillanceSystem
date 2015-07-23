@@ -1,12 +1,48 @@
 {% extends "secure/base.html" %}
 
+
     {% block maincontent%}
+
+        <script type="application/javascript" >
+            function validateForm()
+            {
+                var toyear = document.forms["search_form"]["toyear"].value;
+                var fromyear = document.forms["search_form"]["fromyear"].value;
+
+                if (toyear != "")
+                {
+                    if (toyear.length < 4)
+                    {
+                        alert("To Year must contain a 4 digit year")
+                        return false;
+                    }
+                    if (!jQuery.isNumeric(toyear))
+                    {
+                        alert("To Year must be numeric")
+                        return false;
+                    }
+                }
+
+                if (fromyear != "") {
+                    if (fromyear.length < 4) {
+                        alert("From Year must contain a 4 digit year")
+                        return false;
+                    }
+                    if (!jQuery.isNumeric(fromyear))
+                    {
+                        alert("To Year must be numeric")
+                        return false;
+                    }
+                }
+            }
+        </script>
+
         <h1>Welcome: {{ user.username }}</h1>
 
 
         <p> Prepare for the search!</p>
 
-        <form class="form-horizontal" method="post" action="{% url 'basic_search:details'  username=user.username %}">
+        <form id="search_form" class="form-horizontal" method="post" action="{% url 'basic_search:details'  username=user.username %}" onsubmit="return validateForm()">
             {% csrf_token %}
             <fieldset>
 
@@ -17,7 +53,7 @@
             <div class="form-group">
               <label class="col-md-4 control-label" for="genbank_an">GenBank Accession Number</label>
               <div class="col-md-4">
-                <input id="genbank_an" name="genbank_na_accnum" type="search" placeholder="GBA Number" class="form-control input-md">
+                <input id="genbank_an" name="genbank_na_accnum" type="search" placeholder="GBA Number" class="form-control input-md" maxlength="10">
 
               </div>
             </div>
@@ -65,7 +101,7 @@
               <label class="col-md-4 control-label" for="genome_portein_seg">Genome or Protein Segments</label>
               <div class="col-md-4">
                 <select id="genome_portein_seg" name="genomesegment_or_proteinname" class="form-control" multiple="multiple">
-                  <option value="0" class="default" selected >ALL</option>
+                  <option value="all" class="default" selected >ALL</option>
                   {% for segment in segments %}
                       <option value="{{ forloop.counter }}">{{ segment.1 }}</option>
                   {% endfor %}
@@ -99,7 +135,7 @@
                 <select id="country" name="country" class="form-control" multiple="multiple">
                   <option value="ALL" class="default" selected >ALL</option>
                   {% for country in countries %}
-                      <option value="{{ country.0 }}">{{ country.1 }}</option>
+                      <option value="{{ country.1 }}">{{ country.1 }}</option>
                   {% endfor %}
                 </select>
               </div>
@@ -140,7 +176,7 @@
             <div class="form-group">
               <label class="col-md-4 control-label" for="fromyear">From Year:</label>
               <div class="col-md-4">
-                <input id="fromyear" name="fromyear" type="search" placeholder="YYYY" class="form-control input-md">
+                <input id="fromyear" name="fromyear" type="search" placeholder="YYYY" class="form-control input-md" maxlength="4" type="number">
 
               </div>
             </div>
@@ -149,7 +185,7 @@
             <div class="form-group">
               <label class="col-md-4 control-label" for="toyear">To Year:</label>
               <div class="col-md-4">
-                <input id="toyear" name="toyear" type="search" placeholder="YYYY" class="form-control input-md">
+                <input id="toyear" name="toyear" type="search" placeholder="YYYY" class="form-control input-md" maxlength="4" type="number">
 
               </div>
             </div>

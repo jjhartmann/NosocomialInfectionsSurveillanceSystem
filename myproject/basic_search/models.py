@@ -234,7 +234,7 @@ COUNTRIES = (
     ('ARE', 'United Arab Emirates'),
     ('GBR', 'United Kingdom'),
     ('TZA', 'United Republic of Tanzania'),
-    ('USA', 'United States of America'),
+    ('USA', 'USA'),
     ('VIR', 'United States Virgin Islands'),
     ('URY', 'Uruguay'),
     ('UZB', 'Uzbekistan'),
