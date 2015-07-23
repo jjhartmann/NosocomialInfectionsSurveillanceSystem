@@ -281,7 +281,7 @@ class Influenza_NA(models.Model):
     date_discovered = models.DateField(null=True)
     sequence_length = models.IntegerField(null=True)
     virus_name = models.CharField(max_length=30, null=True)
-    age = models.IntegerField(null=True)
+    age = models.FloatField(null=True)
     gender = models.CharField(max_length=2, null=True)  # change to list....
     completeness = models.CharField(max_length=2, null=True)
 
@@ -296,16 +296,16 @@ class Influenza_AA(models.Model):
     date_discovered = models.DateField(null=True)
     sequence_length = models.IntegerField(null=True)
     virus_name = models.CharField(max_length=30, null=True)
-    age = models.IntegerField(null=True)
+    age = models.FloatField(null=True)
     gender = models.CharField(max_length=2, null=True)  # change to list....
     completeness = models.CharField(max_length=2, null=True)
 
 
 class Influenza_FNA(models.Model):
     genbank_na_accnum = models.OneToOneField(Influenza_NA, primary_key=True, null=False)
-    description = models.CharField(max_length=30)
+    fasta_nucleotide_description = models.CharField(max_length=30)
 
 
 class Influenza_FAA(models.Model):
     genbank_na_accnum = models.OneToOneField(Influenza_AA, primary_key=True, null=False)
-    description = models.CharField(max_length=30)
+    fasta_protein_description = models.CharField(max_length=30)

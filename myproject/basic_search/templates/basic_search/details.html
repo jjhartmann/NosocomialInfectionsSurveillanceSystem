@@ -1,6 +1,15 @@
 {% extends "secure/base.html" %}
 
+    <style type="text/css">
+        .mygrid-wrapper-div {
+           border: solid red 5px;
+           overflow: scroll;
+           height: 70%;
+}       }
+    </style>
+
     {% block maincontent%}
+
 
     <h1> This is the details page!!</h1>
 
@@ -18,8 +27,8 @@
                         <td>Virus Name</td>
                         <td>Age</td>
                         <td>Gender</td>
-                        <td>Completeness</td>
-                        <td>Description</td>
+                        <td>Complete-ness</td>
+                        <td>Nucleotide Sequence</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -29,13 +38,17 @@
                             <td>{{ row.host }}</td>
                             <td>{{ row.genomesegment_or_proteinname }}</td>
                             <td>{{ row.country }}</td>
-                            <td>{{ row.date_discovered }}</td>
+                            <td nowrap>{{ row.date_discovered }}</td>
                             <td>{{ row.sequence_length }}</td>
                             <td>{{ row.virus_name }}</td>
                             <td>{{ row.age }}</td>
                             <td>{{ row.gender }}</td>
                             <td>{{ row.completeness }}</td>
-                            <td>{{ row.influenza_fna.description }}</td>
+                            <td style="word-wrap: break-word; max-width: 300px;">
+                                <div style="overflow-x: hidden; overflow-y: scroll; max-height: 150px;">
+                                {{ row.influenza_fna.fasta_nucleotide_description }}
+                                </div>
+                            </td>
                         </tr>
                     {% endfor %}
                 </tbody>
@@ -52,13 +65,13 @@
                         <td>Host</td>
                         <td>Genome Segment</td>
                         <td>Country</td>
-                        <td>Date</td>
+                        <td nowrap>Date</td>
                         <td>Length</td>
                         <td>Virus Name</td>
                         <td>Age</td>
                         <td>Gender</td>
-                        <td>Completeness</td>
-                        <td>Description</td>
+                        <td>Complete-ness</td>
+                        <td>Protein Sequence</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -74,7 +87,11 @@
                             <td>{{ row.age }}</td>
                             <td>{{ row.gender }}</td>
                             <td>{{ row.completeness }}</td>
-                            <td>{{ row.influenza_fna.description }}</td>
+                            <td style="word-wrap: break-word; max-width: 300px;">
+                                <div style="overflow-x: hidden; overflow-y: scroll; max-height: 150px;">
+                                    {{ row.influenza_faa.fasta_protein_description }}
+                                </div>
+                            </td>
                         </tr>
                     {% endfor %}
                 </tbody>
