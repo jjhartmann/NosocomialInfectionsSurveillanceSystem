@@ -1,7 +1,7 @@
 import ast
 import os
-#fo = open("/home/hamza/Pictures/myproject/nocoblast/viewspy.txt", "a")
-#fo.write("Log file\n")
+fo = open("/home/hamza/Pictures/myproject/nocoblast/viewspy.txt", "a")
+fo.write("Log file\n")
 
 from Bio.Blast.Applications import NcbiblastnCommandline, NcbitblastnCommandline, NcbiblastpCommandline, NcbiblastxCommandline
 from Bio.Blast import NCBIXML
@@ -50,7 +50,7 @@ def blast(request, blast_form, template_init, template_result, blast_commandline
                 """
                 blast search, parse results from temp file, put them into template for rendering.
                 """
-                #fo.write(str(blast_commandline))
+                fo.write(str(blast_commandline))
                 blast_records__file_xml, blast_error = utils.run_blast_commands(blast_commandline, **dict(standard_opt_dic, **sensitivity_opt_dic))
 
                 if len(blast_error) > 0:

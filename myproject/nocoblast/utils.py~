@@ -1,4 +1,3 @@
-"""Module with utility functions for nocoblast app.   """
 
 import tempfile
 import os

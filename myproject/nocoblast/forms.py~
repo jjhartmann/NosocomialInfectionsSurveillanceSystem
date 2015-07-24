@@ -1,6 +1,4 @@
-"""
-Module with forms to nocoblast search and validation functions.
-"""
+
 
 from django import forms
 import tempfile
