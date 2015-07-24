@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'basic_search',
     'index',
     'secure',
+    'nocoblast',
 )
 
 MIDDLEWARE_CLASSES = (
