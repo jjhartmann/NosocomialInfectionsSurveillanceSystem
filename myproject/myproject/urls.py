@@ -21,4 +21,5 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^(?P<username>\w+)/search/', include('basic_search.urls', namespace='basic_search')),
     url(r'^(?P<username>\w+)/', include('secure.urls', namespace='secure')),
+    url(r'^blast/', include('nocoblast.urls')),
 ]
