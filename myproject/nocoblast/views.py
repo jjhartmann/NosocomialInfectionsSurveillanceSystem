@@ -1,8 +1,7 @@
-
 import ast
 import os
-#fo = open("/home/hamza/Pictures/myproject/nocoblast/viewspy.txt", "a")
-#fo.write("Log file\n")
+fo = open("/home/hamza/Pictures/myproject/nocoblast/viewspy.txt", "a")
+fo.write("Log file\n")
 
 from Bio.Blast.Applications import NcbiblastnCommandline, NcbitblastnCommandline, NcbiblastpCommandline, NcbiblastxCommandline
 from Bio.Blast import NCBIXML
@@ -92,3 +91,12 @@ def blast(request, blast_form, template_init, template_result, blast_commandline
                                               "blast_max_number_seq_in_input": BLAST_MAX_NUMBER_SEQ_IN_INPUT,
                                               }, context_instance=RequestContext(request))
 
+
+def tblastn(request, blast_form=TBlastnForm, template_init='nocoblast/blast.html', template_result='nocoblast/blast_results.html', extra_context=None):
+    return blast(request, blast_form=blast_form, template_init=template_init, template_result=template_result, blast_commandline=NcbitblastnCommandline,
+                 sample_fasta_path=EXAMPLE_FASTA_PROT_FILE_PATH, extra_context=extra_context)
+
+
+def blastn(request, blast_form=BlastForm, template_init='nocoblast/blast.html', template_result='nocoblast/blast_results.html', extra_context=None):
+    return blast(request, blast_form=blast_form, template_init=template_init, template_result=template_result, blast_commandline=NcbiblastnCommandline,
+                 sample_fasta_path=EXAMPLE_FASTA_NUCL_FILE_PATH, extra_context=extra_context)
