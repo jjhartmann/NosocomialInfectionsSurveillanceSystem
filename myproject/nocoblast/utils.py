@@ -1,11 +1,14 @@
 """Module with utility functions for nocoblast app.   """
 
 import tempfile
+import re
 import os
 from Bio.Application import ApplicationError
-
+from Bio import Entrez
+from Bio import SeqIO
 from features.record import Alignment, BlastRecord, Hsp
-#fo = open("/home/hamza/Pictures/myproject/nocoblast/utilspy.txt", "a")
+
+THIS_DIR = os.path.dirname(os.path.abspath(__file__))
 
 def get_sample_data(sample_file):
     """Read and returns sample data to fill form with default sample sequence.  """
@@ -17,28 +20,46 @@ def get_sample_data(sample_file):
     return sequence_sample_in_fasta
 
 
+def fetch_entrez_seq(id_list):
+    fasta_temp = os.path.join(THIS_DIR, 'fasta_temp.fa')
+    os.system("rm 'fasta_temp'")
+    fo = open(fasta_temp, "w")
+    Entrez.email = "hamzakhanvit@gmail.com"
+    handle = Entrez.efetch(db="nucleotide", rettype="gb", retmode="text", id=id_list)
+    for seq_record in SeqIO.parse(handle, "gb"):
+        fo.write(">%s, %s %s \n" % ((seq_record.id.rstrip('\n')),seq_record.description,(seq_record.seq.rstrip('\n'))))
+
+
 def blast_records_to_object(blast_records):
     """Transforms biopython's blast record into blast object defined in django-nocoblast app.  """
 
     # container for transformed objects
     blast_objects_list = []
-
+    id_list = ""
     for blast_record in blast_records:
-
+        counter = 0
         br = BlastRecord(**{'query': blast_record.query,
                             'version': blast_record.version,
                             'expect': blast_record.expect,
                             'application': blast_record.application,
                             'reference': blast_record.reference})
-
+        
+        #fo = open(os.path.join(THIS_DIR, 'test'), "a")
         for alignment in blast_record.alignments:
-
+            counter+=1;
             al = Alignment(**{
                 'hit_def': alignment.hit_def,
                 'title': alignment.title,
                 'length': alignment.length,
             })
-
+            if(counter<10):
+                  pattern = '^gi\|(.*?)\|'
+                  matchObj = re.match( pattern,(str(alignment.title)))
+                  matchObj = str(matchObj.group(0))[3:-1]
+                  #matchObj = fo.write("%s," % (matchObj))
+                  id_list += matchObj + ","
+                  #fo.write(str(id_list))
+        
             for hsp in alignment.hsps:
                 h = Hsp(**{
                     'align_length': hsp.align_length,
@@ -64,6 +85,8 @@ def blast_records_to_object(blast_records):
                 al.hsp_list.append(h)
             br.alignments.append(al)
         blast_objects_list.append(br)
+        #fo.write(str(id_list))
+        fetch_entrez_seq(id_list);
     return blast_objects_list
 
 
