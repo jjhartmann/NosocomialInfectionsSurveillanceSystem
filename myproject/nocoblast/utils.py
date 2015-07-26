@@ -27,7 +27,7 @@ def fetch_entrez_seq(id_list):
     Entrez.email = "hamzakhanvit@gmail.com"
     handle = Entrez.efetch(db="nucleotide", rettype="gb", retmode="text", id=id_list)
     for seq_record in SeqIO.parse(handle, "gb"):
-        fo.write(">%s, %s %s \n" % ((seq_record.id.rstrip('\n')),seq_record.description,(seq_record.seq.rstrip('\n'))))
+        fo.write(">%s,%s\n%s\n" % ((seq_record.id.rstrip('\n')),seq_record.description,(seq_record.seq.rstrip('\n'))))
 
 
 def blast_records_to_object(blast_records):
