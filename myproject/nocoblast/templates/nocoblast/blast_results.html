@@ -65,7 +65,7 @@
             {% for alignment in br.alignments %}
             <tr>
                 <th scope="row">{{ forloop.counter }}</th>
-                <td>{{ alignment.hit_def }}</td>
+                <td>{{alignment.title}}</td>
                 <td>{{ br.query }}</td>
                 <td>{{ alignment.length }}</td>
                 <td>{{ alignment.best_evalue }}
