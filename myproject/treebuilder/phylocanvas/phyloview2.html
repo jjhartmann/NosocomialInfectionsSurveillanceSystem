@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+     <style>
+     center   {color:blue}
+     </style>
+    
+    <script type="application/javascript" src="PhyloCanvas.js"></script>
+    <script type="application/javascript">
+      window.onload = function() {
+        // Initializing tree object 
+
+        var phylocanvas = new PhyloCanvas.Tree('phylocanvasDivRadial');
+        var newick_file = "example.nwk";
+        phylocanvas.load(newick_file);
+        phylocanvas.setTreeType('radial'); 
+
+        var phylocanvas = new PhyloCanvas.Tree('phylocanvasDivRectangular');
+        var newick_file = "example.nwk";
+        phylocanvas.load(newick_file);
+        phylocanvas.setTreeType('rectangular'); 
+
+      }
+    </script>
+  </head>
+  <body>
+    <form action="phyloview1.html">
+    <input type="submit" value="Go to diagonal and hierachial view" style="float: right">
+    </form>
+    <center> Radial Representation <center><br>
+    <div id="phylocanvasDivRadial"></div><br>
+    <center> Rectangular Representation <center><br>
+    <div id="phylocanvasDivRectangular"></div><br>
+  </body>
+</html>
