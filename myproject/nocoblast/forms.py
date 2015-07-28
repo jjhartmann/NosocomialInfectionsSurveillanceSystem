@@ -1,5 +1,5 @@
 """
-Module with forms to myblast search and validation functions.
+Module with forms to nocoblast search and validation functions.
 """
 
 from django import forms

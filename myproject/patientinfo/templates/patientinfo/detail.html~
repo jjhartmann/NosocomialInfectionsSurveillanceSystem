@@ -1,0 +1,27 @@
+{% extends "secure/base.html" %}
+
+
+    {% block maincontent%}
+<h1> patient information detial: </hi>
+<ul> 
+	<li> First Name: {{ patientinfo.firstname }}</li>
+	<li> Last Name: {{ patientinfo.lastname }}</li>
+	<li> Date of Birth: {{ patientinfo.date_of_birth }}</li>
+	<li> Gender: {{ patientinfo.gender }}</li>
+	<li> Age: {{ patientinfo.age }}</li>
+	<li> Email: {{ patientinfo.Email }}</li>
+	<li> Phone: {{ patientinfo.phone }}</li>
+	<li> Street Address: {{ patientinfo.street_address }}</li>
+	<li> City: {{ patientinfo.city }}</li>
+	<li> Provice: {{ patientinfo.provice }}</li>
+	<li> Postal Code: {{ patientinfo.postal_code }}</li>
+</ul>
+
+<div id="sidebar"
+	{% block sidebar %}
+	<h2><a href="{% url 'patientinfo:index' username %}">patient List</a></h2>
+	<h2><a href="{% url 'patientinfo:update' username patientinfo.id %}">Update</a></h2>
+	{% endblock %}
+</div>
+
+    {% endblock %}

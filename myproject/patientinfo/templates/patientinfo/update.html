@@ -1,0 +1,23 @@
+
+{% extends "secure/base.html" %}
+
+
+    {% block maincontent%}
+<h1> patient information:</hi>
+
+<form action="{% url 'patientinfo:index'  username %}" method="post">{% csrf_token %}
+<ul>
+	{{form.as_ul}}
+</ul>
+
+<input type= "submit"  name="submit" value="Update Patient Information">
+</form>
+
+<div id="sidebar"
+	{% block sidebar %}
+	<h2><a href="{% url 'patientinfo:index'  username %}">Cancle</a></h2>
+	{% endblock %}
+	
+</div>
+
+    {% endblock %}

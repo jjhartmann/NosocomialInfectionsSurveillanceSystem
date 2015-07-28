@@ -28,7 +28,6 @@ class Hsp(object):
         self.strand = kwargs['strand']
         self.str = kwargs['str']
 
-
     @staticmethod
     def chop_sequence(sequence, limit_length):
         """Input sequence is divided on smaller non-overlapping sequences with set length.  """
@@ -47,4 +46,44 @@ class Hsp(object):
         return self.chop_sequence(self.sbjct, self.limit_length)
 
 
+class Alignment(object):
+    """Store and process alignment object from blast local search.  """
 
+    def __init__(self, **kwargs):
+        self.hit_def = kwargs['hit_def']
+        self.title = kwargs['title']
+        self.length = kwargs['length']
+        self.hsp_list = []
+        self.hit_url = ""
+        self.hit_protein_name = ""
+
+    def best_evalue(self):
+        """Returns e-value of the best HSP in alignment.  """
+        if len(self.hsp_list) > 0:
+            return self.hsp_list[0].expect
+
+    def best_score(self):
+        """Returns score of the best HSP in alignment.  """
+        if len(self.hsp_list) > 0:
+            return self.hsp_list[0].score
+
+    def best_identities(self):
+        """Returns identities of the best HSP in alignment.  """
+        if len(self.hsp_list) > 0:
+            return round(float(self.hsp_list[0].identities) / float(self.hsp_list[0].align_length) * 100, 1)
+
+    def get_id(self):
+        """Returns unique id of an alignment.  """
+        return hash(str(self.title) + str(self.best_score()) + str(self.hit_def))
+
+
+class BlastRecord(object):
+    """Store a single blast record from blast local search.  """
+
+    def __init__(self, **kwargs):
+        self.query = kwargs['query']
+        self.version = kwargs['version']
+        self.expect = kwargs['expect']
+        self.application = kwargs['application']
+        self.reference = kwargs['reference']
+        self.alignments = []
