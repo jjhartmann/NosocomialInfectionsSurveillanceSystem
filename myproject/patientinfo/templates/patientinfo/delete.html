@@ -1,0 +1,15 @@
+{% extends "secure/base.html" %}
+
+
+    {% block maincontent%}
+<h1> patient information has deleted </hi>
+
+
+<div id="sidebar"
+	{% block sidebar %}
+	<h2><a href="{% url 'patientinfo:index' username %}">Back to Patient List</a></h2>
+
+	{% endblock %}
+</div>
+
+    {% endblock %}
