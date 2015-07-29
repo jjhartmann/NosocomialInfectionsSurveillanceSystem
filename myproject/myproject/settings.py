@@ -42,6 +42,8 @@ INSTALLED_APPS = (
     'secure',
     'nocoblast',
     'patientinfo',
+    'graph',
+    'coc',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -117,3 +119,7 @@ STATICFILES_DIRS = (
     '/var/www/static/',
     os.path.join(BASE_DIR, "bower_components"),
 )
+
+# Define project root 
+settings_dir = os.path.dirname(__file__)
+PROJECT_ROOT = os.path.abspath(os.path.dirname(settings_dir))
