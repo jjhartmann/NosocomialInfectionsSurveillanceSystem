@@ -1,0 +1,21 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'coc/style.css' %}" />
+
+<h1>Genbank Accession Number Matrix</h1>
+
+<div id = "select">
+	<aside style="margin-top:80px;">
+	<p>Order: <select id="order">
+	<option value="name">name</option>
+	<option value="count">Host</option>
+	<option value="group">Country</option>
+	<option value="sequence">Sequence Length</option>
+	</select>
+	</aside>
+</div>
+
+<div id = "matrix">
+	<script src="http://d3js.org/d3.v2.min.js?2.8.1"></script>
+	<script type="text/javascript" src="{% static "coc/cocTree.js"%}"></script>
+</div>

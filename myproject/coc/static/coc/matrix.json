@@ -1,0 +1,2802 @@
+[
+{
+  "fields": {
+    "completeness": "p\r\n",
+    "virus_name": "Influenza A virus (A/Chicken/Yunnan/493/05(H5N1))",
+    "date_discovered": "2005-01-01",
+    "country": "China",
+    "age": null,
+    "genomesegment_or_proteinname": "2",
+    "subtype": "H5N1",
+    "host": "Avian",
+    "gender": "",
+    "sequence_length": 1464
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "DQ095745"
+},
+{
+  "fields": {
+    "completeness": "p\r\n",
+    "virus_name": "Influenza A virus (A/Chicken/Yunnan/493/05(H5N1))",
+    "date_discovered": "2005-01-01",
+    "country": "China",
+    "age": null,
+    "genomesegment_or_proteinname": "1",
+    "subtype": "H5N1",
+    "host": "Avian",
+    "gender": "",
+    "sequence_length": 1293
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "DQ095765"
+},
+{
+  "fields": {
+    "completeness": "p\r\n",
+    "virus_name": "Influenza A virus (A/Chile/1/1983(H1N1))",
+    "date_discovered": "1983-01-01",
+    "country": "Chile",
+    "age": null,
+    "genomesegment_or_proteinname": "2",
+    "subtype": "H1N1",
+    "host": "Human",
+    "gender": "",
+    "sequence_length": 1401
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "X66320"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/Chile/1/1983(H1N1))",
+    "date_discovered": "1983-01-01",
+    "country": "Chile",
+    "age": null,
+    "genomesegment_or_proteinname": "4",
+    "subtype": "H1N1",
+    "host": "Human",
+    "gender": "",
+    "sequence_length": 1742
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY121261"
+},
+{
+  "fields": {
+    "completeness": "\r\n",
+    "virus_name": "Influenza A virus (A/Chile/1/1983(H1N1))",
+    "date_discovered": "1983-01-01",
+    "country": "Chile",
+    "age": null,
+    "genomesegment_or_proteinname": "7",
+    "subtype": "H1N1",
+    "host": "Human",
+    "gender": "",
+    "sequence_length": 1002
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY121262"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/WSN/1933(H1N1))",
+    "date_discovered": "1933-01-01",
+    "country": "United Kingdom",
+    "age": null,
+    "genomesegment_or_proteinname": "7",
+    "subtype": "H1N1",
+    "host": "Human",
+    "gender": "",
+    "sequence_length": 982
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "X08088"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/WS/7/1933(H1N1))",
+    "date_discovered": "1933-01-01",
+    "country": "United Kingdom",
+    "age": null,
+    "genomesegment_or_proteinname": "7",
+    "subtype": "H1N1",
+    "host": "Human",
+    "gender": "",
+    "sequence_length": 982
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "X08089"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/Port Chalmers/1/1973-mouse adapted(H3N2))",
+    "date_discovered": "1973-01-01",
+    "country": "New Zealand",
+    "age": null,
+    "genomesegment_or_proteinname": "7",
+    "subtype": "H3N2",
+    "host": "Human",
+    "gender": "",
+    "sequence_length": 982
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "X08090"
+},
+{
+  "fields": {
+    "completeness": "p\r\n",
+    "virus_name": "Influenza A virus (A/NIB/4/1988(H1N1))",
+    "date_discovered": "1988-01-01",
+    "country": "United Kingdom",
+    "age": null,
+    "genomesegment_or_proteinname": "4",
+    "subtype": "H1N1",
+    "host": "Human",
+    "gender": "",
+    "sequence_length": 1068
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "X59778"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/USSR/90/1977(H1N1))",
+    "date_discovered": "1977-01-01",
+    "country": "Russia",
+    "age": null,
+    "genomesegment_or_proteinname": "7",
+    "subtype": "H1N1",
+    "host": "Human",
+    "gender": "",
+    "sequence_length": 1027
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "X53029"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/chicken/Rostock/8/1934(H7N1))",
+    "date_discovered": "1934-01-01",
+    "country": "Germany",
+    "age": null,
+    "genomesegment_or_proteinname": "6",
+    "subtype": "H7N1",
+    "host": "Avian",
+    "gender": "",
+    "sequence_length": 1393
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "X52226"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza B virus (B/Ann Arbor/1/1986)",
+    "date_discovered": "1986-01-01",
+    "country": "USA",
+    "age": null,
+    "genomesegment_or_proteinname": "5",
+    "subtype": "",
+    "host": "Human",
+    "gender": "",
+    "sequence_length": 1811
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "X14217"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/81/HO)",
+    "date_discovered": null,
+    "country": "LAB",
+    "age": null,
+    "genomesegment_or_proteinname": "5",
+    "subtype": "H7N2",
+    "host": "Human",
+    "gender": "",
+    "sequence_length": 1565
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "X15890"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/Chile/1/1983(H1N1))",
+    "date_discovered": "1983-01-01",
+    "country": "Chile",
+    "age": null,
+    "genomesegment_or_proteinname": "8",
+    "subtype": "H1N1",
+    "host": "Human",
+    "gender": "",
+    "sequence_length": 890
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "X15282"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/FW/1/1950(H1N1))",
+    "date_discovered": "1950-01-01",
+    "country": "USA",
+    "age": null,
+    "genomesegment_or_proteinname": "7",
+    "subtype": "H1N1",
+    "host": "Human",
+    "gender": "",
+    "sequence_length": 982
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "X08091"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/Port Chalmers/1/1973(H3N2))",
+    "date_discovered": "1973-01-01",
+    "country": "New Zealand",
+    "age": null,
+    "genomesegment_or_proteinname": "7",
+    "subtype": "H3N2",
+    "host": "Human",
+    "gender": "",
+    "sequence_length": 982
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "X08092"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/33/1977(H1N1))",
+    "date_discovered": "1977-04-12",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "3",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2221
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084552"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/33/1977(H1N1))",
+    "date_discovered": "1977-04-12",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "2",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2306
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084551"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/33/1977(H1N1))",
+    "date_discovered": "1977-04-12",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "1",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2300
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084550"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/330/2011(H1N1))",
+    "date_discovered": "2011-01-13",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "1",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2280
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028500"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/330/2011(H1N1))",
+    "date_discovered": "2011-01-13",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "2",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2277
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028501"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/330/2011(H1N1))",
+    "date_discovered": "2011-01-13",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "3",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2151
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028502"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/330/2011(H1N1))",
+    "date_discovered": "2011-01-13",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "4",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1701
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028503"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/330/2011(H1N1))",
+    "date_discovered": "2011-01-13",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "5",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1497
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028504"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/330/2011(H1N1))",
+    "date_discovered": "2011-01-13",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "6",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1410
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028505"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/330/2011(H1N1))",
+    "date_discovered": "2011-01-13",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "7",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 982
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028506"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/330/2011(H1N1))",
+    "date_discovered": "2011-01-13",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "8",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 838
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028507"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/34/1977(H1N1))",
+    "date_discovered": "1977-04-12",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "4",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1712
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084561"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/34/1977(H1N1))",
+    "date_discovered": "1977-04-12",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "7",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 986
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084564"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/34/1977(H1N1))",
+    "date_discovered": "1977-04-12",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "6",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1416
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084563"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/34/1977(H1N1))",
+    "date_discovered": "1977-04-12",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "8",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 895
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084565"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/34/1977(H1N1))",
+    "date_discovered": "1977-04-12",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "5",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1548
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084562"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/34/1977(H1N1))",
+    "date_discovered": "1977-04-12",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "3",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2221
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084560"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/34/1977(H1N1))",
+    "date_discovered": "1977-04-12",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "2",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2306
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084559"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/34/1977(H1N1))",
+    "date_discovered": "1977-04-12",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "1",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2301
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084558"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/347/1993(H1N1))",
+    "date_discovered": "1993-08-17",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "4",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1734
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084993"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/347/1993(H1N1))",
+    "date_discovered": "1993-08-17",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "7",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1015
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084996"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/347/1993(H1N1))",
+    "date_discovered": "1993-08-17",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "6",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1413
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084995"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/347/1993(H1N1))",
+    "date_discovered": "1993-08-17",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "8",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 887
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084997"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/347/1993(H1N1))",
+    "date_discovered": "1993-08-17",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "5",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1548
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084994"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/347/1993(H1N1))",
+    "date_discovered": "1993-08-17",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "3",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2209
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084992"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/347/1993(H1N1))",
+    "date_discovered": "1993-08-17",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "2",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2299
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084991"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/347/1993(H1N1))",
+    "date_discovered": "1993-08-17",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "1",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2306
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084990"
+},
+{
+  "fields": {
+    "completeness": "p\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/35/2004(H1N2))",
+    "date_discovered": "2004-01-06",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "4",
+    "subtype": "H1N2",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1061
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY086679"
+},
+{
+  "fields": {
+    "completeness": "p\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/35/2004(H1N2))",
+    "date_discovered": "2004-01-06",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "6",
+    "subtype": "H1N2",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 876
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY086680"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/36/1977(H1N1))",
+    "date_discovered": "1977-04-18",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "4",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1711
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084569"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/36/1977(H1N1))",
+    "date_discovered": "1977-04-18",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "7",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 986
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084572"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/36/1977(H1N1))",
+    "date_discovered": "1977-04-18",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "6",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1414
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084571"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/36/1977(H1N1))",
+    "date_discovered": "1977-04-18",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "8",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 879
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084573"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/36/1977(H1N1))",
+    "date_discovered": "1977-04-18",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "5",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1548
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084570"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/36/1977(H1N1))",
+    "date_discovered": "1977-04-18",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "3",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2221
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084568"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/36/1977(H1N1))",
+    "date_discovered": "1977-04-18",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "2",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2305
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084567"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/36/1977(H1N1))",
+    "date_discovered": "1977-04-18",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "1",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2296
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084566"
+},
+{
+  "fields": {
+    "completeness": "p\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/36/2004(H1N2))",
+    "date_discovered": "2004-01-06",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "4",
+    "subtype": "H1N2",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1061
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY086681"
+},
+{
+  "fields": {
+    "completeness": "p\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/36/2004(H1N2))",
+    "date_discovered": "2004-01-06",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "6",
+    "subtype": "H1N2",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 982
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY086682"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/360/2011(H1N1))",
+    "date_discovered": "2011-01-13",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "1",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2280
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028508"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/360/2011(H1N1))",
+    "date_discovered": "2011-01-13",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "2",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2277
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028509"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/360/2011(H1N1))",
+    "date_discovered": "2011-01-13",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "3",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2151
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028510"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/360/2011(H1N1))",
+    "date_discovered": "2011-01-13",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "4",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1701
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028511"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/360/2011(H1N1))",
+    "date_discovered": "2011-01-13",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "5",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1497
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028512"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/360/2011(H1N1))",
+    "date_discovered": "2011-01-13",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "6",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1410
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028513"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/360/2011(H1N1))",
+    "date_discovered": "2011-01-13",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "7",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 982
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028514"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/360/2011(H1N1))",
+    "date_discovered": "2011-01-13",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "8",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 838
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028515"
+},
+{
+  "fields": {
+    "completeness": "p\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/3635/1999(H1N1))",
+    "date_discovered": "1999-01-21",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "4",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1027
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY086023"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/3635/1999(H1N1))",
+    "date_discovered": "1999-01-21",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "6",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1441
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY086024"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/37/1977(H1N1))",
+    "date_discovered": "1977-04-18",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "4",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1704
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084577"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/37/1977(H1N1))",
+    "date_discovered": "1977-04-18",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "7",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 982
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084580"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/37/1977(H1N1))",
+    "date_discovered": "1977-04-18",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "6",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1424
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084579"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/37/1977(H1N1))",
+    "date_discovered": "1977-04-18",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "8",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 884
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084581"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/37/1977(H1N1))",
+    "date_discovered": "1977-04-18",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "5",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1548
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084578"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/37/1977(H1N1))",
+    "date_discovered": "1977-04-18",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "3",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2188
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084576"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/37/1977(H1N1))",
+    "date_discovered": "1977-04-18",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "2",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2297
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084575"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/37/1977(H1N1))",
+    "date_discovered": "1977-04-18",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "1",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2300
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084574"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/3700/2011(H3N2))",
+    "date_discovered": "2011-09-15",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "1",
+    "subtype": "H3N2",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2280
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028796"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/3700/2011(H3N2))",
+    "date_discovered": "2011-09-15",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "2",
+    "subtype": "H3N2",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2277
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028797"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/3700/2011(H3N2))",
+    "date_discovered": "2011-09-15",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "3",
+    "subtype": "H3N2",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2151
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028798"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/3700/2011(H3N2))",
+    "date_discovered": "2011-09-15",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "4",
+    "subtype": "H3N2",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1701
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028799"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/3700/2011(H3N2))",
+    "date_discovered": "2011-09-15",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "5",
+    "subtype": "H3N2",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1497
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028800"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/3700/2011(H3N2))",
+    "date_discovered": "2011-09-15",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "6",
+    "subtype": "H3N2",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1410
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028801"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/3700/2011(H3N2))",
+    "date_discovered": "2011-09-15",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "7",
+    "subtype": "H3N2",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 982
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028802"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/3700/2011(H3N2))",
+    "date_discovered": "2011-09-15",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "8",
+    "subtype": "H3N2",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 838
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028803"
+},
+{
+  "fields": {
+    "completeness": "p\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/3788/1999(H1N1))",
+    "date_discovered": "1999-01-21",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "4",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 804
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY086025"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/3788/1999(H1N1))",
+    "date_discovered": "1999-01-21",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "6",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1430
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY086026"
+},
+{
+  "fields": {
+    "completeness": "nc\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/38/1977(H1N1))",
+    "date_discovered": "1977-04-18",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "4",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1698
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084585"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/38/1977(H1N1))",
+    "date_discovered": "1977-04-18",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "7",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 986
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084588"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/38/1977(H1N1))",
+    "date_discovered": "1977-04-18",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "6",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1418
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084587"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/38/1977(H1N1))",
+    "date_discovered": "1977-04-18",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "8",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 890
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084589"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/38/1977(H1N1))",
+    "date_discovered": "1977-04-18",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "5",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1548
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084586"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/38/1977(H1N1))",
+    "date_discovered": "1977-04-18",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "3",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2221
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084584"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/38/1977(H1N1))",
+    "date_discovered": "1977-04-18",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "2",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2303
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084583"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/38/1977(H1N1))",
+    "date_discovered": "1977-04-18",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "1",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2304
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084582"
+},
+{
+  "fields": {
+    "completeness": "p\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/38/2004(H1N2))",
+    "date_discovered": "2004-01-06",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "4",
+    "subtype": "H1N2",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1061
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY086683"
+},
+{
+  "fields": {
+    "completeness": "p\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/38/2004(H1N2))",
+    "date_discovered": "2004-01-06",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "6",
+    "subtype": "H1N2",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 806
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY086684"
+},
+{
+  "fields": {
+    "completeness": "p\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/3847/1999(H1N1))",
+    "date_discovered": "1999-01-21",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "4",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1190
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY086027"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/3847/1999(H1N1))",
+    "date_discovered": "1999-01-21",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "6",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1430
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY086028"
+},
+{
+  "fields": {
+    "completeness": "p\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/386/2008(H1N2))",
+    "date_discovered": "2008-03-27",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "4",
+    "subtype": "H1N2",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1181
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY086873"
+},
+{
+  "fields": {
+    "completeness": "p\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/386/2008(H1N2))",
+    "date_discovered": "2008-03-27",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "6",
+    "subtype": "H1N2",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 959
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY086874"
+},
+{
+  "fields": {
+    "completeness": "p\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/388/2004(H1N1))",
+    "date_discovered": "2004-03-29",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "4",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1096
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY086699"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/388/2004(H1N1))",
+    "date_discovered": "2004-03-29",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "6",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1441
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY086700"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/39/1977(H1N1))",
+    "date_discovered": "1977-04-18",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "4",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1713
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084593"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/39/1977(H1N1))",
+    "date_discovered": "1977-04-18",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "7",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1006
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084596"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/39/1977(H1N1))",
+    "date_discovered": "1977-04-18",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "6",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1414
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084595"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/39/1977(H1N1))",
+    "date_discovered": "1977-04-18",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "8",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 876
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084597"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/39/1977(H1N1))",
+    "date_discovered": "1977-04-18",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "5",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1548
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084594"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/39/1977(H1N1))",
+    "date_discovered": "1977-04-18",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "3",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2220
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084592"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/39/1977(H1N1))",
+    "date_discovered": "1977-04-18",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "2",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2309
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084591"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/39/1977(H1N1))",
+    "date_discovered": "1977-04-18",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "1",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2302
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084590"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/3904/2011(H1N1))",
+    "date_discovered": "2011-10-06",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "1",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2280
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028812"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/3904/2011(H1N1))",
+    "date_discovered": "2011-10-06",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "2",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2277
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028813"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/3904/2011(H1N1))",
+    "date_discovered": "2011-10-06",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "3",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2151
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028814"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/3904/2011(H1N1))",
+    "date_discovered": "2011-10-06",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "4",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1701
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028815"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/3904/2011(H1N1))",
+    "date_discovered": "2011-10-06",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "5",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1497
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028816"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/3904/2011(H1N1))",
+    "date_discovered": "2011-10-06",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "6",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1410
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028817"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/3904/2011(H1N1))",
+    "date_discovered": "2011-10-06",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "7",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 982
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028818"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/3904/2011(H1N1))",
+    "date_discovered": "2011-10-06",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "8",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 838
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028819"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/3914/2011(H1N1))",
+    "date_discovered": "2011-10-06",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "1",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2280
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028820"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/3914/2011(H1N1))",
+    "date_discovered": "2011-10-06",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "2",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2277
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028821"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/3914/2011(H1N1))",
+    "date_discovered": "2011-10-06",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "3",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2151
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028822"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/3914/2011(H1N1))",
+    "date_discovered": "2011-10-06",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "4",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1701
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028823"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/3914/2011(H1N1))",
+    "date_discovered": "2011-10-06",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "5",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1497
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028824"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/3914/2011(H1N1))",
+    "date_discovered": "2011-10-06",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "6",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1410
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028825"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/3914/2011(H1N1))",
+    "date_discovered": "2011-10-06",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "7",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 982
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028826"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/3914/2011(H1N1))",
+    "date_discovered": "2011-10-06",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "8",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 838
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028827"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/3939/2011(H1N2))",
+    "date_discovered": "2011-10-06",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "1",
+    "subtype": "H1N2",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2280
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028828"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/3939/2011(H1N2))",
+    "date_discovered": "2011-10-06",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "2",
+    "subtype": "H1N2",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2277
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028829"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/3939/2011(H1N2))",
+    "date_discovered": "2011-10-06",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "3",
+    "subtype": "H1N2",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2151
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028830"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/3939/2011(H1N2))",
+    "date_discovered": "2011-10-06",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "4",
+    "subtype": "H1N2",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1701
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028831"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/3939/2011(H1N2))",
+    "date_discovered": "2011-10-06",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "5",
+    "subtype": "H1N2",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1497
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028832"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/3939/2011(H1N2))",
+    "date_discovered": "2011-10-06",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "6",
+    "subtype": "H1N2",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1410
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028833"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/3939/2011(H1N2))",
+    "date_discovered": "2011-10-06",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "7",
+    "subtype": "H1N2",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 982
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028834"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/3939/2011(H1N2))",
+    "date_discovered": "2011-10-06",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "8",
+    "subtype": "H1N2",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 838
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028835"
+},
+{
+  "fields": {
+    "completeness": "p\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/3954/1999(H1N1))",
+    "date_discovered": "1999-02-26",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "4",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1028
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY086029"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/3954/1999(H1N1))",
+    "date_discovered": "1999-02-26",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "6",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1430
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY086030"
+},
+{
+  "fields": {
+    "completeness": "p\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/3984/1999(H1N1))",
+    "date_discovered": "1999-02-26",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "4",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 953
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY086031"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/3984/1999(H1N1))",
+    "date_discovered": "1999-02-26",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "6",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1430
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY086032"
+},
+{
+  "fields": {
+    "completeness": "p\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/3998/1999(H1N1))",
+    "date_discovered": "1999-02-26",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "4",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 990
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY086033"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/3998/1999(H1N1))",
+    "date_discovered": "1999-02-26",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "6",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1430
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY086034"
+},
+{
+  "fields": {
+    "completeness": "p\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/4/1976(H3N2))",
+    "date_discovered": "1976-01-01",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "6",
+    "subtype": "H3N2",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1341
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "D21189"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/40/1977(H1N1))",
+    "date_discovered": "1977-04-18",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "4",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1712
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084601"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/40/1977(H1N1))",
+    "date_discovered": "1977-04-18",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "7",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 985
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084604"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/40/1977(H1N1))",
+    "date_discovered": "1977-04-18",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "6",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1416
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084603"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/40/1977(H1N1))",
+    "date_discovered": "1977-04-18",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "8",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 894
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084605"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/40/1977(H1N1))",
+    "date_discovered": "1977-04-18",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "5",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1548
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084602"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/40/1977(H1N1))",
+    "date_discovered": "1977-04-18",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "3",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2221
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084600"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/40/1977(H1N1))",
+    "date_discovered": "1977-04-18",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "2",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2309
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084599"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/40/1977(H1N1))",
+    "date_discovered": "1977-04-18",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "1",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2301
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY084598"
+},
+{
+  "fields": {
+    "completeness": "p\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/40/2004(H1N2))",
+    "date_discovered": "2004-01-06",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "4",
+    "subtype": "H1N2",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1061
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY086685"
+},
+{
+  "fields": {
+    "completeness": "p\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/40/2004(H1N2))",
+    "date_discovered": "2004-01-06",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "6",
+    "subtype": "H1N2",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 956
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY086686"
+},
+{
+  "fields": {
+    "completeness": "p\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/400/2004(H1N1))",
+    "date_discovered": "2004-03-29",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "4",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1098
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY086701"
+},
+{
+  "fields": {
+    "completeness": "p\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/400/2004(H1N1))",
+    "date_discovered": "2004-03-29",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "6",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1405
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY086702"
+},
+{
+  "fields": {
+    "completeness": "p\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/4010/1999(H1N1))",
+    "date_discovered": "1999-02-26",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "4",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1023
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY086035"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/4010/1999(H1N1))",
+    "date_discovered": "1999-02-26",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "6",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1430
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY086036"
+},
+{
+  "fields": {
+    "completeness": "p\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/4026/1999(H1N1))",
+    "date_discovered": "1999-02-26",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "4",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1195
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY086037"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/4026/1999(H1N1))",
+    "date_discovered": "1999-02-26",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "6",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1430
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY086038"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/4027/2011(H1N2))",
+    "date_discovered": "2011-10-20",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "1",
+    "subtype": "H1N2",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2280
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028868"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/4027/2011(H1N2))",
+    "date_discovered": "2011-10-20",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "2",
+    "subtype": "H1N2",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2277
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028869"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/4027/2011(H1N2))",
+    "date_discovered": "2011-10-20",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "3",
+    "subtype": "H1N2",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2151
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028870"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/4027/2011(H1N2))",
+    "date_discovered": "2011-10-20",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "4",
+    "subtype": "H1N2",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1701
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028871"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/4027/2011(H1N2))",
+    "date_discovered": "2011-10-20",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "5",
+    "subtype": "H1N2",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1497
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028872"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/4027/2011(H1N2))",
+    "date_discovered": "2011-10-20",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "6",
+    "subtype": "H1N2",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1410
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028873"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/4027/2011(H1N2))",
+    "date_discovered": "2011-10-20",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "7",
+    "subtype": "H1N2",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 982
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028874"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/4027/2011(H1N2))",
+    "date_discovered": "2011-10-20",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "8",
+    "subtype": "H1N2",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 838
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028875"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/404/2005(H1N1))",
+    "date_discovered": "2005-03-21",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "4",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1707
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY085726"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/404/2005(H1N1))",
+    "date_discovered": "2005-03-21",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "7",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1017
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY085729"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/404/2005(H1N1))",
+    "date_discovered": "2005-03-21",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "6",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1431
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY085728"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/404/2005(H1N1))",
+    "date_discovered": "2005-03-21",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "8",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 873
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY085730"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/404/2005(H1N1))",
+    "date_discovered": "2005-03-21",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "5",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1543
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY085727"
+},
+{
+  "fields": {
+    "completeness": "nc\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/404/2005(H1N1))",
+    "date_discovered": "2005-03-21",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "3",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2150
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY085725"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/404/2005(H1N1))",
+    "date_discovered": "2005-03-21",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "2",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2286
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY085724"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/404/2005(H1N1))",
+    "date_discovered": "2005-03-21",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "1",
+    "subtype": "H1N1",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2325
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "CY085723"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/4046/2011(H1N2))",
+    "date_discovered": "2011-10-20",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "1",
+    "subtype": "H1N2",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2280
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028876"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/4046/2011(H1N2))",
+    "date_discovered": "2011-10-20",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "2",
+    "subtype": "H1N2",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2277
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028877"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/4046/2011(H1N2))",
+    "date_discovered": "2011-10-20",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "3",
+    "subtype": "H1N2",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 2151
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028878"
+},
+{
+  "fields": {
+    "completeness": "c\r\n",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/4046/2011(H1N2))",
+    "date_discovered": "2011-10-20",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "4",
+    "subtype": "H1N2",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1701
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028879"
+},
+{
+  "fields": {
+    "completeness": "c",
+    "virus_name": "Influenza A virus (A/swine/Hong Kong/4046/2011(H1N2))",
+    "date_discovered": "2011-10-20",
+    "country": "Hong Kong",
+    "age": null,
+    "genomesegment_or_proteinname": "5",
+    "subtype": "H1N2",
+    "host": "Swine",
+    "gender": "",
+    "sequence_length": 1497
+  },
+  "model": "basic_search.influenza_na",
+  "pk": "KM028880"
+}
+]

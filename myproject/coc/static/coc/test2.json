@@ -1,0 +1,18 @@
+[
+{
+    "fields": {
+        "completeness": "p\r\n",
+        "virus_name": "Influenza A virus (A/Chicken/Yunnan/493/05(H5N1))",
+        "date_discovered": "2005-01-01",
+        "country": "China",
+        "age": null,
+        "genomesegment_or_proteinname": "2",
+        "subtype": "H5N1",
+        "host": "Avian",
+        "gender": "",
+        "sequence_length": 1464
+    },
+    "model": "basic_search.influenza_na",
+    "pk": "DQ095745"
+}
+]
