@@ -11,8 +11,16 @@
         padding-top: 60px;
         padding-bottom: 40px;
       }
-      {% block css %}{% endblock %}
+
+      {% block rawcss %}
+
+      {% endblock %}
     </style>
+
+    <!-- Link your style sheets here in your templates -->
+    {% block css %}
+
+    {% endblock %}
     <link href="{% static 'css/stickyfooter.css' %}" rel="stylesheet"/>
     <link href="{% static 'css/navbarstyle.css' %}" rel="stylesheet"/>
 

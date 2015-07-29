@@ -5,6 +5,7 @@ import os
 
 from Bio.Blast.Applications import NcbiblastnCommandline, NcbitblastnCommandline, NcbiblastpCommandline, NcbiblastxCommandline
 from Bio.Blast import NCBIXML
+from django.contrib.auth.decorators import login_required
 
 from django.shortcuts import render_to_response
 from django.template import RequestContext
@@ -15,8 +16,8 @@ from settings import EXAMPLE_FASTA_NUCL_FILE_PATH, EXAMPLE_FASTA_PROT_FILE_PATH
 from forms import BlastForm, TBlastnForm
 import utils
 
-
-def blast(request, blast_form, template_init, template_result, blast_commandline, sample_fasta_path, extra_context=None):
+@login_required
+def blast(request, username, blast_form, template_init, template_result, blast_commandline, sample_fasta_path, extra_context=None):
     """
     Process blastn/tblastn (blast+) query or set up initial blast form.
     """
@@ -76,7 +77,8 @@ def blast(request, blast_form, template_init, template_result, blast_commandline
                     return render_to_response(template_result,
                                               {'application': blast_records_in_object_and_list[0].application,
                                                'version': blast_records_in_object_and_list[0].version,
-                                               'blast_records': blast_records_in_object_and_list, },
+                                               'blast_records': blast_records_in_object_and_list,
+                                               'username': username, },
                                               context_instance=RequestContext(request))
 
             finally:
@@ -89,14 +91,15 @@ def blast(request, blast_form, template_init, template_result, blast_commandline
 
     return render_to_response(template_init, {'form': form, 'sequence_sample_in_fasta': utils.get_sample_data(sample_fasta_path),
                                               "blast_max_number_seq_in_input": BLAST_MAX_NUMBER_SEQ_IN_INPUT,
+                                              'username': username,
                                               }, context_instance=RequestContext(request))
 
-
-def tblastn(request, blast_form=TBlastnForm, template_init='nocoblast/blast.html', template_result='nocoblast/blast_results.html', extra_context=None):
-    return blast(request, blast_form=blast_form, template_init=template_init, template_result=template_result, blast_commandline=NcbitblastnCommandline,
+@login_required
+def tblastn(request, username, blast_form=TBlastnForm, template_init='nocoblast/blast.html', template_result='nocoblast/blast_results.html', extra_context=None):
+    return blast(request, username=username, blast_form=blast_form, template_init=template_init, template_result=template_result, blast_commandline=NcbitblastnCommandline,
                  sample_fasta_path=EXAMPLE_FASTA_PROT_FILE_PATH, extra_context=extra_context)
 
-
-def blastn(request, blast_form=BlastForm, template_init='nocoblast/blast.html', template_result='nocoblast/blast_results.html', extra_context=None):
-    return blast(request, blast_form=blast_form, template_init=template_init, template_result=template_result, blast_commandline=NcbiblastnCommandline,
+@login_required
+def blastn(request, username, blast_form=BlastForm, template_init='nocoblast/blast.html', template_result='nocoblast/blast_results.html', extra_context=None):
+    return blast(request, username=username, blast_form=blast_form, template_init=template_init, template_result=template_result, blast_commandline=NcbiblastnCommandline,
                  sample_fasta_path=EXAMPLE_FASTA_NUCL_FILE_PATH, extra_context=extra_context)
