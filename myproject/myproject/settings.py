@@ -42,6 +42,7 @@ INSTALLED_APPS = (
     'secure',
     'nocoblast',
     'patientinfo',
+    'userprofile',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -117,3 +118,6 @@ STATICFILES_DIRS = (
     '/var/www/static/',
     os.path.join(BASE_DIR, "bower_components"),
 )
+
+#added by palmer for userprofile
+AUTH_PROFILE_MODEL= 'userprofile.UserProfile'

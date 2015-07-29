@@ -23,4 +23,5 @@ urlpatterns = [
     url(r'^(?P<username>\w+)/', include('secure.urls', namespace='secure')),
     url(r'^blast/', include('nocoblast.urls')),
     url(r'^(?P<username>\w+)/patientinfo/', include('patientinfo.urls', namespace='patientinfo')),
+    url(r'^(?P<username>\w+)/userprofile/', include('userprofile.urls', namespace='userprofile')),
 ]

@@ -14,5 +14,5 @@ urlpatterns = [
     #added by palmer,
     url(r'^register/$', views.doctor_register, name='register'),
     url(r'^register_success/$', views.doctor_register_success, name='register_success'),
-
+    
 ]
