@@ -49,7 +49,7 @@ def update(request, username, patientinfo_id):
 
     	args['form']=form
     	args['username']=username
-    	args['patientinfo_id']=patientinfo_id
+    	args['patientinfo']=Patientinfo.objects.get(id=patientinfo_id)
     return render(request, 'patientinfo/update.html', args)
 
 def delete(request, username, patientinfo_id):
