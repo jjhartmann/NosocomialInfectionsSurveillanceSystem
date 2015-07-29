@@ -5,7 +5,7 @@
     {% block maincontent%}
 <h1> patient information:</hi>
 
-<form action="{% url 'patientinfo:index'  username %}" method="post">{% csrf_token %}
+<form action="{% url 'patientinfo:update'  username patientinfo_id %}" method="post">{% csrf_token %}
 <ul>
 	{{form.as_ul}}
 </ul>
