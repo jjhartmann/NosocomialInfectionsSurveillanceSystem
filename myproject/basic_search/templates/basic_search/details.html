@@ -3,6 +3,18 @@
 
     {% block maincontent%}
 
+        <!--Display chart and matrix after search result (temparary)-->
+        {% block graph %}
+        <button onclick="myFunction()">Display Graph</button>
+        <button onclick="DisplayFunction()">Display Matrix</button>
+        <script type = "text/javascript">
+        function myFunction() {
+            window.open("{% url 'graph:index' username %}", "_blank", "resizable=yes, status =no, left=00,top=300,width=1500, height=400")
+        }
+        function DisplayFunction() {
+            window.open("{% url 'coc:index' username %}", "_blank", "resizable=yes, status= no, left=-100,top=00,width=700, height=800")
+        }</script>
+        {% endblock %}
 
     <style type="text/css">
         .mygrid-wrapper-div {
@@ -102,5 +114,4 @@
                 </tbody>
             </table>
        </div>
-
     {% endblock %}

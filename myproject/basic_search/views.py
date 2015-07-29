@@ -8,7 +8,9 @@ from django.http import Http404
 from django.views import generic
 from django.template import RequestContext, loader
 from django.contrib.auth.models import User
-
+from django.core import serializers
+from django.conf import settings
+from myproject.settings import PROJECT_ROOT
 from .models import *
 
 
@@ -149,6 +151,10 @@ def process_search(request, username):
 
         query_entries_na = query_entries_na.filter(**keywordlist_other)
         query_entries_aa = query_entries_aa.filter(**keywordlist_other)
+
+        #Generate query results in json format for matrix input
+        with open (PROJECT_ROOT + '/coc/static/coc/matrix.json', "w") as out:
+            serializers.serialize("json", query_entries_na,stream=out,indent=2)
 
         return render(request, "basic_search/details.html",
                       {'queryEntriesNA': query_entries_na, 'queryEntriesAA': query_entries_aa, 'username': username})
