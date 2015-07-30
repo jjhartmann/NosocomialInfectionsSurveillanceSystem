@@ -43,14 +43,18 @@ def parse_data(request,username):
     x=[]
     y=[]
     group_count = 0
-    for i in range (0,len(decode_data)):
+    if len(decode_data) <= 20:
+        total_node = len(decode_data)
+    else:
+        total_node = 20
+    for i in range (0,total_node):
         node = {"name":decode_data[i]['pk'],"group":group_count}
         incr = i+1
         x.append(node)
         str1 = decode_data[i]['pk']
         str1_group = decode_data[i]['fields']['country']
         pprint ("str1 = " + str1 , sys.stderr)
-        while (incr < len(decode_data)):
+        while (incr < total_node):
             str2 = decode_data[incr]['pk']
             str2_group = decode_data[incr]['fields']['country']
             if str1_group != str2_group:
@@ -58,7 +62,7 @@ def parse_data(request,username):
                 node = {"name":decode_data[i]['pk'],"group":group_count}
             m = 0
             count = 0
-            for m in range(0, len(str1)):
+            for m in range(0, 6):
                 if str1[m] == str2[m]:
                     count = count + 1
                 if count > 0:
