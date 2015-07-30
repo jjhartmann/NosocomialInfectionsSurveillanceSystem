@@ -6,9 +6,9 @@ from django.shortcuts import render, render_to_response
 from django.template import RequestContext
 
 #added by palmer
-#from django.contrib.auth.forms import UserCreationForm
 from django.core.context_processors import csrf
 from forms import MyRegistrationForm
+
 
 # Create your views here.
 

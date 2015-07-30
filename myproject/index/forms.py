@@ -19,3 +19,4 @@ class MyRegistrationForm(UserCreationForm):
                 user.save()
 
             return user
+
