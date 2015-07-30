@@ -23,11 +23,8 @@ urlpatterns = [
     url(r'^(?P<username>\w+)/', include('secure.urls', namespace='secure')),
     url(r'^(?P<username>\w+)/blast/', include('nocoblast.urls', namespace='nocoblast')),
     url(r'^(?P<username>\w+)/patientinfo/', include('patientinfo.urls', namespace='patientinfo')),
-<<<<<<< HEAD
     url(r'^(?P<username>\w+)/graph/', include('graph.urls', namespace='graph')),
     url(r'^(?P<username>\w+)/search/details/matrix/', include('coc.urls', namespace='coc')),
-=======
     url(r'^(?P<username>\w+)/userprofile/', include('userprofile.urls', namespace='userprofile')),
->>>>>>> ee61a3282f788a0559bab0441fab191abccfeaf1
 ]
 
