@@ -42,12 +42,10 @@ INSTALLED_APPS = (
     'secure',
     'nocoblast',
     'patientinfo',
-<<<<<<< HEAD
     'graph',
     'coc',
-=======
     'userprofile',
->>>>>>> ee61a3282f788a0559bab0441fab191abccfeaf1
+
 )
 
 MIDDLEWARE_CLASSES = (
@@ -124,11 +122,10 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "bower_components"),
 )
 
-<<<<<<< HEAD
-# Define project root 
+
+# Define project root
 settings_dir = os.path.dirname(__file__)
 PROJECT_ROOT = os.path.abspath(os.path.dirname(settings_dir))
-=======
+
 #added by palmer for userprofile
 AUTH_PROFILE_MODEL= 'userprofile.UserProfile'
->>>>>>> ee61a3282f788a0559bab0441fab191abccfeaf1
