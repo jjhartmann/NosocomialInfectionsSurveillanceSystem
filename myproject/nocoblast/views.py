@@ -1,5 +1,5 @@
 import ast
-import os
+import os, json
 #fo = open("/home/hamza/Pictures/myproject/nocoblast/viewspy.txt", "a")
 #fo.write("Log file\n")
 
@@ -59,9 +59,70 @@ def blast(request, username, blast_form, template_init, template_result, blast_c
 
                 else:
                     blast_records = NCBIXML.parse(blast_records__file_xml)
-
+                    #print json.dumps((blast_records__file_xml.name),sort_keys=True, indent=4)
+                    #print blast_records__file_xml.name
                     # converts blast results into objects and pack into list
                     blast_records_in_object_and_list = utils.blast_records_to_object(list(blast_records))
+                    
+#Function for blast record vars for JSON
+                    class myjsonrecord:
+ 
+                        def __init__(self,contig,query,length,evalue,score,indent):
+ 
+                             self.contig=contig
+                             self.query=query
+                             self.length=length
+                             self.evalue=evalue
+                             self.score=score
+                             self.indent=indent
+
+#Function for alignment vars for JSON
+                    class myjsonalign:
+ 
+                        def __init__(self,length,evalue,score,indent,positives,bits,query_start,query_end,subject_start,subject_end):
+ 
+                             self.length=length
+                             self.evalue=evalue
+                             self.score=score
+                             self.indentities=indent
+                             self.positives=positives
+                             self.bits=bits
+                             self.query_start=query_start
+                             self.query_end=query_end
+                             self.subject_start=subject_start
+                             self.subject_end=subject_end
+
+
+#JSON Parser for blast output
+                    
+                    THIS_DIR = os.path.dirname(os.path.abspath(__file__))
+                    json_temp = os.path.join(THIS_DIR, 'my-output.json')
+                    with open(json_temp, 'w') as f:
+                       f.write("{ \"Description\": [")
+                       for br in blast_records_in_object_and_list:
+                             for alignment in br.alignments:
+                                         myrecord=myjsonrecord(str(alignment.get_id()),str(br.query),str(alignment.length),str(alignment.best_evalue()),str(alignment.get_id()), str(alignment.best_identities()))
+                                         print vars(myrecord)
+                                         f.write(json.dumps(vars(myrecord))) 
+                                         f.write(",")
+                       f.seek(-1, os.SEEK_END)
+                       f.truncate()
+                       f.write("], \n\"Alignments\": [{")
+                       
+                       for br in blast_records_in_object_and_list:
+                             for alignment in br.alignments:
+                                 f.write("\"%s\":[" % (alignment.hit_def))
+                                 for hsp in alignment.hsp_list:
+                                         myalign=myjsonalign(str(hsp.align_length),str(hsp.expect),str(hsp.score),str(hsp.identities), str(hsp.positives), str(hsp.bits), str(hsp.query_start), str(hsp.query_end),str(hsp.sbjct_start), str(hsp.sbjct_end))                
+                                         print vars(myalign)
+                                         f.write(json.dumps(vars(myalign))) 
+                                         f.write(",")
+                                 f.seek(-1, os.SEEK_END)
+                                 f.truncate()
+                                 f.write("],")
+                             f.seek(-1, os.SEEK_END)
+                             f.truncate()
+                       f.write("}]}")
 
                     try:
                         '''
