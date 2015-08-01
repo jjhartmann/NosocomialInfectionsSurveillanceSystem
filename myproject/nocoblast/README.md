@@ -8,3 +8,6 @@ django
 
 Biopython
 (easy_install -f http://biopython.org/DIST/ biopython)
+
+(xmlutils)
+sudo pip install xmlutils

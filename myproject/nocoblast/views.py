@@ -53,7 +53,7 @@ def blast(request, username, blast_form, template_init, template_result, blast_c
                 """
                 #fo.write(str(blast_commandline))
                 blast_records__file_xml, blast_error = utils.run_blast_commands(blast_commandline, **dict(standard_opt_dic, **sensitivity_opt_dic))
-
+                
                 if len(blast_error) > 0:
                     return render_to_response(template_result, {"blast_record": ''}, context_instance=RequestContext(request))
 
@@ -102,7 +102,7 @@ def blast(request, username, blast_form, template_init, template_result, blast_c
                        for br in blast_records_in_object_and_list:
                              for alignment in br.alignments:
                                          myrecord=myjsonrecord(str(alignment.get_id()),str(br.query),str(alignment.length),str(alignment.best_evalue()),str(alignment.get_id()), str(alignment.best_identities()))
-                                         print vars(myrecord)
+                                         #print vars(myrecord)
                                          f.write(json.dumps(vars(myrecord))) 
                                          f.write(",")
                        f.seek(-1, os.SEEK_END)
@@ -114,7 +114,7 @@ def blast(request, username, blast_form, template_init, template_result, blast_c
                                  f.write("\"%s\":[" % (alignment.hit_def))
                                  for hsp in alignment.hsp_list:
                                          myalign=myjsonalign(str(hsp.align_length),str(hsp.expect),str(hsp.score),str(hsp.identities), str(hsp.positives), str(hsp.bits), str(hsp.query_start), str(hsp.query_end),str(hsp.sbjct_start), str(hsp.sbjct_end))                
-                                         print vars(myalign)
+                                         #print vars(myalign)
                                          f.write(json.dumps(vars(myalign))) 
                                          f.write(",")
                                  f.seek(-1, os.SEEK_END)

@@ -106,13 +106,20 @@ def run_blast_commands(ncbicommandline_method, **keywords):
     try:
         # formating nocoblast command
         nocoblastx_cline = ncbicommandline_method(**keywords)
-        #fo.write(str(nocoblastx_cline))
+        print(str(nocoblastx_cline))
         stdout, stderr = nocoblastx_cline()
 
     except ApplicationError as e:
         error_string = "Runtime error: " + stderr + "\n" + e.cmd
 
     # remove query temp file
+    blastxml = os.path.join(THIS_DIR, 'recent_blast.xml')
+    blastjson = os.path.join(THIS_DIR, 'blast.json')
+    cmd = "cp %s %s"%(blast_out_tmp.name, blastxml)
+    print cmd
+    os.system(cmd)
+    cmd = "xml2json --input %s --output %s" %(blastxml, blastjson)
+    os.system(cmd)
     os.remove(query_file_object_tmp.name)
 
     return blast_out_tmp, error_string
