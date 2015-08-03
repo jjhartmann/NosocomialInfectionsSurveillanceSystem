@@ -29,6 +29,9 @@ d3.json('/static/coc/parse.json', function(parse) {
   nodes.forEach(function(node, i) {
     node.index = i;
     node.count = 0;
+    node.date = 0;
+    node.host = 0;
+    node.sequence = 0;
     matrix[i] = d3.range(n).map(function(j) { return {x: j, y: i, z: 0}; });
   });
 
@@ -46,7 +49,10 @@ d3.json('/static/coc/parse.json', function(parse) {
   var orders = {
     name: d3.range(n).sort(function(a, b) { return d3.ascending(nodes[a].name, nodes[b].name); }),
     count: d3.range(n).sort(function(a, b) { return nodes[b].count - nodes[a].count; }),
-    group: d3.range(n).sort(function(a, b) { return nodes[b].group - nodes[a].group; })
+    group: d3.range(n).sort(function(a, b) { return nodes[b].group - nodes[a].group; }),
+    host: d3.range(n).sort(function(a, b) { return nodes[b].host - nodes[a].host; }),
+    date: d3.range(n).sort(function(a, b) { return nodes[b].date - nodes[a].date; }),
+    sequences: d3.range(n).sort(function(a, b) { return nodes[b].sequences - nodes[a].sequences; })
   };
 
   // The default sort order.
