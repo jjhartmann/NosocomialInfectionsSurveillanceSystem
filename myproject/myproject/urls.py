@@ -26,5 +26,6 @@ urlpatterns = [
     url(r'^(?P<username>\w+)/graph/', include('graph.urls', namespace='graph')),
     url(r'^(?P<username>\w+)/search/details/matrix/', include('coc.urls', namespace='coc')),
     url(r'^(?P<username>\w+)/userprofile/', include('userprofile.urls', namespace='userprofile')),
+    url(r'^(?P<username>\w+)/phylib/', include('userprofile.urls', namespace='phylib')),
 ]
 
