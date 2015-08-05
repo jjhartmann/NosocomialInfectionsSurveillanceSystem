@@ -40,7 +40,7 @@ img.alignnone {
 	z-index:0;
 	position:relative;
 	background-color:#f4ede5;
-	border-radius:4px 0 4px 4px;
+	border-radius:4px 0 1px 4px;
 	position:absolute;
 	right:0;
 	width:271px;
@@ -53,7 +53,7 @@ img.alignnone {
 	color:#877561;
 }
 .header .login-wrap #loginform:before {
-	content:'Login or register';
+	content:'Manage Account';
 	font-weight:normal;
 	font-size:20px;
 	line-height:35px;
@@ -113,9 +113,9 @@ img.alignnone {
 	float:right;
 	position:relative;
 	top:0px;
-	margin-top:-2px;
+	margin-top:0px;
 }
-.stuck_wrapper { padding:31px 0 12px; }
+.stuck_wrapper { padding:10px 0 12px; }
 .sf-menu {
 	position:relative;
 	float:none;
@@ -135,7 +135,7 @@ img.alignnone {
 	color:#c8bdb0;
 }
 .sf-menu a.sf-with-ul .sf-sub-indicator:before {
-	content:'';
+	content:"";
 	display:block;
 	font:16px/20px 'FontAwesome';
 }
