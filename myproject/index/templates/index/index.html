@@ -1,12 +1,195 @@
 {% extends "public/base.html" %}
 
-  {% block maincontent%}
-     <h1>Hello this is the main page template....</h1>
-
-    <br>
-
+{% load staticfiles %}
+  {% block front_page %}
+            <ul class="baseList">
+                <li data-preview="{% static 'pic/slide_1.jpg'%}" data-thumb-url="{% static 'pic/slide_1.jpg'%}" data-ulr-link="">
+                    <div class="slider_caption">
+                        <h2>&nbsp;</h2>
+                        <p><a href="blog/">Discover our website!</a></p>
+                    </div>
+                </li>
+                <li data-preview="{% static 'pic/slide_2.jpg'%}" data-thumb-url="{% static 'pic/slide_2.jpg'%}" data-ulr-link="">
+                    <div class="slider_caption">
+                        <h2>Check Blast+ </h2>
+                        <a href="blog/">Blast+</a>
+                    </div>
+                </li>
+                <li data-preview="{% static 'pic/slide3.jpg'%}" data-thumb-url="{% static 'pic/slide3.jpg'%}" data-ulr-link="">
+                    <div class="slider_caption">
+                        <h2> Build a Phylogenetic Tree! </h2>
+                        <a href="blog/">Go to Phylic tree!</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="motopress-wrapper content-holder clearfix">
+            <div class="container">
+                <div class="row">
+                    <div class="span12" data-motopress-wrapper-file="page-home.php" data-motopress-wrapper-type="content">
+                        <div class="row">
+                            <div class="span12" data-motopress-type="static" data-motopress-static-file="static/static-slider.php">
+                                <div class="slider_off"> </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="span12" data-motopress-type="loop" data-motopress-loop-file="loop/loop-page.php">
+                                <div id="post-203" class="page post-203 type-page status-publish hentry">
+                                    <div class="row ">
+                                        <div class="span9 ">
+                                            <div class="row ">
+                                                <div class="span3 ">
+                                                    <div class="service-box ">
+                                                        <div class="service-box_body">
+                                                            <h3 class="title">Database</h3>
+                                                            <h4 class="sub-title">Check</h4>
+                                                            <div class="service-box_txt">
+                                                                We have import full nna and nfa information in database for fast query and search !
+                                                            </div>
+                                                            <div class="btn-align"><a href="about/" title="Read more" class="btn btn-inverse btn-normal btn-primary " target="_self">Read more</a></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="span3 ">
+                                                    <div class="service-box ">
+                                                        <div class="service-box_body">
+                                                            <h3 class="title"> Project </h3>
+                                                            <h4 class="sub-title">at a glance!</h4>
+                                                            <div class="service-box_txt">
+                                                                Check our goal, specification and xx for the project!Check our goal, specification and xx for the project!
+                                                            </div>
+                                                            <div class="btn-align"><a href="blog/" title="Read more" class="btn btn-inverse btn-normal btn-primary " target="_self">Read more</a></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="span3 ">
+                                                    <div class="service-box ">
+                                                        <div class="service-box_body">
+                                                            <h3 class="title">Members</h3>
+                                                            <h4 class="sub-title">introduction</h4>
+                                                            <div class="service-box_txt">Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt.</div>
+                                                            <div class="btn-align"><a href="portfolio/" title="Read more" class="btn btn-inverse btn-normal btn-primary " target="_self">Read more</a></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <h3>NISS Database</h3>
+                                            <div class="row-fluid ">
+                                                <div class="span6">
+                                                    <div class="iconed_block">
+                                                        <figure class="alignleft aligntextleft "><i class="icn-1 " style="color:#00000; font-size:14px; line-height:1.2em;"></i></figure>
+                                                        <div class="extra-wrap">
+                                                            <h4><a href="#">Database graph 1</a></h4>
+                                                            <p>Descripton about graph</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="span6">
+                                                    <div class="iconed_block">
+                                                        <figure class="alignleft aligntextleft "><i class="icn-2 " style="color:#00000; font-size:14px; line-height:1.2em;"></i></figure>
+                                                        <div class="extra-wrap">
+                                                            <h4><a href="#">Database graph 2</a></h4>
+                                                            <p>Description about graph 2</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row-fluid ">
+                                                <div class="span6">
+                                                    <div class="iconed_block">
+                                                        <figure class="alignleft aligntextleft "><i class="icn-3 " style="color:#00000; font-size:14px; line-height:1.2em;"></i></figure>
+                                                        <div class="extra-wrap">
+                                                            <h4><a href="#">Databse graph 3</a></h4>
+                                                            <p>Descripton about grap 3</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="span6">
+                                                    <div class="iconed_block">
+                                                        <figure class="alignleft aligntextleft "><i class="icn-4 " style="color:#00000; font-size:14px; line-height:1.2em;"></i></figure>
+                                                        <div class="extra-wrap">
+                                                            <h4><a href="#">Database graph 4</a></h4>
+                                                            <p>Description about graph 4</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="span3 ">
+                                            <div class="booking-form-wrap">
+                                                <a class="twitter-timeline" href="https://twitter.com/nocosis" data-widget-id="625836869754859520" data-chrome="nofooter transparent noborders noscrollbar" width="300" height="300" >Tweets by @nocosis</a>
+                                                <script>!function(d,s,id){
+                                                    var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+                                                    if(!d.getElementById(id)){
+                                                        js=d.createElement(s);
+                                                        js.id=id;
+                                                        js.src=p+"://platform.twitter.com/widgets.js";
+                                                        fjs.parentNode.insertBefore(js,fjs);
+                                                    }
+                                                }(document,"script","twitter-wjs");</script>
+                                            </div>
+                                            <div class="list styled arrow-list">
+                                                <h4><strong>External</strong> Links</h4>
+                                                <ul>
+                                                    <li><a href="https://www.dnalc.org/">DNA Learning Center </a></li>
+                                                    <li><a href="https://www.genome.gov/ResearchFunding/">NIH </a></li>
+                                                    <li><a href="http://www.flu.gov/symptoms-treatment/symptoms/"> FLU.GOV </a></li>
+                                                    <li><a href="#">Name </a></li>
+                                                    <li><a href="#">Name </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class = "Discovery project">
+                                    <section class="parallax-box image-parallax-box parallax-1">
+                                        <div class="parallax-content">
+                                            <p style="text-align: center;"><a href="blog/"  class="btn btn-default btn-large btn-inline ">Discovery our project!</a></p>
+                                            <div class="clear"></div>
+                                        </div>
+                                        <div class="parallax-bg" data-parallax-type="image" data-img-url="{%static 'pic/project.jpg' %}" data-speed="slow" data-invert="false"></div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "News feed">
+                            <h3>Latest news</h3>
+                            <ul class="mini-posts-list ">
+                                <li class="mini-post-holder clearfix list-item-0">
+                                    <figure class="featured-thumbnail thumbnail custom_thumb">
+                                        <img src="{% static "pic/rsz_new2.jpg" %}" alt="Aliquam erat" />
+                                    </figure>
+                                    <div class="mini-post-content">
+                                        <div class="mini-post-meta">
+                                            <h4> CDC Updates </h4>
+                                        </div>
+                                        <h4><!-- start feedwind code --><!-- start feedwind code --><script type="text/javascript">document.write('\x3Cscript type="text/javascript" src="' + ('https:' == document.location.protocol ? 'https://' : 'http://') + 'feed.mikle.com/js/rssmikle.js">\x3C/script>');</script><script type="text/javascript">(function() {var params = {rssmikle_url: "http://tools.cdc.gov/feed.aspx?feedid=21",rssmikle_frame_width: "250",rssmikle_frame_height: "200",frame_height_by_article: "0",rssmikle_target: "_blank",rssmikle_font: "Verdana, Arial, sans-serif",rssmikle_font_size: "13",rssmikle_border: "off",responsive: "off",rssmikle_css_url: "",text_align: "left",text_align2: "left",corner: "off",scrollbar: "off",autoscroll: "on",scrolldirection: "up",scrollstep: "3",mcspeed: "20",sort: "Off",rssmikle_title: "off",rssmikle_title_sentence: "",rssmikle_title_link: "",rssmikle_title_bgcolor: "#9ACD32",rssmikle_title_color: "#FFFFFF",rssmikle_title_bgimage: "",rssmikle_item_bgcolor: "#FFFFFF",rssmikle_item_bgimage: "",rssmikle_item_title_length: "150",rssmikle_item_title_color: "#FEB233",rssmikle_item_border_bottom: "on",rssmikle_item_description: "on",item_link: "off",rssmikle_item_description_length: "300",rssmikle_item_description_color: "#BAA1A5",rssmikle_item_date: "gl1",rssmikle_timezone: "Etc/GMT",datetime_format: "%b %e, %Y %l:%M:%S %p",item_description_style: "text+tn",item_thumbnail: "full",item_thumbnail_selection: "auto",article_num: "15",rssmikle_item_podcast: "off",keyword_inc: "",keyword_exc: ""};feedwind_show_widget_iframe(params);})();</script>    <div style="font-size:10px; text-align:center; width:250px;">
+                                            <a href="http://feed.mikle.com/" target="_blank" style="color:#CCCCCC;">RSS Feed Widget</a><!--Please display the above link in your web page according to Terms of Service.--></div><!-- end feedwind code -->
+                                        </h4>
+                                    </div>
+                                </li>
+                                <li class="mini-post-holder clearfix list-item-1">
+                                    <figure class="featured-thumbnail thumbnail custom_thumb">
+                                        <img src="{% static "pic/rsz_new3.jpg" %}" alt="Aliquam erat" />
+                                    </figure>
+                                    <div class="mini-post-content">
+                                        <div class="mini-post-meta">
+                                            <h4>Medical News</h4>
+                                        </div>
+                                        <h4><!-- start feedwind code --><script type="text/javascript">document.write('\x3Cscript type="text/javascript" src="' + ('https:' == document.location.protocol ? 'https://' : 'http://') + 'feed.mikle.com/js/rssmikle.js">\x3C/script>');</script><script type="text/javascript">(function() {var params = {rssmikle_url: "http://www.medicalnewstoday.com/newsfeeds-rss",rssmikle_frame_width: "250",rssmikle_frame_height: "200",frame_height_by_article: "0",rssmikle_target: "_blank",rssmikle_font: "Verdana, Arial, sans-serif",rssmikle_font_size: "13",rssmikle_border: "off",responsive: "off",rssmikle_css_url: "",text_align: "left",text_align2: "left",corner: "off",scrollbar: "off",autoscroll: "on",scrolldirection: "up",scrollstep: "3",mcspeed: "20",sort: "Off",rssmikle_title: "off",rssmikle_title_sentence: "",rssmikle_title_link: "",rssmikle_title_bgcolor: "#9ACD32",rssmikle_title_color: "#FFFFFF",rssmikle_title_bgimage: "",rssmikle_item_bgcolor: "#FFFFFF",rssmikle_item_bgimage: "",rssmikle_item_title_length: "150",rssmikle_item_title_color: "#FEB233",rssmikle_item_border_bottom: "on",rssmikle_item_description: "on",item_link: "off",rssmikle_item_description_length: "300",rssmikle_item_description_color: "#BAA1A5",rssmikle_item_date: "gl1",rssmikle_timezone: "Etc/GMT",datetime_format: "%b %e, %Y %l:%M:%S %p",item_description_style: "text+tn",item_thumbnail: "full",item_thumbnail_selection: "auto",article_num: "15",rssmikle_item_podcast: "off",keyword_inc: "",keyword_exc: ""};feedwind_show_widget_iframe(params);})();</script>     <div style="font-size:10px; text-align:center; width:250px;">
+                                            <a href="http://feed.mikle.com/" target="_blank" style="color:#CCCCCC;">RSS Feed Widget</a><!--Please display the above link in your web page according to Terms of Service.--></div><!-- end feedwind code -->
+                                        </h4>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
     <!-- TODO: Need to create CSS to formate links to buttons. Needs to create base class and template. -->
 
-    <a href="{% url 'index:login' %}">Log In</a>
-  {% endblock %}
+
 
