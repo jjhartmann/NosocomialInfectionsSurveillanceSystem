@@ -1,0 +1,168 @@
+{% load staticfiles %}
+
+    <link rel='stylesheet' id='theme54037-css' href="{% static 'css/main2.css' %}"media='all' />
+    <script type='text/javascript' src='http://www.suzukimotorcyclesbh.com/wp-content/plugins/cherry-plugin/lib/js/elasti-carousel/jquery.elastislide.js@ver=1.1'></script>     
+    <script type='text/javascript' src='http://www.cobaltmorning.com/wp-content/themes/cobaltmorning2/includes/plugins/cherry-parallax/js/cherry.parallax.js'></script>
+    <!-- display iamge -->
+    <script type='text/javascript' src="{%static 'js/superfish.js'%}"></script>
+    <script type='text/javascript' src="{% static 'js/devicemin.js' %}"></script>
+    <script type='text/javascript' src="{% static 'js/parrallaxSlider.js' %}"></script>
+    <!-- for login -->
+    <script type='text/javascript' src="{% static 'js/jquery_magnific_popup_min.js' %}"></script>
+    <script type='text/javascript' src="{% static 'js/jqueryClever.js' %}"></script>
+
+
+<script>
+var
+        _window = jQuery(window);
+    ;
+
+jQuery(document).ready(function(){
+
+    var
+        _window = jQuery(window);
+        not_resizes = false;
+    ;
+
+    _window.on("resize", function(){
+        resizeFunction();
+    })
+    resizeFunction();
+
+    function resizeFunction(){
+        if(!not_resizes){
+            var
+                newWidth = _window.width()
+            ,   marginHalf = _window.width()/-2;
+            ;
+            if (jQuery('body').hasClass('cherry-fixed-layout')) {
+                var
+                    newWidth = jQuery('.main-holder').width()
+                ,   marginHalf =jQuery('.main-holder').width()/-2;
+                ;
+            }
+
+            jQuery('.wide').css({width: newWidth, "margin-left": marginHalf, left: '50%'});
+        }
+    }
+
+    $('.login-toggle').click(function(){
+      $('#loginform').slideToggle("mediom");
+      $( this ).toggleClass( "active" );
+    })
+});
+</script>
+
+<header class="motopress-wrapper header">
+    <div class="container">
+        <div class="row">
+            <div class="span12" data-motopress-wrapper-file="wrapper/wrapper-header.php" data-motopress-wrapper-type="header" data-motopress-id="55bed0b188a23">
+                <div class="stuck_wrapper">
+                    <div class="container">
+                        <div class="row">
+                            <div class="span5" data-motopress-type="static" data-motopress-static-file="static/static-logo.php">
+                                <div class="logo pull-left">
+                                    <a href="#" class=""><img src="{% static 'pic/rsz_logo.png'%}" alt="NISS" title=""></a>
+                                </div>
+                            </div>
+                            <!--put code here -->
+                                <div class="login-wrap">
+                                    <div class="login-toggle icon-user"></div>
+                                    <form  id="loginform" >
+
+                                            <a class="btn" href="{% url 'index:logout' %}">Logout</a>
+                                    </form>
+                                </div>
+                                <nav class="nav nav__primary clearfix">
+                                    <ul id="topnav" class="sf-menu">
+                                        <li id="menu-item-1807" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-203 current_page_item">
+                                            <a href="{%url 'secure:index' username %}">Home</a>
+                                        </li>
+                                        <li id="menu-item-1810" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                                            <a href="{% url 'basic_search:index' username %}">Search</a>
+                                        </li>
+                                        <li id="menu-item-1808" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="#">Patient Data<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+                                            <ul class="sub-menu">
+                                                <li id="menu-item-1815" class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                    <a href="{% url 'patientinfo:index' username %}">Patient info</a>
+                                                </li>
+                                                <li id="menu-item-1814" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                                                <a href="#">Another action</a></li>
+                                                </li>
+                                                <li id="menu-item-1813" class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                   <li><a href="#">Something else here</a></li>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li id="menu-item-1804" class="menu-item menu-item-type-post_type menu-item-object-page">
+                                            <a href="#">Blast+<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
+                                            <ul class="sub-menu">
+                                                <li id="menu-item-1815" class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                    <a href="{% url 'nocoblast:blastn' username %}">Blast N</a>
+                                                </li>
+                                                <li id="menu-item-1814" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                                                <a href="{% url 'nocoblast:tblastn' username %}">T Blast N</a></li>
+                                            </ul>
+                                        </li>
+                                        <li id="menu-item-1804" class="menu-item menu-item-type-post_type menu-item-object-page">
+                                            <a href="#">Phylib</a>
+                              
+                                         <li>
+                                          <li id="menu-item-1804" class="menu-item menu-item-type-post_type menu-item-object-page">
+                                            <a href="{% url 'index:logout'%}">Logout</a>
+                              
+                                         <li>
+                                <a class="btn btn-default btn-outline btn-circle"  data-toggle="collapse" href="#nav-collapse4" aria-expanded="false" aria-controls="nav-collapse4">Profile<i class=""></i> </a>
+                                </li>
+                                <ul class="collapse nav navbar-nav nav-collapse navbar-right" role="search" id="nav-collapse4">
+                    <li><a href="#">Support</a></li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><img class="img-circle" src="https://en.gravatar.com/userimage/7783599/8282ed6f31d3f35f8e2d7fbd906e57cd.jpg" alt="{{ username }}" width="20" /> {{ username }} <span class="caret"></span></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">My profile</a></li>
+                        <li><a href="#">Favorited</a></li>
+                        <li><a href="{% url 'userprofile:setprofile' username %}">Settings</a></li>
+                        <li class="divider"></li>
+                        <li><a href="{% url 'index:logout' %}">Logout</a></li>
+                      </ul>
+                    </li>
+                </ul>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="hidden-phone span12" data-motopress-type="static" data-motopress-static-file="static/static-search.php"></div>
+                </div>
+            </div>
+        </div>
+    </div>          
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            if (!device.mobile() && !device.tablet()) {
+                liteModeSwitcher = false;
+            } else {
+                liteModeSwitcher = true;
+            }
+            if ($.browser.msie && parseInt($.browser.version) < 9) {
+                liteModeSwitcher = true;
+            }
+
+            jQuery('#parallax-slider').parallaxSlider({
+                parallaxEffect: "parallax_effect_normal",
+                parallaxInvert: false,
+                animateLayout: "simple-fade-eff",
+                duration: 1500,
+                autoSwitcher: true,
+                autoSwitcherDelay: 10000,
+                scrolling_description: true,
+                slider_navs: true,
+                slider_pagination: "none_pagination",
+                liteMode: liteModeSwitcher
+            });
+
+        });
+    </script>
+</header>

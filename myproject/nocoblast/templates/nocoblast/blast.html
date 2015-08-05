@@ -9,6 +9,7 @@
 
 {% load extras %}
 
+<div class="container">
 <table style="width:80%; margin:0 auto;" cellpadding="5px">
     <tr>
         <td align="center"><h2> Nocosomial Surveillance BLAST: Basic Local Alignment Search Tool </h2></td>
@@ -16,7 +17,7 @@
     <tr>
         <td>
             <div>
-                <button type="button" id="loadSampleData" data-loading-text="Loading..." autocomplete="off">
+                <button class="btn btn-success" type="button" id="loadSampleData" data-loading-text="Loading..." autocomplete="off">
                     Use sample sequence
                 </button>
 
@@ -54,7 +55,7 @@
                     <p><strong>Word size:</strong> {{form.word_size_in_form}}</p>
 
                     <p><strong>Sensitivity:</strong> {{form.search_sensitivity_in_form}}</p>
-                    <input type="submit" value="Search">
+                    <input class="btn btn-success" type="submit" value="Search">
                 </form>
             </div>
         </td>
@@ -62,7 +63,7 @@
 
 
 </table>
-
+</div>
 {% endblock %}
 
 
