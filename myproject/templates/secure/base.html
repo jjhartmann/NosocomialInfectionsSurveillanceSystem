@@ -4,43 +4,93 @@
 <head>
     <meta charset="UTF-8">
     <title>NOSOCOMIAL INFECTIONS SURVEILLANCE SYSTEM</title>
+    <!-- for scroll -->
+    <script type='text/javascript' src='http://code.jquery.com/jquery-1.7.2.min.js'></script>  
+    <script type='text/javascript' src='http://www.suzukimotorcyclesbh.com/wp-content/plugins/cherry-plugin/lib/js/elasti-carousel/jquery.elastislide.js@ver=1.1'></script>     
+    <script type='text/javascript' src='http://www.cobaltmorning.com/wp-content/themes/cobaltmorning2/includes/plugins/cherry-parallax/js/cherry.parallax.js'></script>
+    <!-- display iamge -->
+    <script type='text/javascript' src="{%static 'js/superfish.js'%}"></script>
+    <script type='text/javascript' src="{% static 'js/devicemin.js' %}"></script>
+    <script type='text/javascript' src="{% static 'js/parrallaxSlider.js' %}"></script>
+    <!-- for login -->
+    <script type='text/javascript' src="{% static 'js/jquery_magnific_popup_min.js' %}"></script>
+    <script type='text/javascript' src="{% static 'js/jqueryClever.js' %}"></script>
+    <script type='text/javascript' src="{% static 'js/moushwheel.js' %}"></script>
 
-    <link href="{% static 'bootstrap-css/css/bootstrap.min.css' %}" rel="stylesheet">
+    <script type="text/javascript">
+        // Init navigation menu
+        jQuery(function() {
+            // main navigation init
+            jQuery('ul.sf-menu').superfish({
+                delay: 1000, // the delay in milliseconds that the mouse can remain outside a sub-menu without it closing
+                animation: {
+                    opacity: "show",
+                    height: "show"
+                }, // used to animate the sub-menu open
+                speed: "normal", // animation speed
+                autoArrows: true, // generation of arrow mark-up (for submenu)
+                disableHI: true // to disable hoverIntent detection
+            });
+
+            //Zoom fix
+            //IPad/IPhone
+            var viewportmeta = document.querySelector && document.querySelector('meta[name="viewport"]'),
+                ua = navigator.userAgent,
+                gestureStart = function() {
+                    viewportmeta.content = "width=device-width, minimum-scale=0.25, maximum-scale=1.6, initial-scale=1.0";
+                },
+                scaleFix = function() {
+                    if (viewportmeta && /iPhone|iPad/.test(ua) && !/Opera Mini/.test(ua)) {
+                        viewportmeta.content = "width=device-width, minimum-scale=1.0, maximum-scale=1.0";
+                        document.addEventListener("gesturestart", gestureStart, false);
+                    }
+                };
+            scaleFix();
+        })
+    </script>
+
     <style type="text/css">
       body {
-        padding-top: 60px;
+        padding-top: 20px;
         padding-bottom: 40px;
+
       }
 
       {% block rawcss %}
 
       {% endblock %}
+
+
     </style>
 
     <!-- Link your style sheets here in your templates -->
     {% block css %}
 
     {% endblock %}
+    <link href="{% static 'bootstrap-css/css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/stickyfooter.css' %}" rel="stylesheet"/>
     <link href="{% static 'css/navbarstyle.css' %}" rel="stylesheet"/>
-
-    <!-- Bootstrap JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="{% static 'bootstrap-css/js/bootstrap.min.js' %}"></script>
-
 </head>
 <body>
-{% include "secure/menu.html" %}
+{% include "secure/navigation.html" %}
 
+<div id="parallax-slider" class="parallax-slider">
 <div id="wrap">
+
     <div class="container-fluid">
         {% block maincontent %}
 
         {% endblock %}
     </div> <!--maincontainer -->
 </div>
+</div>
 
-{% include "secure/footer.html" %}
+<footer class="footer">
+      <div class="container">
+        {% include "secure/footer.html" %}
+      </div>
+    </footer>
+
 
 </body>
 </html>
