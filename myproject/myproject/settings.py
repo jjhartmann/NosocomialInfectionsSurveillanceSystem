@@ -45,6 +45,7 @@ INSTALLED_APPS = (
     'graph',
     'coc',
     'userprofile',
+    'treebuilder',
 
 )
 

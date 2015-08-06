@@ -2,12 +2,9 @@
 {% load staticfiles %}
 <!-- Ignore the CSS, since it has no match as of now -->
 {% block css %}
-    <link href="{%  static "phyapp/style.css" %}" rel="stylesheet"/>
 {% endblock %}
 
 {% block maincontent  %}
-
-{% load extras %}
 
 <table style="width:80%; margin:0 auto;" cellpadding="5px">
     <tr>
@@ -35,7 +32,7 @@
                     <form action="" method="post">
                     {% csrf_token %}
                     <!-- Just need to run the script on click event of this button -->
-		    <input id="runp" type="submit" value="Run Phyapp">
+		    <a href="{% url 'phylo:generate' username %}" class="btn btn-primary">Generate</a>
                 </form>
             </div>
         </td>
