@@ -89,3 +89,60 @@ def doctor_register(request):
 def doctor_register_success(request):
     return render_to_response('index/register_success.html')
 
+def data_graph_json(request):
+    #pip install Counter
+  import json, os
+  from collections import Counter
+  from basic_search.models import *
+  a = Influenza_NA.objects.all()
+  countries=[]
+  #for i in a:
+   #  b = i.__dict__
+    # countries.append(b['country'])
+     #countries = list(set(countries))
+  #print countries
+
+  for i in a:
+     b = i.__dict__
+     print b
+     countries.append(b['country'])
+     #print b['country']
+
+  myDict = Counter(countries);
+  myDict    
+  #for key in myDict:
+    #print key
+    #print myDict[key]
+  THIS_DIR = os.path.dirname(os.path.abspath(__file__))
+  data_jsonfile = os.path.join(THIS_DIR, '../static/data/data.json')
+  with open(data_jsonfile, 'w') as fp:  
+   fp.write("[\n")
+   for key in myDict:
+    print key
+    sw=0
+    av=0
+    hu=0
+    for i in a:
+       b = i.__dict__  
+       if(b['country']==key) and (b['host']=='Swine'):
+                 sw+=1
+       if(b['country']==key) and (b['host']=='Human'):
+                 hu+=1
+       if(b['country']==key) and (b['host']=='Avian'):
+                 av+=1
+    print sw, "\n"
+    print av, "\n"
+    print hu, "\n"  
+    fp.write(("{\"Country\":\"").rstrip('\n'))
+    fp.write((key).rstrip('\n'))
+    fp.write((("\",\"freq\":{\"human\":%s,\"avian\":%s,\"swine\":%s}},") % (hu,av,sw)) .rstrip('\n'))
+    fp.write("\n")     
+    #print myDict[key]
+   fp.seek(-2, os.SEEK_END)
+   fp.truncate()
+   fp.write("]")
+  return render_to_response('index/chart2.html')
+
+
+
+

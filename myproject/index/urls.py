@@ -14,5 +14,6 @@ urlpatterns = [
     #added by palmer,
     url(r'^register/$', views.doctor_register, name='register'),
     url(r'^register_success/$', views.doctor_register_success, name='register_success'),
+    url(r'^data_graph/$', views.data_graph_json, name='views.data_graph_json'),
     
 ]
