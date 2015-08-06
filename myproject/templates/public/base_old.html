@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NOSOCOMIAL INFECTIONS SURVEILLANCE SYSTEM</title>
+
+    <link href="{% static 'bootstrap-css/css/bootstrap.min.css' %}" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      {% block css %}{% endblock %}
+    </style>
+    <link href="{% static 'css/stickyfooter.css' %}" rel="stylesheet"/>
+    <link href="{% static 'css/navbarstyle.css' %}" rel="stylesheet"/>
+
+    <!-- Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="{% static 'bootstrap-css/js/bootstrap.min.js' %}"></script>
+
+</head>
+<body>
+{% include "public/menu.html" %}
+
+<div id="wrap">
+    <div class="container-fluid">
+        {% block maincontent %}
+
+
+        {% endblock %}
+    </div> <!--maincontainer -->
+</div>
+
+
+{% include "public/footer.html" %}
+
+
+</body>
+</html>
