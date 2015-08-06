@@ -178,22 +178,6 @@
 {
   "fields": {
     "completeness": "c\r\n",
-    "virus_name": "Influenza B virus (B/Ann Arbor/1/1986)",
-    "date_discovered": "1986-01-01",
-    "country": "USA",
-    "age": null,
-    "genomesegment_or_proteinname": "5",
-    "subtype": "",
-    "host": "Human",
-    "gender": "",
-    "sequence_length": 1811
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "X14217"
-},
-{
-  "fields": {
-    "completeness": "c\r\n",
     "virus_name": "Influenza A virus (A/81/HO)",
     "date_discovered": null,
     "country": "LAB",

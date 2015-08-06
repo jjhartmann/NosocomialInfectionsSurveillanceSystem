@@ -1,23 +1,54 @@
 {% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+.background {
+  fill: #eee;
+}
 
-<link rel="stylesheet" type="text/css" href="{% static 'coc/style.css' %}" />
+line {
+  stroke: #fff;
+}
 
-<h1>Genbank Accession Number Matrix</h1>
+text {
+ font: 11px sans-serif;
+}
+
+text.active {
+  fill: red;
+}
+
+body {
+  font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.42857143;
+  color: #735F3C;
+  background-color: #fff;
+}
+</style>
+<title>Genbank Accession Number Matrix</title>
+<body>
+
+<h2>Please make your selction:</h2>
 
 <div id = "select">
-	<aside style="margin-top:80px;">
-	<p>Order: <select id="order">
+	<aside style="margin-top:30px;">
+	<p>Order by: <select id="order">
 	<option value="name">name</option>
 	<option value="count">Count</option>
 	<option value="group">Country</option>
 	<option value="host">Host</option>
 	<option value="date">Date Discoveried</option>
-	<option value="sequence">Sequence Length</option>
+	<option value="sequences">Sequence Length</option>
 	</select>
 	</aside>
 </div>
 
 <div id = "matrix">
+	<!-- generate matrix -->
 	<script src="http://d3js.org/d3.v2.min.js?2.8.1"></script>
 	<script type="text/javascript" src="{% static "coc/cocTree.js"%}"></script>
 </div>
+</body>
+<html>

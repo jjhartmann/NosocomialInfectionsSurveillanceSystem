@@ -3,17 +3,14 @@
 
     {% block maincontent%}
 
-        <!--Display chart and matrix after search result (temparary)-->
+        <!--Display chart after search result (temparary)-->
         {% block graph %}
         <button onclick="myFunction()">Display Graph</button>
-        <button onclick="DisplayFunction()">Display Matrix</button>
         <script type = "text/javascript">
         function myFunction() {
             window.open("{% url 'graph:index' username %}", "_blank", "resizable=yes, status =no, left=00,top=300,width=1500, height=400")
         }
-        function DisplayFunction() {
-            window.open("{% url 'coc:index' username %}", "_blank", "resizable=yes, status= no, left=-100,top=00,width=700, height=800")
-        }</script>
+        </script>
         {% endblock %}
 
     <style type="text/css">
@@ -24,9 +21,21 @@
         }
     </style>
 
+    <!-- Display matrix in a popup window -->
+    <script>
+    function popupform(myform, windowname) {
+        if (! window.focus)
+            return true;
+        window.open('', windowname, "_blank", 'resizable=yes, status= no, left=100,top= 0, width=400, height=1200')
+        myform.target=windowname;
+        return true;
+     }
+    </script>
+
+
     <h1> This is the details page!!</h1>
 
-       <div class="container">
+       <div class="container" style="padding-left:10px;">
             <h2 class="text-muted">Influenza NA</h2>
             <table class="table table-stripes">
                 <thead>
@@ -43,6 +52,7 @@
                         <td>Gender</td>
                         <td>Complete-ness</td>
                         <td>Nucleotide Sequence</td>
+                        <td>Display Matrix</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -64,6 +74,10 @@
                                 {{ row.influenza_fna.fasta_nucleotide_description }}
                                 </div>
                             </td>
+                            <!-- Insert checkbox to select rows to be displayed in matrix -->
+                            <form class="form-group" action="{% url 'coc:parse_data' username %}" method="post" onsubmit="popupform(this, 'join')">
+                            {% csrf_token %}
+                            <td><input type="checkbox" name="displays" value="{{row.genbank_accession_number}}" /></td>
                         </tr>
                     {% endfor %}
                 </tbody>
@@ -73,7 +87,7 @@
         <hr class="fade"/>
         <div class="container">
             <h2 class="text-muted">Influenza AA</h2>
-            <table class="table table-stripes">
+            <table class="table table-stripes" style="padding-left:10px;">
                 <thead>
                     <tr>
                         <td>Genbank Accession Number</td>
@@ -88,6 +102,7 @@
                         <td>Gender</td>
                         <td>Complete-ness</td>
                         <td>Protein Sequence</td>
+                        <td>Display Matrix</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -109,9 +124,14 @@
                                     {{ row.influenza_faa.fasta_protein_description }}
                                 </div>
                             </td>
+                            <td><input type="checkbox" name="displays" value="{{row.genbank_accession_number}}" /></td>
                         </tr>
                     {% endfor %}
                 </tbody>
             </table>
+                <div style="text-align:right;">
+                    <input class="btn btn-default" type="submit" value="Submit" />
+                </div>
+            </form>
        </div>
-    {% endblock %}
+   {% endblock %}
