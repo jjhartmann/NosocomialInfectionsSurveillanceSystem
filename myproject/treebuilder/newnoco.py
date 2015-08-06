@@ -28,7 +28,7 @@ def run_phylo():
 
     clustalw_cline = ClustalwCommandline(clustalw_exe, infile=fasta_temp)
     assert os.path.isfile(clustalw_exe), "Clustal W executable missing"
-    # stdout, stderr = clustalw_cline()
+    stdout, stderr = clustalw_cline()
 
     align = AlignIO.read(fasta_aln, "clustal")
     # align = AlignIO.read("./phylocanvas/fasta_temp.aln", "clustal")
