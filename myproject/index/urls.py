@@ -15,4 +15,5 @@ urlpatterns = [
     url(r'^register/$', views.doctor_register, name='register'),
     url(r'^register_success/$', views.doctor_register_success, name='register_success'),
     url(r'^data_graph/$', views.data_graph_json, name='data_graph_json'),
+    url(r'^project/$', views.project_des, name='project_des')
 ]

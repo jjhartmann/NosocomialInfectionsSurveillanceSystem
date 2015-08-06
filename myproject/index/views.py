@@ -8,8 +8,8 @@ from django.template import RequestContext
 #added by palmer
 from django.core.context_processors import csrf
 from forms import MyRegistrationForm
-
-
+from collections import Counter
+from basic_search.models import *
 # Create your views here.
 
 
@@ -92,8 +92,7 @@ def doctor_register_success(request):
 def data_graph_json(request):
     #pip install Counter
   import json, os
-  from collections import Counter
-  from basic_search.models import *
+  
   a = Influenza_NA.objects.all()
   countries=[]
   #for i in a:
@@ -142,3 +141,6 @@ def data_graph_json(request):
    fp.truncate()
    fp.write("]")
   return render_to_response('index/chart2.html')
+
+def project_des(request):
+  return render_to_response('index/project_des.html')
