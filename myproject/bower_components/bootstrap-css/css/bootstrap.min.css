@@ -2587,7 +2587,7 @@ legend {
     margin-bottom: 20px;
     font-size: 21px;
     line-height: inherit;
-    color: #333;
+    color: #82784F;
     border: 0;
     border-bottom: 1px solid #e5e5e5
 }
@@ -3224,7 +3224,7 @@ fieldset[disabled] .btn-primary:hover {
 .btn-success {
     color: #fff;
     background-color: #5cb85c;
-    border-color: #4cae4c
+    
 }
 .btn-success.active,
 .btn-success.focus,
