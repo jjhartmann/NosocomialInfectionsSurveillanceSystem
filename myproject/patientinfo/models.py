@@ -17,6 +17,8 @@ class Patientinfo(models.Model):
 	city = models.CharField(max_length=20, null=True)
 	provice = models.CharField(max_length=20, null=True)
 	postal_code = models.CharField(max_length=20, null=True)
-
+	patient_picture = models.FileField(upload_to="patient_image/", blank=True)
+	patient_data = models.FileField(upload_to="patient_data/", blank=True)
+	
 	def __str__(self):
 		return self.firstname + " " + self.lastname

@@ -5,7 +5,7 @@
 <h2>Welcome: {{ user.username }}</h2>
 
 <h3> Please fill patient information:</h3>
-<form id="search_form" class="form-horizontal" action="{% url 'patientinfo:create'  username %}" method="post">
+<form id="search_form" class="form-horizontal" action="{% url 'patientinfo:create'  username %}" method="post"enctype="multipart/form-data">
 {% csrf_token %}
  	<fieldset>
 		<div class="form-group">
@@ -36,9 +36,9 @@
 			<div class="col-md-4">
 				<select id="id_gender" name="gender">
 				<option value="" selected="selected">---------</option>
-				<option value="MALE">Male</option>
-				<option value="FEMALE">Female</option>
-				<option value="OTHER">Other</option>
+				<option value="M">Male</option>
+				<option value="F">Female</option>
+				
 			</select>
 			</div>
 		</div>

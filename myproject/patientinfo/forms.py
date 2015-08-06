@@ -15,5 +15,8 @@ class PatientinfoForm(forms.ModelForm):
                           'street_address',
                           'city',
                           'provice',
-                          'postal_code')
+                          'postal_code',
+                          'patient_picture',
+                          'patient_data'                          
+                          )
 

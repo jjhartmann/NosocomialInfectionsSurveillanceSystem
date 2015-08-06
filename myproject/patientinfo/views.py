@@ -3,6 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.core.urlresolvers import reverse
 from .models import *
 from forms import PatientinfoForm
+
 from django.http import HttpResponseRedirect, HttpResponse
 from django.core.context_processors import csrf
 
@@ -17,7 +18,7 @@ def detail(request, username, patientinfo_id):
 
 def create(request, username):
     if request.POST:
-        form = PatientinfoForm(request.POST)
+        form = PatientinfoForm(request.POST,request.FILES)
         if form.is_valid():
             form.save()
 
@@ -30,7 +31,7 @@ def create(request, username):
 
     args['form']=form
     args['username']=username
-    return render(request, 'patientinfo/create.html', args)
+    return render(request, 'patientinfo/create_orig.html', args)
 
 def update(request, username, patientinfo_id):
     record = get_object_or_404(Patientinfo, id=patientinfo_id)
@@ -44,13 +45,32 @@ def update(request, username, patientinfo_id):
     else:
         form = PatientinfoForm(instance=record)
 
-    	args = {}
-    	args.update(csrf(request))
+        args = {}
+        args.update(csrf(request))
 
-    	args['form']=form
-    	args['username']=username
-    	args['patientinfo']=Patientinfo.objects.get(id=patientinfo_id)
+        args['form']=form
+        args['username']=username
+        args['patientinfo']=Patientinfo.objects.get(id=patientinfo_id)
     return render(request, 'patientinfo/update.html', args)
+# def upload_index(request, username):
+#     return render(request, 'patientinfo/upload_index.html', {'patientinfos': Patientinfo.objects.all(),'username': username })
+
+# def upload(request, username):
+#     if request.POST:
+#         form = PatientDataForm(request.POST, request.FILES)
+#         if form.is_valid():
+#             form.save()
+
+#             return HttpResponseRedirect(reverse('patientinfo:index', kwargs={'username': username }))
+#     else:
+#         form = PatientDataForm()
+
+#     args = {}
+#     args.update(csrf(request))
+
+#     args['form']=form
+#     args['username']=username
+#     return render(request, 'patientinfo/upload.html', args)
 
 def delete(request, username, patientinfo_id):
     record = Patientinfo.objects.get(id=patientinfo_id)
@@ -58,5 +78,3 @@ def delete(request, username, patientinfo_id):
     return render(request, 'patientinfo/delete.html', {'username': username})
     
 
-
-    

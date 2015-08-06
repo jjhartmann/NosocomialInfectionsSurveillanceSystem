@@ -2,7 +2,12 @@
 
 
     {% block maincontent%}
-<h1> patient information detial: </hi>
+<h1> patient information detial: </h1>
+
+{% if patientinfo.patient_picture %}
+<p> patient picture: </p>
+<p><img src="/static/{{patientinfo.patient_picture}}" width="200" /></p>
+{% endif %}
 <ul> 
 	<li> First Name: {{ patientinfo.firstname }}</li>
 	<li> Last Name: {{ patientinfo.lastname }}</li>
