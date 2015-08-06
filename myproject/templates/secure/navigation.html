@@ -74,9 +74,9 @@ jQuery(document).ready(function(){
                                    
                                     <form  id="loginform" method="post">
                               
-                                          <div class ="custome_margin" style="margin-bottom:10px"><a class="btn btn-sucess btn-sm btn-block" href="{% url 'index:register' %}">Profile</a><br></div>
+                                          <div class ="custome_margin" style="margin-bottom:10px"><a class="btn btn-sucess btn-sm btn-block" href="{% url 'userprofile:viewprofile' username %}">Profile</a><br></div>
                                             <div class ="custome_margin" style="margin-bottom:10px"><a class="btn btn-sucess btn-sm btn-block" href="{% url 'index:register' %}">Favoriate</a><br></div>
-                                            <div class ="custome_margin" style="margin-bottom:10px"><a class="btn btn-sucess btn-block" href="{% url 'index:register' %}">Settings</a><br></div>
+                                            <div class ="custome_margin" style="margin-bottom:10px"><a class="btn btn-sucess btn-block" href="{% url 'userprofile:setprofile' username %}">Settings</a><br></div>
                                        <div class ="custome_margin" style="margin-bottom:10px"> <a class="btn btn-sucess btn-block" href="{% url 'index:index' %}">Lougout</a></div>
                                     
                                     </form>
