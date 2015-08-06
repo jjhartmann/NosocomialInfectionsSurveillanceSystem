@@ -303,9 +303,9 @@ class Influenza_AA(models.Model):
 
 class Influenza_FNA(models.Model):
     genbank_na_accnum = models.OneToOneField(Influenza_NA, primary_key=True, null=False)
-    fasta_nucleotide_description = models.CharField(max_length=30)
+    fasta_nucleotide_description = models.CharField(max_length=30, null=True)
 
 
 class Influenza_FAA(models.Model):
     genbank_na_accnum = models.OneToOneField(Influenza_AA, primary_key=True, null=False)
-    fasta_protein_description = models.CharField(max_length=30)
+    fasta_protein_description = models.CharField(max_length=30, null=True)
