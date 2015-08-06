@@ -11,13 +11,12 @@ from forms import UserProfileForm
 
 @login_required
 def set_profile (request, username):
-   
+    
     if request. method == 'POST':
-
         form = UserProfileForm(request.POST, instance=request.user.profile)
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect(reverse('patientinfo:index', kwargs={'username': username}))
+            return HttpResponseRedirect(reverse('userprofile:viewprofile', kwargs={'username': username}))
     else:
         
         user = request.user
@@ -30,3 +29,10 @@ def set_profile (request, username):
     args['form']=form 
     args['username']=username
     return render(request, 'userprofile/setprofile.html', args)
+
+
+@login_required
+def view_profile (request, username):
+    profile = request.user.profile
+    return render(request, 'userprofile/viewprofile.html', {'userprofile': profile,'username': username })
+   

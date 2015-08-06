@@ -2,15 +2,14 @@ from django.db import models
 
 # Create your models here.
 GENDER_CHOICES = (
-        ('MALE', 'Male'),
-        ('FEMALE', 'Female'),
-        ('OTHER', 'Other'),)
-
+        ('M', 'Male'),
+        ('F', 'Female'),
+       )
 class Patientinfo(models.Model):
 	firstname = models.CharField(max_length=20, null=False)
 	lastname = models.CharField(max_length=20, null=False)
 	date_of_birth= models.DateField(max_length=20, null=True)
-        gender = models.CharField(max_length=6, choices=GENDER_CHOICES, null=True )
+        gender = models.CharField(max_length=1, choices=GENDER_CHOICES, null=True )
         age = models.PositiveSmallIntegerField( null=True)
 	email = models.EmailField(max_length=50, null=True)
 	phone = models.CharField(max_length=20, null=True)
