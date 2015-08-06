@@ -18,31 +18,30 @@ from basic_search.models import *
 
 # Create your views here.
 def index(request,username):
-	return render(request, 'coc/graph.html',{'username': username })
-
-#genbank_accession_number = models.CharField(max_length=10, null=False, primary_key=True)
-#host = models.CharField(max_length=10, null=True)
-#genomesegment_or_proteinname = models.CharField(max_length=10, null=True)
-#subtype = models.CharField(max_length=10, null=True)
-#country = CountryField(verbose_name="Country", help_text="Origin of viral strain.", null=True)
-#date_discovered = models.DateField(null=True)
-#sequence_length = models.IntegerField(null=True)
-#virus_name = models.CharField(max_length=30, null=True)
-#age = models.FloatField(null=True)
-#gender = models.CharField(max_length=2, null=True)  # change to list....
-#completeness = models.CharField(max_length=2, null=True)
+    return render(request, 'coc/graph.html',{'username': username })
 
 def parse_data(request,username):
     """
     Get input from detail search result and parse input to produce adjancency matrix
     """
+    if request.method == 'POST':
+        display = request.POST.getlist('displays')
+    # pprint("[DEBUG] get checkbox value - " + repr(display), sys.stderr)
+    for dis in display:
+        pprint("[DEBUG] get checkbox value - " + repr(dis), sys.stderr)
     # Define path to open input file
     path = PROJECT_ROOT + '/coc/static/coc/matrix.json'
     pprint("[DEBUG] open file - " + path, sys.stderr)
-    # Define a variable to contain input 
+    # Define a variable to contain input
     json_data = open(path)
     # Decode json format to python object (key:value) pairs
-    decode_data = json.load(json_data)
+    decode_data_total = json.load(json_data)
+    decode_data = []
+    # Store the user selected rows in decode_data[]
+    for i in range(0, len(decode_data_total)):
+        for j in range (0, len(display)):
+            if display[j] == decode_data_total[i]['pk']:
+                decode_data.append(decode_data_total[i])
     # Create an array to store node and link
     node = []
     link = []
@@ -95,14 +94,16 @@ def parse_data(request,username):
             str2 = decode_data[incr]['pk']
             m = 0
             count = 0
+
             # Compare each element in string 1 and string 2, increment count if character is same
-            for m in range(0, 6):
-                if str1[m] == str2[m]:
-                    count = count + 1
+            for m in range(0, len(str1)):
+
+                for n in range(0,len(str2)):
+                    if str2[n] == str1[m]:
+                        count = count + 1
             # Create a link between two elements if their names have same ch
             if count > 0:
                 link.append({'source':i,'target':incr,'value':count})
-
             incr = incr + 1
         # date and sequence block
         date_index = dates.index(decode_data[i]['fields']['date_discovered'])
@@ -114,7 +115,7 @@ def parse_data(request,username):
     writeFile = open(PROJECT_ROOT + '/coc/static/coc/parse.json', 'w')
     writeFile.write(parse)
     writeFile.close()
-    return HttpResponse(parse,{'username': username })
+    return render(request, 'coc/graph.html',{'username': username })
 
 
 

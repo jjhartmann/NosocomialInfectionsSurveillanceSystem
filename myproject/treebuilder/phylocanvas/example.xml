@@ -1,7 +1,6 @@
 <phyloxml xmlns="http://www.phyloxml.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.phyloxml.org http://www.phyloxml.org/1.10/phyloxml.xsd">
   <phylogeny rooted="true">
     <clade>
-      <branch_length>1.0</branch_length>
       <clade>
         <branch_length>0.0077</branch_length>
         <clade>

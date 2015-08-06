@@ -4,8 +4,8 @@
  */
 
 var margin = {top: 80, right: 0, bottom: 10, left: 60},
-    width = 300,
-    height = 300;
+    width = 500,
+    height =500;
 
 var x = d3.scale.ordinal().rangeBands([0, width]),
     z = d3.scale.linear().domain([0, 4]).clamp(true),
