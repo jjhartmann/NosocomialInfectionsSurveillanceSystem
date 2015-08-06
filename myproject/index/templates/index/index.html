@@ -1,7 +1,9 @@
 {% extends "public/base.html" %}
 
 {% load staticfiles %}
-  {% block front_page %}
+  {% block maincontent %}
+
+    <div id="parallax-slider" class="parallax-slider">
             <ul class="baseList">
                 <li data-preview="{% static 'pic/slide_1.jpg'%}" data-thumb-url="{% static 'pic/slide_1.jpg'%}" data-ulr-link="">
                     <div class="slider_caption">
@@ -23,6 +25,7 @@
                 </li>
             </ul>
         </div>
+    </div>
         <div class="motopress-wrapper content-holder clearfix">
             <div class="container">
                 <div class="row">
@@ -46,7 +49,8 @@
                                                             <div class="service-box_txt">
                                                                 We have import full nna and nfa information in database for fast query and search !
                                                             </div>
-                                                            <div class="btn-align"><a href="about/" title="Read more" class="btn btn-inverse btn-normal btn-primary " target="_self">Read more</a></div>
+                                                       
+                                                            <div class="btn-align"><a href="{% url 'index:data_graph_json' %}" title="Read more" class="btn btn-inverse btn-normal btn-primary " target="_self">Read more</a></div>
                                                         </div>
                                                     </div>
                                                 </div>

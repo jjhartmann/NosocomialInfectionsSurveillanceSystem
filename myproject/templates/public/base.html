@@ -64,22 +64,12 @@
 <body>
     <!-- navigation.html -->
     {% include "public/navigation.html" %}
-
-
-    <div id="parallax-slider" class="parallax-slider">
-        {% block front_page %}
-        <!-- home page content in index/index.html -->
-        {% endblock %}
-   
-            <div class="container-fluid">
-                {% block maincontent %}
-                <!--maincontainer -->
-                {% endblock %}
-            </div>
     
-    </div>
+    {% block maincontent %}
+        <!-- home page content in index/index.html -->
+    {% endblock %} 
 
-{% include "public/footer.html" %}
+ {% include "public/footer.html" %}
 
 </body>
 </html>
