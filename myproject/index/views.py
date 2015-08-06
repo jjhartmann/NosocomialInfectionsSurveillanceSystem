@@ -142,7 +142,3 @@ def data_graph_json(request):
    fp.truncate()
    fp.write("]")
   return render_to_response('index/chart2.html')
-
-
-
-
