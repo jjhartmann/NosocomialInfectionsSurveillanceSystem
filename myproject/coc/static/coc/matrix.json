@@ -179,6 +179,8 @@
 {
   "fields": {
     "completeness": "c\r\n",
+<<<<<<< HEAD
+=======
     "virus_name": "Influenza B virus (B/Ann Arbor/1/1986)",
     "date_discovered": "1986-01-01",
     "country": "USA",
@@ -195,6 +197,7 @@
 {
   "fields": {
     "completeness": "c\n",
+>>>>>>> 432cd5dc71890937aa9a1fc4b6a73ce6f0b66d37
     "virus_name": "Influenza A virus (A/81/HO)",
     "date_discovered": null,
     "country": "LAB",
