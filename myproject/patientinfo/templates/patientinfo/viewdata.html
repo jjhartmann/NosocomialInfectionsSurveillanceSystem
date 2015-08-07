@@ -1,0 +1,29 @@
+{% extends "secure/base.html" %}
+
+
+    {% block maincontent%}
+<h1> patient information detial: </h1>
+
+{% if patientinfo.patient_data %}
+<p> patient data: </p>
+<p><embed src="/static/{{patientinfo.patient_data}}" width="800px" height="2100px"></p>
+{% endif %}
+
+
+<p> Wanting To Upload: </p>
+<ul><a href="{% url 'patientinfo:uploaddata' username patientinfo.id %}">Upload Patient Data</a></ul>
+
+
+
+
+
+<div id="sidebar">
+	{% block sidebar %}
+
+	<h2><a href="{% url 'patientinfo:index' username %}">Back to Patient List</a></h2>
+	<h2><a href="{% url 'patientinfo:detail' username patientinfo.id %}">View Patient Detail</a></h2>
+
+	{% endblock %}
+</div>
+
+    {% endblock %}

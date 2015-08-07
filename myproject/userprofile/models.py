@@ -8,7 +8,7 @@ GENDER_CHOICES = (
 
 class UserProfile(models.Model):
     user = models.OneToOneField(User)
-    profile_picture = models.ImageField(upload_to='static/profile_image', blank=True)
+    profile_picture = models.ImageField(upload_to='profile_picture', blank=True)
     address = models.CharField(max_length=50,null=True)
     phone = models.CharField(max_length=20, null=True)
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES, null=True )

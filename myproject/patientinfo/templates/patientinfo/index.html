@@ -9,9 +9,11 @@
 <div>
 <h2>{{ patientinfo.firstname }} {{ patientinfo.lastname }}</h2>
 	<ul>
-		<li><a href="{% url 'patientinfo:detail' username patientinfo.id %}">View detail</a></li>
+		<li><a href="{% url 'patientinfo:detail' username patientinfo.id %}">View Patient detail</a></li>
+		<li><a href="{% url 'patientinfo:viewdata' username patientinfo.id %}">View/Upload Patient Data</a></li>
 		<li><a href="{% url 'patientinfo:update' username patientinfo.id %}">Update</a></li>
 		<li><a href="{% url 'patientinfo:delete' username patientinfo.id %}">Delete</a></li>
+
 	</ul>
 <div>
 {% endfor %}
