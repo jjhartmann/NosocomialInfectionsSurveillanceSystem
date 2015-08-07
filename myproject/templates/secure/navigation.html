@@ -72,14 +72,14 @@ jQuery(document).ready(function(){
                                 <div class="login-wrap">
                                     <div class="login-toggle icon-user"></div>
                                    
-                                    <form  id="loginform" method="post">
+                                    <div  id="loginform" >
                               
                                           <div class ="custome_margin" style="margin-bottom:10px"><a class="btn btn-sucess btn-sm btn-block" href="{% url 'userprofile:viewprofile' username %}">Profile</a><br></div>
                                             <div class ="custome_margin" style="margin-bottom:10px"><a class="btn btn-sucess btn-sm btn-block" href="{% url 'index:register' %}">Favoriate</a><br></div>
                                             <div class ="custome_margin" style="margin-bottom:10px"><a class="btn btn-sucess btn-block" href="{% url 'userprofile:setprofile' username %}">Settings</a><br></div>
-                                       <div class ="custome_margin" style="margin-bottom:10px"> <a class="btn btn-sucess btn-block" href="{% url 'index:index' %}">Lougout</a></div>
+                                       <div class ="custome_margin" style="margin-bottom:10px"> <a class="btn btn-sucess btn-block" href="{% url 'index:logout' %}">Lougout</a></div>
                                     
-                                    </form>
+                                    </div>
                                 
                                 </div>
                                 <nav class="nav nav__primary clearfix">
