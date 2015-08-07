@@ -1,4 +1,5 @@
 """Module with utility functions for nocoblast app.   """
+import StringIO
 
 import tempfile
 import re
@@ -7,6 +8,7 @@ from Bio.Application import ApplicationError
 from Bio import Entrez
 from Bio import SeqIO
 from features.record import Alignment, BlastRecord, Hsp
+from nocoblast.models import FASTATable
 
 THIS_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -26,8 +28,23 @@ def fetch_entrez_seq(id_list):
     fo = open(fasta_temp, "w")
     Entrez.email = "hamzakhanvit@gmail.com"
     handle = Entrez.efetch(db="nucleotide", rettype="gb", retmode="text", id=id_list)
+
+    fasta_str = StringIO.StringIO()
+
     for seq_record in SeqIO.parse(handle, "gb"):
-        fo.write(">%s,%s\n%s\n" % ((seq_record.id.rstrip('\n')),seq_record.description,(seq_record.seq.rstrip('\n'))))
+        fasta_str.write(">%s,%s\n%s\n" % ((seq_record.id.rstrip('\n')),seq_record.description,(seq_record.seq.rstrip('\n'))))
+        # fo.write(">%s,%s\n%s\n" % ((seq_record.id.rstrip('\n')),seq_record.description,(seq_record.seq.rstrip('\n'))))
+
+    # Store in db
+    print("\nID LIST IN BLAST\n")
+    print(id_list)
+
+    try:
+        id = FASTATable.objects.get(desc=id_list)
+    except (FASTATable.DoesNotExist):
+        row = FASTATable(desc=id_list, fasta=fasta_str.getvalue())
+        row.save()
+
 
 
 def blast_records_to_object(blast_records):
@@ -95,6 +112,9 @@ def run_blast_commands(ncbicommandline_method, **keywords):
     #fo.write(str(ncbicommandline_method))
     # temporary files for output
     blast_out_tmp = tempfile.NamedTemporaryFile(delete=False)
+    blast_out_tmp_str = StringIO.StringIO()
+
+    # keywords['out'] = blast_out_tmp_str
     keywords['out'] = blast_out_tmp.name
 
     # unpack query temp file object
