@@ -10,7 +10,7 @@
 {% endif %}
 
 
-<p> Wanting To Upload: </p>
+<p> Want To Upload: </p>
 <ul><a href="{% url 'patientinfo:uploaddata' username patientinfo.id %}">Upload Patient Data</a></ul>
 
 
@@ -20,7 +20,7 @@
 <div id="sidebar">
 	{% block sidebar %}
 
-	<h2><a href="{% url 'patientinfo:index' username %}">Back to Patient List</a></h2>
+	<h2><a href="{% url 'patientinfo:index_data' username %}">Back to Patient List</a></h2>
 	<h2><a href="{% url 'patientinfo:detail' username patientinfo.id %}">View Patient Detail</a></h2>
 
 	{% endblock %}

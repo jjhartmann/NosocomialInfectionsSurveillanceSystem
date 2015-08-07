@@ -13,6 +13,14 @@ from django.core.context_processors import csrf
 def index(request, username):
     return render(request, 'patientinfo/index.html', {'patientinfos': Patientinfo.objects.all(),'username': username })
 
+@login_required
+def index_data(request, username):
+    return render(request, 'patientinfo/index_data.html', {'patientinfos': Patientinfo.objects.all(),'username': username })
+
+@login_required
+def index_manage(request, username):
+    return render(request, 'patientinfo/index_manage.html', {'patientinfos': Patientinfo.objects.all(),'username': username })
+
 def detail(request, username, patientinfo_id):
     return render(request, 'patientinfo/detail.html', {'patientinfo': Patientinfo.objects.get(id=patientinfo_id),'username': username })
 
@@ -69,7 +77,7 @@ def uploaddata(request, username, patientinfo_id):
         if form.is_valid():
             form.save()
 
-            return HttpResponseRedirect(reverse('patientinfo:index', kwargs={'username': username}))
+            return HttpResponseRedirect(reverse('patientinfo:index_data', kwargs={'username': username}))
     else:
         form = PatientDataForm(instance=record)
 

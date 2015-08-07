@@ -1,25 +1,12 @@
+
 {% extends "secure/base.html" %}
 
 {% block maincontent%}
 
-<!-- datepicker -->
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <script>
-  $(function() {
-    $( "#id_date_of_birth" ).datepicker({
-      changeMonth: true,
-      changeYear: true
-    });
-  });
-  </script>
-
 <h2>Welcome: {{ user.username }}</h2>
 
-<h3> Please fill patient information:</h3>
-<form id="search_form" class="form-horizontal" action="{% url 'patientinfo:create'  username %}" method="post" enctype="multipart/form-data">
+<h3> Updating patient information:</h3>
+<form id="search_form" class="form-horizontal" action="{% url 'patientinfo:update'  username patientinfo.id %}" method="post" enctype="multipart/form-data">
 {% csrf_token %}
  	<fieldset>
 		<div class="form-group">
@@ -41,7 +28,7 @@
 		<div class="form-group">
 			<label class="col-md-4 control-label" for="id_date_of_birth">Date of birth:</label>
 			<div class="col-md-4">
-		 		<input id="id_date_of_birth" name="date_of_birth" type="text" placeholder="Enter Your Birthday" />
+		 		<input id="id_date_of_birth" name="date_of_birth" type="text" />
 			</div>
 		</div>
 
@@ -60,49 +47,49 @@
 		<div class="form-group">
 			<label class="col-md-4 control-label"  for="id_age">Age:</label>
 			<div class="col-md-4">
-				<input id="id_age" min="0" name="age" type="number" placeholder="Enter Your Age" />
+				<input id="id_age" min="0" name="age" type="number" />
 			</div>
 		</div>
 
 		<div class="form-group">
 			<label class="col-md-4 control-label"  for="id_email">Email:</label>
 			<div class="col-md-4">
-				<input id="id_email" maxlength="50" name="email" type="email" placeholder="Enter Your First Email" />
+				<input id="id_email" maxlength="50" name="email" type="email" />
 			</div>
 		</div>
 
 		<div class="form-group">
 			<label class="col-md-4 control-label"  for="id_phone">Phone:</label>
 			<div class="col-md-4">
-				<input id="id_phone" maxlength="20" name="phone" type="text" placeholder="XXX-XXX-XXXX" />
+				<input id="id_phone" maxlength="20" name="phone" type="text" />
 			</div>
 		</div>
 
 		<div class="form-group">
 			<label class="col-md-4 control-label"  for="id_street_address">Street address:</label>
 			<div class="col-md-4">
-				<input id="id_street_address" maxlength="20" name="street_address" type="text" placeholder="Enter Your Street Address"/>
+				<input id="id_street_address" maxlength="20" name="street_address" type="text" />
 			</div>
 		</div>
 
 		<div class="form-group">
 			<label class="col-md-4 control-label"  for="id_city">City:</label>
 			<div class="col-md-4">
-				<input id="id_city" maxlength="20" name="city" type="text" placeholder="Enter the City Name" />
+				<input id="id_city" maxlength="20" name="city" type="text" />
 			</div>
 		</div>
 
 		<div class="form-group">
 			<label class="col-md-4 control-label"  for="id_provice">Provice:</label>
 			<div class="col-md-4">
-				<input id="id_provice" maxlength="20" name="provice" type="text" placeholder="Enter the Provice Name"/>
+				<input id="id_provice" maxlength="20" name="provice" type="text" />
 			</div>
 		</div>
 
 		<div class="form-group">
 			<label class="col-md-4 control-label"  for="id_postal_code">Postal code:</label>
 			<div class="col-md-4">
-				<input id="id_postal_code" maxlength="20" name="postal_code" type="text" placeholder="Enter Your Postal Code"/>
+				<input id="id_postal_code" maxlength="20" name="postal_code" type="text" />
 			</div>
 		</div>
 
@@ -124,7 +111,7 @@
 		<div class="form-group">
             <label class="col-md-4 control-label" for="search"></label>
     
-				<input class="btn btn-success btn-sm" id= "search" type= "submit"  name="submit" value="Create Patient Information">
+				<input class="btn btn-success btn-sm" id= "search" type= "submit"  name="submit" value="Update Patient Information">
 			<a href="{% url 'patientinfo:index'  username %}"><input class="btn btn-success btn-sm" value="Cancel"></a>
 		</div>
 

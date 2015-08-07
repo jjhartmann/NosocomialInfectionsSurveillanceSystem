@@ -96,10 +96,10 @@ jQuery(document).ready(function(){
                                                     <a href="{% url 'patientinfo:index' username %}">Patient info</a>
                                                 </li>
                                                 <li id="menu-item-1814" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
-                                                <a href="#">Another action</a></li>
+                                                <a href="{% url 'patientinfo:index_data' username %}">Patient data</a></li>
                                                 </li>
                                                 <li id="menu-item-1813" class="menu-item menu-item-type-post_type menu-item-object-page">
-                                                   <li><a href="#">Something else here</a></li>
+                                                   <li><a href="{% url 'patientinfo:index_manage' username %}">Managing patient </a></li>
                                                 </li>
                                             </ul>
                                         </li>
