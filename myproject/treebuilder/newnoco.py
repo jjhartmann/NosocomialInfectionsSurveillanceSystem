@@ -1,4 +1,5 @@
 # load the required packages
+import StringIO
 from Bio.Align.Applications import ClustalwCommandline
 from Bio import AlignIO
 import os
@@ -7,9 +8,10 @@ import pylab
 import matplotlib.pyplot as plt
 from Bio import Phylo
 import platform
+from .models import TreebuilderFiles
 
 
-def run_phylo():
+def run_phylo(user):
     # read in the input file, i.e. output of the blast result
     fasta_temp = os.path.abspath("./treebuilder/phylocanvas/fasta_temp.fa")
     fasta_aln = os.path.abspath("./treebuilder/phylocanvas/fasta_temp.aln")
@@ -42,16 +44,14 @@ def run_phylo():
     Phylo.draw_graphviz(tree, prog="neato", node_size=0)
 
     pylab.savefig(phylo_dot)
-    # pylab.savefig('./phylocanvas/phylo-dot.png')
 
-    Phylo.write(tree, example_xml, "phyloxml")
-    # Phylo.write(tree, "./phylocanvas/example.xml", "phyloxml")
+    nwk = StringIO.StringIO()
+    xml = StringIO.StringIO()
 
-    Phylo.write(tree, example_nwk, "newick")
-    # Phylo.write(tree, "./phylocanvas/example.nwk", "newick")
+    Phylo.write(tree, xml, "phyloxml")
+    Phylo.write(tree, nwk, "newick")
 
-    # tree = Phylo.read("example.xml", "phyloxml")
-    # Phylo.draw_graphviz(tree, prog="neato", node_size=0)
-    # pylab.show()
-    # Displays the tree in an interactive viewer
-    # pylab.savefig('phylo-dot.png')
+    row = TreebuilderFiles(user=user, newick_file=nwk.getvalue(), phyloxml_file=xml.getvalue())
+    row.save()
+
+

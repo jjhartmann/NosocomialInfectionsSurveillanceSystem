@@ -9,12 +9,12 @@
 
        var phylocanvas = new PhyloCanvas.Tree('phylocanvasDivDiagonal');
         var newick_file = "../treebuilder/phylocanvas/example.nwk";
-        phylocanvas.load(newick_file);
+        phylocanvas.load('{{ newick }}');
         phylocanvas.setTreeType('diagonal');
 
         var phylocanvas = new PhyloCanvas.Tree('phylocanvasDivHierarchy');
         var newick_file = "../treebuilder/phylocanvas/example.nwk";
-        phylocanvas.load(newick_file);
+        phylocanvas.load('{{ newick }}');
         phylocanvas.setTreeType('hierarchy');
 
       }
@@ -55,9 +55,9 @@
     <form action="phyloview2.html">
     <input type="submit" value="Go to radial and rectangular view" style="float: right">
     </form>
-    <center> Diagonal Representation <center><br>
+    <center> Diagonal Representation </center><br>
     <div id="phylocanvasDivDiagonal"></div><br>
-    <center> Hierarchial Representation <center><br>
+    <center> Hierarchial Representation </center><br>
     <div id="phylocanvasDivHierarchy"></div><br>
 
 {% endblock %}

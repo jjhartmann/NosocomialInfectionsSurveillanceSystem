@@ -1,6 +1,9 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 from newnoco import run_phylo
+from .models import TreebuilderFiles
+
+
 # Create your views here.
 
 # Index view to render the main project page
@@ -11,5 +14,8 @@ def indexview(request, username):
 
 @login_required
 def generate(request, username):
-    run_phylo()
-    return render(request, 'treebuilder/phyloview1.html', {'username': username})
+    run_phylo(username)
+
+    files = TreebuilderFiles.objects.get(user=username)
+    newick = files.newick_file.replace('\n', '')
+    return render(request, 'treebuilder/phyloview1.html', {'username': username, 'newick': newick })
