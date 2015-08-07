@@ -8,6 +8,7 @@
 <p> patient picture: </p>
 <p><img src="/static/{{patientinfo.patient_picture}}" width="200" /></p>
 {% endif %}
+
 <ul> 
 	<li> First Name: {{ patientinfo.firstname }}</li>
 	<li> Last Name: {{ patientinfo.lastname }}</li>
@@ -20,9 +21,11 @@
 	<li> City: {{ patientinfo.city }}</li>
 	<li> Provice: {{ patientinfo.provice }}</li>
 	<li> Postal Code: {{ patientinfo.postal_code }}</li>
+	<h2><a href="{% url 'patientinfo:viewdata' username patientinfo.id %}">View Patient Data</a></h2>
 </ul>
 
-<div id="sidebar"
+
+<div id="sidebar">
 	{% block sidebar %}
 	<h2><a href="{% url 'patientinfo:index' username %}">Back to Patient List</a></h2>
 	<h2><a href="{% url 'patientinfo:update' username patientinfo.id %}">Update</a></h2>

@@ -13,7 +13,7 @@ from forms import UserProfileForm
 def set_profile (request, username):
     
     if request. method == 'POST':
-        form = UserProfileForm(request.POST, instance=request.user.profile)
+        form = UserProfileForm(request.POST, request.FILES, instance=request.user.profile)
         if form.is_valid():
             form.save()
             return HttpResponseRedirect(reverse('userprofile:viewprofile', kwargs={'username': username}))

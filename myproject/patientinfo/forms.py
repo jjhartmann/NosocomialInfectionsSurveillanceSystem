@@ -20,3 +20,8 @@ class PatientinfoForm(forms.ModelForm):
                           'patient_data'                          
                           )
 
+class PatientDataForm(forms.ModelForm):
+
+        class Meta:
+                model = Patientinfo
+                fields = ('patient_data',)
