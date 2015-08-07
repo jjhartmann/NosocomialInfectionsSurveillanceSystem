@@ -1,0 +1,19 @@
+{% extends "secure/base.html" %}
+
+
+    {% block maincontent%}
+<h1>managing patient </h1>
+<a href="{% url 'patientinfo:create' username %}">Create New Patient Info</a>
+{% for patientinfo in patientinfos %}
+
+<div>
+<h2>{{ patientinfo.firstname }} {{ patientinfo.lastname }}</h2>
+	<ul>
+	
+		<li><a href="{% url 'patientinfo:delete' username patientinfo.id %}">Delete</a></li>
+
+	</ul>
+<div>
+{% endfor %}
+    {% endblock %}
+ 

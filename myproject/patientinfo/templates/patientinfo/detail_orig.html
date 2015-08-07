@@ -1,0 +1,36 @@
+{% extends "secure/base.html" %}
+
+
+    {% block maincontent%}
+<h1> patient information detial: </h1>
+
+{% if patientinfo.patient_picture %}
+<p> patient picture: </p>
+<p><img src="/static/{{patientinfo.patient_picture}}" width="200" /></p>
+{% endif %}
+
+<ul> 
+	<li> First Name: {{ patientinfo.firstname }}</li>
+	<li> Last Name: {{ patientinfo.lastname }}</li>
+	<li> Date of Birth: {{ patientinfo.date_of_birth }}</li>
+	<li> Gender: {{ patientinfo.gender }}</li>
+	<li> Age: {{ patientinfo.age }}</li>
+	<li> Email: {{ patientinfo.email }}</li>
+	<li> Phone: {{ patientinfo.phone }}</li>
+	<li> Street Address: {{ patientinfo.street_address }}</li>
+	<li> City: {{ patientinfo.city }}</li>
+	<li> Provice: {{ patientinfo.provice }}</li>
+	<li> Postal Code: {{ patientinfo.postal_code }}</li>
+	<h2><a href="{% url 'patientinfo:viewdata' username patientinfo.id %}">View Patient Data</a></h2>
+</ul>
+
+
+<div id="sidebar">
+	{% block sidebar %}
+	<h2><a href="{% url 'patientinfo:index' username %}">Back to Patient List</a></h2>
+	<h2><a href="{% url 'patientinfo:update' username patientinfo.id %}">Update</a></h2>
+	<h2><a href="{% url 'patientinfo:delete' username patientinfo.id %}">Delete</a></h2>
+	{% endblock %}
+</div>
+
+    {% endblock %}

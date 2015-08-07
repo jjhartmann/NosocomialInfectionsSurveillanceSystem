@@ -2,14 +2,12 @@
 
 
     {% block maincontent%}
-<h1> patient information has deleted </hi>
+<h1> patient information has been deleted </hi>
 
-
-<div id="sidebar">
-	{% block sidebar %}
-	<h2><a href="{% url 'patientinfo:index_manage' username %}">Back to Patient List</a></h2>
-
-	{% endblock %}
-</div>
-
+		<div class="form-group">
+           
+    
+			<a href="{% url 'patientinfo:index_manage' username %}"><input class="btn btn-success btn-sm" value="Back to Patient List"></a>
+		</div>
     {% endblock %}
+

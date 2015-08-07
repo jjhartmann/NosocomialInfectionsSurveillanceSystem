@@ -2,17 +2,24 @@
 
 
     {% block maincontent%}
-<h1> patient information detial: </h1>
+
+<!-- datepicker plugin site:http://www.jqueryrain.com/?rb4amMEf-->
+<script type="text/javascript" src="http://github.com/malsup/media/raw/master/jquery.media.js?v0.92"></script> 
+<script type="text/javascript" src="jquery.metadata.js"></script> 
+<script> 
+$('a.media').media({width:500, height:400});
+</script>
+<h1> patient data: </h1>
 
 {% if patientinfo.patient_data %}
-<p> patient data: </p>
-<p><embed src="/static/{{patientinfo.patient_data}}" width="800px" height="2100px"></p>
+<p><a class="media" href="/static/{{patientinfo.patient_data}}" width="800px">Patient Data File</a></p>
+
+
+{% else %}
+<h2> No Data Here! </h2>
+<a href="{% url 'patientinfo:uploaddata' username patientinfo.id %}" class="btn btn-success btn-sm">Upload Patient Data</a>
+
 {% endif %}
-
-
-<p> Want To Upload: </p>
-<ul><a href="{% url 'patientinfo:uploaddata' username patientinfo.id %}">Upload Patient Data</a></ul>
-
 
 
 
@@ -20,8 +27,8 @@
 <div id="sidebar">
 	{% block sidebar %}
 
-	<h2><a href="{% url 'patientinfo:index_data' username %}">Back to Patient List</a></h2>
-	<h2><a href="{% url 'patientinfo:detail' username patientinfo.id %}">View Patient Detail</a></h2>
+	<h2><a href="{% url 'patientinfo:index_data' username %}"class="btn btn-success btn-sm">Back to Patient List</a></h2>
+
 
 	{% endblock %}
 </div>

@@ -1,7 +1,7 @@
  {% extends "secure/base.html" %}
 
   {% block maincontent%}
-     <h2> Profile</h2>
+     <h1> Profile</h1>
 
      {% for field in form %}
         {{field.error}}
@@ -15,12 +15,12 @@
     {{form.as_ul}}
     </ul>
 
-    <input type="submit" value="Update" >
+    <input type="submit" value="Update" class="btn btn-success btn-sm">
     </form>
 
     <div id="sidebar">
     {% block sidebar %}
-    <h2><a href="{% url 'userprofile:viewprofile'  username %}">Cancle</a></h2>
+    <h2><a href="{% url 'userprofile:viewprofile'  username %}" class="btn btn-success btn-sm">Cancle</a></h2>
     {% endblock %}
     
 </div>

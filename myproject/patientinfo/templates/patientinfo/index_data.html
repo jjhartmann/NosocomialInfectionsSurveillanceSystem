@@ -2,20 +2,32 @@
 
 
     {% block maincontent%}
-<h1>patient data</h1>
+  
+
+<div class="container">
+  <h1>patient information</h1>
 <li><a href="{% url 'patientinfo:create' username %}">Create New Patient Info</a></li>
-{% for patientinfo in patientinfos %}
+          
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Feature</th>
+      </tr>
+    </thead>
 
-<div>
-<h2>{{ patientinfo.firstname }} {{ patientinfo.lastname }}</h2>
-	<ul>
-		
-		<li><a href="{% url 'patientinfo:viewdata' username patientinfo.id %}">View/Upload Patient Data</a></li>
-		
-	
+    <tbody>
+    {% for patientinfo in patientinfos %} 
+      <tr>
+        <td>{{ patientinfo.firstname }}</td>
+        <td>{{ patientinfo.lastname }}</td>
+        <td><a href="{% url 'patientinfo:viewdata' username patientinfo.id %}" class="btn btn-success btn-sm">View/Upload Patient Data</a></td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
 
-	</ul>
-<div>
-{% endfor %}
     {% endblock %}
- 
+

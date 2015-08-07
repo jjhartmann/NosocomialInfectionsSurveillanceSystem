@@ -1,20 +1,21 @@
 {% extends "secure/base.html" %}
     {% block maincontent%}
-<h1> patient data:</hi>
+<h1> Updating patient data</h1>
 
-<form action="{% url 'patientinfo:uploaddata'  username patientinfo.id %}" method="post" enctype="multipart/form-data">{% csrf_token %}
+<form action="{% url 'patientinfo:uploaddata'  username patientinfo.id %}" method="post" enctype="multipart/form-data" >{% csrf_token %}
 <ul>
 	{{form.as_ul}}
 </ul>
 
-<input type= "submit"  name="submit" value="Update Patient Data">
+<input type= "submit"  name="submit" value="Update Patient Data" class="btn btn-success btn-sm">
 </form>
 
 <div id="sidebar">
 	{% block sidebar %}
-	<h2><a href="{% url 'patientinfo:index_data'  username %}">Cancle</a></h2>
+	<h2><a href="{% url 'patientinfo:index_data'  username %}"class="btn btn-success btn-sm">Cancle</a></h2>
+
 	{% endblock %}
-	
 </div>
+	
 
     {% endblock %}

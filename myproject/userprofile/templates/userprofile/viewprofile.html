@@ -2,31 +2,78 @@
 
 
     {% block maincontent%}
+<div class="container">
+      <div class="row">
+      <div class="col-md-5  toppad  pull-right col-md-offset-3 ">
+    
 
-<h1> User detial: </hi>
+      </div>
+        <div class="toppad" >
+   
+   
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">User Profile</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-3 col-lg-3 " align="center"> <img img src="/static/{{userprofile.profile_picture}}" class="img-circle img-responsive"> </div>
+                
+                <div class=" col-md-9 col-lg-9 "> 
+                  <table class="table table-striped">
+                    <tbody>
+                       <tr>
+                        <td>Username:</td>
+                        <td>{{ userprofile.user.username }}</td>
+                      </tr>
+ 
+                      <tr>
+                        <td>First Name:</td>
+                        <td>{{ userprofile.user.first_name }}</td>
+                      </tr>
 
-{% if userprofile.profile_picture %}
-<p> User picture: </p>
-<p><img src="/static/{{userprofile.profile_picture}}" width="200" /></p>
-{% endif %}
+                      <tr>
+                        <td>Last Name:</td>
+                        <td>{{ userprofile.user.last_name }}</td>
+                      </tr>                  
+                  
+                         <tr>
+                        <td>Gender:</td>
+                        <td>{{ userprofile.gender }}</td>
+                      </tr>
 
-<ul> 
-	<li> Username: {{ userprofile.user.username }}</li>
-	<li> First Name: {{ userprofile.user.first_name }}</li>
-	<li> Last Name: {{ userprofile.user.last_name }}</li>
-	<li> Gender: {{ userprofile.gender }}</li>
-	<li> Phone: {{ userprofile.phone }}</li>
-	<li> Email: {{ userprofile.user.email }}</li>
-	<li> Address: {{ userprofile.address }}</li>
+                      <tr>
+                        <td>Email:</td>
+                        <td>{{ userprofile.user.email }}</td>
+                      </tr>
 
+                      <tr>
+                        <td>Phone Number:</td>
+                        <td>{{ userprofile.phone }}
+                        </td>
+                      </tr>
 
-</ul>
+                      <tr>
+                        <td>Address:</td>
+                        <td>{{ userprofile.address }}
+                        </td>
+                      </tr>
 
-<div id="sidebar"
-	{% block sidebar %}
-	<h2><a href="{% url 'userprofile:setprofile' username %}">Setting</a></h2>
-
-	{% endblock %}
-</div>
-
+                   
+                    </tbody>
+                  </table>
+                  
+            
+                </div>
+              </div>
+            </div>
+                 <div class="panel-footer">
+                      <a href="{% url 'userprofile:setprofile' username %}" class="btn btn-success btn-sm">Setting Profile</a>
+                        
+                    </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
     {% endblock %}

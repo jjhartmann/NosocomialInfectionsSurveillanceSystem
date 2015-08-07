@@ -2,18 +2,31 @@
 
 
     {% block maincontent%}
-<h1>managing patient </h1>
-<a href="{% url 'patientinfo:create' username %}">Create New Patient Info</a>
-{% for patientinfo in patientinfos %}
+  
 
-<div>
-<h2>{{ patientinfo.firstname }} {{ patientinfo.lastname }}</h2>
-	<ul>
-	
-		<li><a href="{% url 'patientinfo:delete' username patientinfo.id %}">Delete</a></li>
+<div class="container">
+  <h1>patient information</h1>
+<li><a href="{% url 'patientinfo:create' username %}">Create New Patient Info</a></li>
+          
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Feature</th>
+      </tr>
+    </thead>
 
-	</ul>
-<div>
-{% endfor %}
+    <tbody>
+    {% for patientinfo in patientinfos %} 
+      <tr>
+        <td>{{ patientinfo.firstname }}</td>
+        <td>{{ patientinfo.lastname }}</td>
+        <td><a href="{% url 'patientinfo:delete' username patientinfo.id %}" class="btn btn-success btn-sm">Delete</a></td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+
     {% endblock %}
- 
