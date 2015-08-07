@@ -277,7 +277,7 @@ a:focus > .sf-sub-indicator, a:hover > .sf-sub-indicator, a:active > .sf-sub-ind
     z-index: 0;
 }
 .content-holder {
-    padding-bottom: 50px;
+
     position: relative;
     z-index: 1;
 }

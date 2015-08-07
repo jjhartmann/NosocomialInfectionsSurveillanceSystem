@@ -1,13 +1,13 @@
 {% load staticfiles %}
 
 {% block footer %}
- <footer class="motopress-wrapper footer">
+ <footer class="motopress-wrapper footer" >
 	<div class="container">
 	        <div class="row">
 	            <div class="span12" data-motopress-wrapper-file="wrapper/wrapper-footer.php" data-motopress-wrapper-type="footer" >
 	                <div class="container  footer-widgets">
 	                    <div class="row">
-	                        <img src="{% static 'pic/foot2.png' %}" alt="NISS LOGO" align=left style="height: 80px; width: 80px;padding-left: 0px; margin-top: 10px;"/>
+	                        <img src="{% static 'pic/foot_logo.png' %}" alt="NISS LOGO" align=left style="height: 80px; width: 80px;padding-left: 0px; margin-top: 10px;"/>
 	                                <div class="span3" data-motopress-type="dynamic-sidebar" data-motopress-sidebar-id="footer-sidebar-1">
 	                            <div id="nav_menu-2" class="visible-all-devices " style="line-height:10px">
 	                                <h4 align="center" ><b>Technology</b></h4>
@@ -66,12 +66,13 @@
 
 <div class="container">
 	<div class="row copyright">
-	
+		<div class="span4"  >
 			<div id="footer-text" class="footer-text">
 				<a href="#">SFU CMPT470 GROUP 9 </a> &copy; 2015.
 				<a href="#" title="Privacy Policy">Privacy Policy</a>
 			</div>
+		</div>
 	</div>
 </div>
 
-{% endblock %}
+{%endblock%}

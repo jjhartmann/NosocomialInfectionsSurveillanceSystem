@@ -45,20 +45,20 @@ jQuery(document).ready(function(){
 <header class="motopress-wrapper header">
     <div class="container">
         <div class="row">
-            <div class="span12" data-motopress-wrapper-file="wrapper/wrapper-header.php" data-motopress-wrapper-type="header" data-motopress-id="55bed0b188a23">
+            <div class="span12" >
                 <div class="stuck_wrapper">
                     <div class="container">
                         <div class="row">
-                            <div class="span5" data-motopress-type="static" data-motopress-static-file="static/static-logo.php">
+                            <div class="span5">
                                 <div class="logo pull-left">
-                                    <a href="#" class=""><img src="{% static 'pic/rsz_logo.png'%}" alt="NISS LOGO" style="margin-top:-10px"></a>
+                                    <a href="#" class=""><img src="{% static 'pic/log.png'%}" alt="NISS LOGO" style="margin-top:-10px;height:60px;width:60px;" ></a>
                                 </div>
                             </div>
                             <!-- Register Form -->
-                            <div class="span7" data-motopress-type="static" data-motopress-static-file="static/static-nav.php">
+                            <div class="span7">
                                 <div class="login-wrap">
                                     <div class="login-toggle icon-user"></div>
-                                    <form name="loginform" id="loginform" action="{% url 'index:verifycredentials' %}" method="post">
+                           <form name="loginform" id="loginform" action="{% url 'index:verifycredentials' %}" method="post">
                                         {% csrf_token %}
                                         <p class="login-username ">
                                             <label>Username:</label>
@@ -69,9 +69,9 @@ jQuery(document).ready(function(){
                                             <input type="password" name="password" id="pwd" value="" size="20" tabindex="2"  />
                                         </p>
                                         <p class="submit">
-                                            <input type="submit" name="submit" id="submit" class="btn" value="Login" tabindex="4" />
-                                            <a class="btn" href="{% url 'index:register' %}">Register</a>
-                                        </p>
+                                            <input type="submit" name="submit" id="submit" class="btn" value="Login" tabindex="4" /> 
+                                            <a  class="btn" href="{% url 'index:register' %}">Register</a>
+                                       </p>
 
                                         <p class="login-remember">
                                             <label>
@@ -159,4 +159,4 @@ jQuery(document).ready(function(){
 
         });
     </script>
-</header>
+

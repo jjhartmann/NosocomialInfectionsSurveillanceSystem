@@ -985,9 +985,10 @@ img.alignnone {
 .footer a:hover { color:#fd8505; }
 .footer-widgets {
 	font-size:15px;
-	line-height:36px;
+	line-height:50px;
 	position:relative;
 	color:#877561;
+
 
 }
 .footer-widgets a { color:#877561; }
@@ -1054,7 +1055,7 @@ img.alignnone {
 	-o-transform:scale(1);
 	transform:scale(1);
 }
-.footer .copyright { padding:19px 0; }
+.footer .copyright { padding:0px 0; }
 .footer .copyright nav.footer-nav ul li a:hover { color:#abcc26; }
 .footer .copyright nav.footer-nav ul li.current_page_item a { color:#abcc26; }
 .zoom-icon {
