@@ -2,12 +2,15 @@
 
 {% block maincontent%}
 
-    <h2> Register</h2>
-    <form action="{% url 'index:register' %}" method="post"> {% csrf_token %}
-    {{form.as_ul}}
-
-    <input type="submit" value="Register" />
+<div class="motopress-wrapper content-holder clearfix">
+<div class="container">
+    <h1 style="margin-left:300px; margin-top:100px;margin-bottom:50px;font-size:33px;"> Register</h1>
+    <form style="margin-bottom:140px;margin-left:300px;" action="{% url 'index:register' %}"  method="post"> {% csrf_token %}
+ 	{{form.as_ul}}
+    <input class="btn btn-success btn-sm" type="submit" value="Register" />
     </form>
+    </div>
+
 
 {% endblock %}
 
