@@ -9,6 +9,7 @@ body {
 body.cherry-fixed-layout {
     padding-left: 0 !important;
     padding-right: 0 !important;
+
 }
 }
 @media (max-width: 767px) {
@@ -2078,7 +2079,7 @@ iframe .uiHeader h3 {
 .footer {
     background: #eee none repeat scroll 0 0;
     border-top: 1px solid #d9d9d9;
-    padding: 20px 0;
+    padding: 0px 0;
     position: relative;
     z-index: 100;
 }
