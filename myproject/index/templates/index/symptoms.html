@@ -1,0 +1,249 @@
+<!-- Modifyed from D3 Bubble chart.js 2010-2015, Michael Bostock -->
+
+{% load staticfiles %}
+
+<!DOCTYPE html>
+
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600,200italic,600italic&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+<script src="{%static 'js/footer.js'%}"></script>
+<script src="http://phuonghuynh.github.io/js/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="http://phuonghuynh.github.io/js/bower_components/d3/d3.min.js"></script>
+<script src="http://phuonghuynh.github.io/js/bower_components/d3-transform/src/d3-transform.js"></script>
+<script src="http://phuonghuynh.github.io/js/bower_components/cafej/src/extarray.js"></script>
+<script src="http://phuonghuynh.github.io/js/bower_components/cafej/src/misc.js"></script>
+<script src="http://phuonghuynh.github.io/js/bower_components/cafej/src/micro-observer.js"></script>
+<script src="http://phuonghuynh.github.io/js/bower_components/microplugin/src/microplugin.js"></script>
+<script src="http://phuonghuynh.github.io/js/bower_components/bubble-chart/src/bubble-chart.js"></script>
+<script src="http://phuonghuynh.github.io/js/bower_components/bubble-chart/src/plugins/central-click/central-click.js"></script>
+<script src="http://phuonghuynh.github.io/js/bower_components/bubble-chart/src/plugins/lines/lines.js"></script>
+<script src="index.js"></script>
+
+
+<script>
+$(document).ready(function () {
+  var bubbleChart = new d3.svg.BubbleChart({
+    supportResponsive: true,
+    //container: => use @default
+    size: 600,
+    //viewBoxSize: => use @default
+    innerRadius: 600 / 3.5,
+    //outerRadius: => use @default
+    radiusMin: 60,
+    //radiusMax: use @default
+    //intersectDelta: use @default
+    //intersectInc: use @default
+    //circleColor: use @default
+    data: {
+      items: [
+        {text: "Pain", des1:"abdominal pain", des2:"back pain,eye pain headache", des3:"leg pain, jaw pain, side pain", count: "200"},
+        {text: "Fever", des1: "A fever usually means the body has raised its ", des2:"temperature to fight an infection or condition.",des3:"The most common causes are", des4:"infectious viruses such as cold or flu.", count: "150"},
+        {text: "Night Sweats", des2:"Sweating when your body is cold or with chills.",count: "170"},
+        {text: "Breatthing Difficulties", count: "123"},
+        {text: "Infection", des1: "skin inflection ", des2:"blood inflection",des3: "recurrent infections",count: "12"},
+        {text: "Inflammation", des1:"Redness, swelling, pain, and/or a feeling", des2:" of heat in an area of the body. This is a ",  des3:"protective reaction to injury,disease,",des4:"or irritation of the tissues.", count: "170"},
+        {text: "Swelling", des1:"Swelling or bloating of the abdomen.",des2:"Swelling or enlargement of the spleen.",des3:"A swelling located on the eyelid.",des4:"The swelling of the cornea of the eye.", count: "382"},
+
+      ],
+      eval: function (item) {return item.count;},
+      classed: function (item) {
+      	return item.text.split(" ").join("");
+		return item.des1.split(" ").join("");
+		return item.des2.split(" ").join("");
+		return item.des3.split(" ").join("");
+		return item.des4.split(" ").join("");
+		return item.des5.split(" ").join("");
+  	}
+    },
+    plugins: [
+
+      {
+        name: "lines",
+        options: {
+          format: [
+          {// Line #0
+              textField: "text",
+              classed: {text: true},
+              style: {
+                "font-size": "10px",
+                "font-family": "Source Sans Pro, sans-serif",
+                "text-anchor": "middle",
+                fill: "white"
+              },
+              attr: {
+                dy: "-20px",
+             
+                x: function (d) {return d.cx;},
+                y: function (d) {return d.cy;}
+
+              }
+            },
+             {// Line #1
+              textField: "des1",
+              classed: {des1: true},
+              style: {
+                "font-size": "6px",
+                "font-family": "Source Sans Pro, sans-serif",
+                "text-anchor": "middle",
+                fill: "white"
+              },
+              attr: {
+                dy: "-5px",
+                x: function (d) {return d.cx;},
+                y: function (d) {return d.cy;}
+              }
+            },
+            {// Line #2
+              textField: "des2",
+              classed: {des2: true},
+              style: {
+                "font-size": "6px",
+                "font-family": "Source Sans Pro, sans-serif",
+                "text-anchor": "middle",
+                fill: "white"
+              },
+              attr: {
+                dy: "10px",
+                x: function (d) {return d.cx;},
+                y: function (d) {return d.cy;}
+              }
+            },
+
+		{// Line #3
+              textField: "des3",
+              classed: {des3: true},
+              style: {
+                "font-size": "6px",
+                "font-family": "Source Sans Pro, sans-serif",
+                "text-anchor": "middle",
+                fill: "white"
+              },
+              attr: {
+                dy: "25px",
+                x: function (d) {return d.cx;},
+                y: function (d) {return d.cy;}
+              }
+            },
+            {// Line #4
+              textField: "des4",
+              classed: {des3: true},
+              style: {
+                "font-size": "6px",
+                "font-family": "Source Sans Pro, sans-serif",
+                "text-anchor": "middle",
+                fill: "white"
+              },
+              attr: {
+                dy: "40px",
+                x: function (d) {return d.cx;},
+                y: function (d) {return d.cy;}
+              }
+            },
+			{// Line #4
+              textField: "des5",
+              classed: {des3: true},
+              style: {
+                "font-size": "6px",
+                "font-family": "Source Sans Pro, sans-serif",
+                "text-anchor": "middle",
+                fill: "white"
+              },
+              attr: {
+                dy: "60px",
+                x: function (d) {return d.cx;},
+                y: function (d) {return d.cy;}
+              }
+            },
+
+
+          ],
+          centralFormat: [
+            {// Line #0
+              style: {"font-size": "35px"},
+              attr: {dy:"-40px"}
+            },
+            {// Line #1,
+              style: {"font-size": "13px"},
+              attr: {dy: "2px"}
+            },
+             {// Line #1,
+              style: {"font-size": "13px"},
+              attr: {dy: "30px"}
+            },
+             {// Line #1,
+              style: {"font-size": "13px"},
+              attr: {dy: "60px"}
+            },
+             {// Line #1,
+              style: {"font-size": "13px"},
+              attr: {dy: "90px"}
+            },
+                  {// Line #1,
+              style: {"font-size": "13px"},
+              attr: {dy: "120px"}
+            },
+          ]
+        }
+      }]
+  });
+});
+</script>
+<style>
+	body{
+	font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
+	}
+    .bubbleChart {
+	min-width: 200px;
+	max-width: 1000px;
+	height: 800px;
+	margin: 0 auto;
+    }
+    .bubbleChart svg{
+      background: #fff;
+    }
+    .go-back {
+    position: fixed;
+    width:80px;height:80px;border-radius:60px;font-size:20px;color:#fff;line-height:80px;text-align:center;background:#000;
+    bottom: 0.75em;
+    left: 2em;
+    text-decoration: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.25);
+    font-size: 12px;
+    padding: 10px;
+    display: none;
+    margin: 0;
+	}
+	.go-back:hover {
+	background-color: rgba(0, 0, 0, 0.6);
+	color: white;
+	text-decoration: none;
+	}
+	.go-link {
+    position: fixed;
+    width:80px;height:80px;border-radius:60px;font-size:20px;color:#fff;line-height:80px;text-align:center;background:#000;
+    bottom: 0.75em;
+    right: 2em;
+    text-decoration: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.25);
+    font-size: 12px;
+    padding: 10px;
+    display: none;
+    margin: 0;
+	}
+	.go-link:hover {
+	background-color: rgba(0, 0, 0, 0.6);
+	color: white;
+	text-decoration: none;
+	}
+  </style>
+</head>
+<body>
+	<body style="background: #fff">
+	<div class="bubbleChart"/>
+	</div>
+	<a href="http://www.rightdiagnosis.com/n/nosocomial_infections/symptoms.htm" class="go-link" style="display: inline;">Check Details!</a>
+	<a href="{% url 'index:index'%}" class="go-back" style="display: inline;">Back Home</a>
+</body>
+</html>
+

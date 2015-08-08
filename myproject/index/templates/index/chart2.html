@@ -6,9 +6,10 @@
 <!DOCTYPE html>
 
 
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="{%static 'js/footer.js'%}"></script>
 
 <style>
 body{
@@ -51,11 +52,11 @@ rect:hover {  fill:blue; }
     align:right;
     width:50px;
 }
-
-.go-top {
+ .go-back {
     position: fixed;
+    width:90px;height:90px;border-radius:50px;font-size:20px;color:#fff;line-height:80px;text-align:center;background:#000;
     bottom: 0.75em;
-    right: 0.5em;
+    left: 2em;
     text-decoration: none;
     color: white;
     background-color: rgba(0, 0, 0, 0.25);
@@ -65,100 +66,14 @@ rect:hover {  fill:blue; }
     margin: 0;
 }
 
-.go-top:hover {
+    .go-back:hover {
     background-color: rgba(0, 0, 0, 0.6);
     color: white;
     text-decoration: none;
-}
-
-.go-back {
-    position: fixed;
-    bottom: 0.75em;
-    left: 0.5em;
-    text-decoration: none;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.25);
-    font-size: 12px;
-    padding: 10px;
-    display: none;
-    margin: 0;
-}
-
-.go-back:hover {
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    text-decoration: none;
-}
+    }
 
 </style>
-<style>
-    .go-top {
-    position: fixed;
-    bottom: 0.75em;
-    right: 0.5em;
-    text-decoration: none;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.25);
-    font-size: 12px;
-    padding: 10px;
-    display: none;
-    margin: 0;
-}
 
-.go-top:hover {
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    text-decoration: none;
-}
-
-.go-back {
-    position: fixed;
-    bottom: 0.75em;
-    left: 0.5em;
-    text-decoration: none;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.25);
-    font-size: 12px;
-    padding: 10px;
-    display: none;
-    margin: 0;
-}
-
-.go-back:hover {
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    text-decoration: none;
-}
-</style>
-<script>
-    // Go top and go home effect
-    $(document).ready(function() {
-        // Show or hide the sticky footer button
-        $(window).scroll(function() {
-            if ($(this).scrollTop() > 200) {
-                $('.go-top').fadeIn(500);
-            } else {
-                $('.go-top').fadeOut(300);
-            }
-        });
-        // Animate the scroll to top
-        $('.go-top').click(function(event) {
-            event.preventDefault();
-
-            $('html, body').animate({scrollTop: 0}, 300);
-        })
-    });
-     $(document).ready(function() {
-        // Show or hide the sticky footer button
-        $(window).scroll(function() {
-            if ($(this).scrollTop() > 200) {
-                $('.go-back').fadeIn(500);
-            } else {
-                $('.go-back').fadeOut(300);
-            }
-        });
-    });
-</script>
 
 <body>
 <div class="motopress-wrapper content-holder clearfix">
@@ -393,6 +308,6 @@ dashboard('#dashboard',freqData);
 </script>
 <!-- Add go back button and go top button  -->
 <a href="{% url 'index:index'%}" class="go-back" style="display: inline;">Back Home</a>
-<a href="#" class="go-top" style="display: inline;">Back to top</a>
+<!-- <a href="#" class="go-top" style="display: inline;">Back to top</a> -->
 
 {% endblock %}

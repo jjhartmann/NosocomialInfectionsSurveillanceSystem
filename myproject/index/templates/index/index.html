@@ -8,19 +8,19 @@
                 <li data-preview="{% static 'pic/slide_1.jpg'%}" data-thumb-url="{% static 'pic/slide_1.jpg'%}" data-ulr-link="">
                     <div class="slider_caption">
                         <h2>&nbsp;</h2>
-                        <p><a href="blog/">Discover our website!</a></p>
+                        <p><a href="blog/">Explore our website!</a></p>
                     </div>
                 </li>
                 <li data-preview="{% static 'pic/slide_2.jpg'%}" data-thumb-url="{% static 'pic/slide_2.jpg'%}" data-ulr-link="">
                     <div class="slider_caption">
                         <h2>Check Blast+ </h2>
-                        <a href="blog/">Blast+</a>
+                        <a href="{% url 'index:blast' %}">Blast+</a>
                     </div>
                 </li>
                 <li data-preview="{% static 'pic/slide3.jpg'%}" data-thumb-url="{% static 'pic/slide3.jpg'%}" data-ulr-link="">
                     <div class="slider_caption">
-                        <h2> Build a Phylogenetic Tree! </h2>
-                        <a href="blog/">Go to Phylic tree!</a>
+                        <h2> Build a Phylogenetic Tree!</h2>
+                         <a href="{% url 'index:phylib_intro' %}">Go to Phylic tree!</a>
                     </div>
                 </li>
             </ul>
@@ -29,15 +29,15 @@
         <div class="motopress-wrapper content-holder clearfix">
             <div class="container">
                 <div class="row">
-                    <div class="span12" data-motopress-wrapper-file="page-home.php" data-motopress-wrapper-type="content">
+                    <div class="span12" >
                         <div class="row">
-                            <div class="span12" data-motopress-type="static" data-motopress-static-file="static/static-slider.php">
+                            <div class="span12" >
                                 <div class="slider_off"> </div>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="span12" data-motopress-type="loop" data-motopress-loop-file="loop/loop-page.php">
-                                <div id="post-203" class="page post-203 type-page status-publish hentry">
+                            <div class="span12" >
+                                <div id="post-203">
                                     <div class="row ">
                                         <div class="span9 ">
                                             <div class="row ">
@@ -76,13 +76,13 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <h3>NISS Database</h3>
+                                            <h3>Everything about nosocomial infection</h3>
                                             <div class="row-fluid ">
                                                 <div class="span6">
                                                     <div class="iconed_block">
                                                         <figure class="alignleft aligntextleft "><i class="icn-1 " style="color:#00000; font-size:14px; line-height:1.2em;"></i></figure>
                                                         <div class="extra-wrap">
-                                                            <h4><a href="data_graph">Database graph 1</a></h4>
+                                                            <h4><a href="{% url 'index:symptoms' %}">Symptoms</a></h4>
                                                             <p>Descripton about graph</p>
                                                         </div>
                                                     </div>
@@ -91,7 +91,7 @@
                                                     <div class="iconed_block">
                                                         <figure class="alignleft aligntextleft "><i class="icn-2 " style="color:#00000; font-size:14px; line-height:1.2em;"></i></figure>
                                                         <div class="extra-wrap">
-                                                            <h4><a href="#">Database graph 2</a></h4>
+                                                            <h4><a href="{% url 'index:cause' %}">Causes</a></h4>
                                                             <p>Description about graph 2</p>
                                                         </div>
                                                     </div>
@@ -102,7 +102,7 @@
                                                     <div class="iconed_block">
                                                         <figure class="alignleft aligntextleft "><i class="icn-3 " style="color:#00000; font-size:14px; line-height:1.2em;"></i></figure>
                                                         <div class="extra-wrap">
-                                                            <h4><a href="#">Databse graph 3</a></h4>
+                                                            <h4><a href="#">Treatment</a></h4>
                                                             <p>Descripton about grap 3</p>
                                                         </div>
                                                     </div>
@@ -111,7 +111,7 @@
                                                     <div class="iconed_block">
                                                         <figure class="alignleft aligntextleft "><i class="icn-4 " style="color:#00000; font-size:14px; line-height:1.2em;"></i></figure>
                                                         <div class="extra-wrap">
-                                                            <h4><a href="#">Database graph 4</a></h4>
+                                                            <h4><a href="#">Prevention</a></h4>
                                                             <p>Description about graph 4</p>
                                                         </div>
                                                     </div>

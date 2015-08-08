@@ -1,9 +1,11 @@
 {% extends "public/base.html" %}
 
 {% block maincontent%}
-    <form class="form-horizontal"  method="post" action="{% url 'index:verifycredentials' %}">
+<div class="motopress-wrapper content-holder clearfix">
+  <div class="container" >
+    <form  method="post" action="{% url 'index:verifycredentials' %}">
         {% csrf_token %}
-        <fieldset>
+        <fieldset style="margin-bottom:600px;" >
 
         <!-- Form Name -->
         <legend>Login:</legend>
@@ -39,5 +41,7 @@
 
         </fieldset>
     </form>
+  </div>
+</div>
 {% endblock %}
 

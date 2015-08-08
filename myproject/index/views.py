@@ -142,5 +142,22 @@ def data_graph_json(request):
    fp.write("]")
   return render_to_response('index/chart2.html')
 
+#Project descritpion page
 def project_des(request):
   return render_to_response('index/project_des.html')
+
+#blast introduction page
+def blast(request):
+  return render_to_response('index/blast.html')
+
+#phylib introduction page
+def phylib_intro(request):
+  return render_to_response('index/phylib_intro.html')
+
+#symtoms introduction page
+def symptoms(request):
+  return render_to_response('index/symptoms.html')
+
+#causes introduction page
+def cause(request):
+  return render_to_response('index/cause.html')

@@ -15,5 +15,10 @@ urlpatterns = [
     url(r'^register/$', views.doctor_register, name='register'),
     url(r'^register_success/$', views.doctor_register_success, name='register_success'),
     url(r'^data_graph/$', views.data_graph_json, name='data_graph_json'),
-    url(r'^project/$', views.project_des, name='project_des')
+    url(r'^project/$', views.project_des, name='project_des'),
+    url(r'^blast/$', views.blast, name='blast'),
+    url(r'^phylib_intro/$', views.phylib_intro, name='phylib_intro'),
+    url(r'^symptoms/$', views.symptoms, name='symptoms'),
+    url(r'^cause/$', views.cause, name='cause'),
 ]
+
