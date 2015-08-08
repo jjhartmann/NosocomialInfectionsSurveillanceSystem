@@ -161,3 +161,6 @@ def symptoms(request):
 #causes introduction page
 def cause(request):
   return render_to_response('index/cause.html')
+#causes introduction page
+def about(request):
+  return render_to_response('index/about.html')

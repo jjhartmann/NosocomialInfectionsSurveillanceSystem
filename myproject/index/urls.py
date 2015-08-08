@@ -20,5 +20,6 @@ urlpatterns = [
     url(r'^phylib_intro/$', views.phylib_intro, name='phylib_intro'),
     url(r'^symptoms/$', views.symptoms, name='symptoms'),
     url(r'^cause/$', views.cause, name='cause'),
+    url(r'^about/$', views.about, name='about'),
 ]
 
