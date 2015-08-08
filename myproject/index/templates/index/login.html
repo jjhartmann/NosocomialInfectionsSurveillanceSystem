@@ -35,9 +35,17 @@
             <input type="submit" name="submit" value="Login" class="btn btn-primary"/>
           </div>
         </div>
-
+        
         <!-- Added by palmer -->
-        <a href="{% url 'index:register' %}">Register an account!</a>
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="submit"></label>
+          <div class="col-md-4">  
+            <a href="{% url 'index:register' %}" class="btn btn-primary" >Register an account</a>
+          </div>
+        </div>
+
+
+        
 
         </fieldset>
     </form>

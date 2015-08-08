@@ -17,8 +17,13 @@
             </div>
             <div class="panel-body">
               <div class="row">
+              <!-- display image  -->
+                {% if userprofile.profile_picture %}
                 <div class="col-md-3 col-lg-3 " align="center"> <img img src="/static/{{userprofile.profile_picture}}" class="img-circle img-responsive"> </div>
-                
+                {% else %}
+                <div class="col-md-3 col-lg-3 " align="center"> <p> No user picture uploaded </p> </div>
+                {% endif %}
+
                 <div class=" col-md-9 col-lg-9 "> 
                   <table class="table table-striped">
                     <tbody>
