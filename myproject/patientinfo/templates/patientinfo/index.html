@@ -5,7 +5,9 @@
   
 
 <div class="container">
-  <h1>patient information</h1>
+  <h1>Patient Information</h1>
+
+  {% if patientinfo %}
 <li><a href="{% url 'patientinfo:create' username %}">Create New Patient Info</a></li>
           
   <table class="table table-striped">
@@ -25,9 +27,20 @@
         <td><a href="{% url 'patientinfo:detail' username patientinfo.id %}" class="btn btn-success btn-sm">View Patient detail</a></td>
       </tr>
     {% endfor %}
+
     </tbody>
   </table>
+  {% else %}
+  <div id="noinfo" >
+
+  <p> You don't have any patient info yet, clicl the button to creat new </p>
+
+  <a href="{% url 'patientinfo:create' username %}" class="btn btn-success btn-sm">Create New Patient Info</a>
+  </div>
+  {% endif %}
+
 </div>
+
 
     {% endblock %}
 
