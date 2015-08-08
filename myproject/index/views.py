@@ -143,16 +143,16 @@ def data_graph_json(request):
   return render_to_response('index/chart2.html')
 
 #Project descritpion page
-def project_des(request):
-  return render_to_response('index/project_des.html')
+def database_search(request):
+  return render_to_response('index/database_search.html')
 
 #blast introduction page
 def blast(request):
   return render_to_response('index/blast.html')
 
 #phylib introduction page
-def phylib_intro(request):
-  return render_to_response('index/phylib_intro.html')
+def phylip_intro(request):
+  return render_to_response('index/phylip_intro.html')
 
 #symtoms introduction page
 def symptoms(request):
@@ -161,6 +161,15 @@ def symptoms(request):
 #causes introduction page
 def cause(request):
   return render_to_response('index/cause.html')
-#causes introduction page
+
 def about(request):
   return render_to_response('index/about.html')
+
+def tutorial(request):
+  return render_to_response('index/tutorial.html')
+
+def website_intro(request):
+  return render_to_response('index/website_intro.html')
+
+def project_intro(request):
+  return render_to_response('index/project_intro.html')

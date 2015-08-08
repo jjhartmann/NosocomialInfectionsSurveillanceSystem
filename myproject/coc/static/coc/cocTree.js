@@ -3,9 +3,9 @@
  *All rights reserved.
  */
 
-var margin = {top: 80, right: 0, bottom: 10, left: 60},
-    width = 500,
-    height =500;
+var margin = {top: 0, right: 0, bottom: 0, left: 0},
+    width = 1000,
+    height =1000;
 
 var x = d3.scale.ordinal().rangeBands([0, width]),
     z = d3.scale.linear().domain([0, 4]).clamp(true),
@@ -60,8 +60,8 @@ d3.json('/static/coc/parse.json', function(parse) {
 
   svg.append("rect")
       .attr("class", "background")
-      .attr("width", width)
-      .attr("height", height);
+      .attr("width", 800)
+      .attr("height", 800);
 
   var row = svg.selectAll(".row")
       .data(matrix)

@@ -1,0 +1,44 @@
+{% extends "public/base.html" %}
+  {% load staticfiles %}
+  {% block maincontent %}
+  <style>
+p{
+font-size: 15px;
+line-height: 2;
+text-decoration: none;
+}
+li {
+	
+	font-size: 15px;
+	text-decoration: none;
+line-height: 2;
+}
+h2 {
+	font-size: 28px;
+	line-height: 3;
+
+}
+</style>
+
+<div class="motopress-wrapper content-holder clearfix">
+	<div class="container">
+		<div class="margin" style="margin-bottom: 150px;">
+			<h2>PHYLIP TREE (Modify later) (temporary section)</h2>
+			<img src="{% static "pic/tree.png" %}" alt="Phylip_tree"/> 
+			<p>PHYLIP (the PHYLogeny Inference Package) is a package of programs for inferring phylogenies (evolutionary trees). It is available free over the Internet, and written to work on as many different kinds of computer systems as possible. The source code is distributed (in C), and executables are also distributed. In particular, already-compiled executables are available for Windows (95/98/NT/2000/me/xp/Vista), Mac OS X, and Linux systems. Older executables are also available for Mac OS 8 or 9 systems. Complete documentation is available on documentation files that come with the package.</p>
+
+			<p>Methods that are available in the package include parsimony, distance matrix, and likelihood methods, including bootstrapping and consensus trees. Data types that can be handled include molecular sequences, gene frequencies, restriction sites and fragments, distance matrices, and discrete characters.</p>
+
+			<p>The programs are controlled through a menu, which asks the users which options they want to set, and allows them to start the computation. The data are read into the program from a text file, which the user can prepare using any word processor or text editor (but it is important that this text file not be in the special format of that word processor -- it should instead be in "flat ASCII" or "Text Only" format). Some sequence analysis programs such as the ClustalW alignment program can write data files in the PHYLIP format. Most of the programs look for the data in a file called "infile" -- if they do not find this file they then ask the user to type in the file name of the data file.</p>
+
+			<p>Output is written onto special files with names like "outfile" and "outtree". Trees written onto "outtree" are in the Newick format, an informal standard agreed to in 1986 by authors of a number of major phylogeny packages.</p>
+			<!-- <img src="{% static "pic/phylip_tree2.png" %}"  style= "margin-right:250px;height:400px; width:400px;" alt="Phylip_tree"/>
+			<img src="{% static "pic/phylip_tree.jpg" %}" alt="Phylip_tree"/>  -->
+
+		</div>
+	</div>
+</div>
+
+
+
+{% endblock %}

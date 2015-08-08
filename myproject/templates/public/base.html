@@ -28,6 +28,8 @@
     <script type='text/javascript' src="{% static 'js/jquery_magnific_popup_min.js' %}"></script>
     <script type='text/javascript' src="{% static 'js/jqueryClever.js' %}"></script>
     <script type='text/javascript' src="{% static 'js/mousewheel.js' %}"></script>
+    <!-- popup window -->
+    <script type='text/javascript' src="{% static 'js/jquery.bpopup.min.js' %}"></script>
     <script type="text/javascript">
         // Init navigation menu
         jQuery(function() {
@@ -62,10 +64,10 @@
 </head>
 
 <body>
-    <idv id="motopress-main" class="main-holder">
+    <div id="motopress-main" class="main-holder">
     <!-- navigation.html -->
     {% include "public/navigation.html" %}
-    
+
     {% block maincontent %}
         <!-- home page content in index/index.html -->
     {% endblock %} 
