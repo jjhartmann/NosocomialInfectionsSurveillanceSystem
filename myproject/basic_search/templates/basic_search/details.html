@@ -11,7 +11,7 @@
         <button onclick="myFunction()">Display Graph</button>
         <script type = "text/javascript">
         function myFunction() {
-            window.open("{% url 'graph:index' username %}", "_blank", "resizable=yes, status =no, left=00,top=300,width=1500, height=400")
+            window.open("{% url 'graph:index' username %}", "_blank", "resizable=yes, status =no, left=auto,right=auto,top=300,width=1500, height=400")
         }
         </script>
         {% endblock %}
@@ -29,7 +29,7 @@
     function popupform(myform, windowname) {
         if (! window.focus)
             return true;
-        window.open('', windowname, "_blank", 'resizable=yes, status= no, left=100,top= 0, width=400, height=1200')
+        window.open('', windowname, "scrollbars=yes, resizable=yes, left=200, width=1000, height=1000")
         myform.target=windowname;
         return true;
      }

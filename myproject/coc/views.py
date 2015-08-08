@@ -94,13 +94,10 @@ def parse_data(request,username):
             str2 = decode_data[incr]['pk']
             m = 0
             count = 0
-
             # Compare each element in string 1 and string 2, increment count if character is same
-            for m in range(0, len(str1)):
-
-                for n in range(0,len(str2)):
-                    if str2[n] == str1[m]:
-                        count = count + 1
+            for m in range(0, 6):
+                if str2[m] == str1[m]:
+                    count = count + 1
             # Create a link between two elements if their names have same ch
             if count > 0:
                 link.append({'source':i,'target':incr,'value':count})

@@ -8,7 +8,7 @@
                 <li data-preview="{% static 'pic/slide_1.jpg'%}" data-thumb-url="{% static 'pic/slide_1.jpg'%}" data-ulr-link="">
                     <div class="slider_caption">
                         <h2>&nbsp;</h2>
-                        <p><a href="blog/">Explore our website!</a></p>
+                        <p><a href="{% url 'index:website_intro' %}">Explore our website!</a></p>
                     </div>
                 </li>
                 <li data-preview="{% static 'pic/slide_2.jpg'%}" data-thumb-url="{% static 'pic/slide_2.jpg'%}" data-ulr-link="">
@@ -20,7 +20,7 @@
                 <li data-preview="{% static 'pic/slide3.jpg'%}" data-thumb-url="{% static 'pic/slide3.jpg'%}" data-ulr-link="">
                     <div class="slider_caption">
                         <h2> Build a Phylogenetic Tree!</h2>
-                         <a href="{% url 'index:phylib_intro' %}">Go to Phylic tree!</a>
+                         <a href="{% url 'index:phylip_intro' %}">Go to Phylip tree!</a>
                     </div>
                 </li>
             </ul>
@@ -42,6 +42,31 @@
                                         <div class="span9 ">
                                             <div class="row ">
                                                 <div class="span3 ">
+                                                    <!-- Binding -->
+                                                    <script type="text/javascript">
+                                                        // Semicolon (;) to ensure closing of earlier scripting
+                                                        // Encapsulation
+                                                        // $ is assigned to jQuery
+                                                        ;(function($) {
+                                                             // DOM Ready
+                                                            $(function() {
+                                                                // Binding a click event
+                                                                // From jQuery v.1.7.0 use .on() instead of .bind()
+                                                                $('#video-popup').bind('click', function(e) {
+                                                                    // Prevents the default action to be triggered. 
+                                                                    e.preventDefault();
+                                                                    // Triggering bPopup when click event is fired
+                                                                    $('#video_to_pop_up').bPopup();
+                                                                });
+                                                                $('#data-graph').bind('click', function(e) {
+                                                                    // Prevents the default action to be triggered. 
+                                                                    e.preventDefault();
+                                                                    // Triggering bPopup when click event is fired
+                                                                    $('#DB_to_pop_up').bPopup();
+                                                                });
+                                                            });
+                                                        })(jQuery);
+                                                    </script>
                                                     <div class="service-box ">
                                                         <div class="service-box_body">
                                                             <h3 class="title">Database</h3>
@@ -49,29 +74,34 @@
                                                             <div class="service-box_txt">
                                                                 We have import full nna and nfa information in database for fast query and search !
                                                             </div>
-                                                            <div class="btn-align"><a href="{% url 'index:data_graph_json' %}" title="Read more" class="btn btn-inverse btn-normal btn-primary " target="_self">Read more</a></div>
+                                                            <div class="btn-align"><a href="{% url 'index:data_graph_json' %}" title="Read more" id="data-graph" class="btn btn-inverse btn-normal btn-primary " target="_self">Read more</a></div>
+                                                            <!-- Element to pop up -->
+                                                            <div id="DB_to_pop_up" style="display:none;"><iframe width="1600" height="870" src="{% url 'index:data_graph_json' %}" style="text-algin: center; margin-left: 0;" frameborder="0" allowfullscreen></iframe></div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="span3 ">
                                                     <div class="service-box ">
                                                         <div class="service-box_body">
+                                                            <!-- Marked -->
                                                             <h3 class="title"> Project </h3>
                                                             <h4 class="sub-title">at a glance!</h4>
                                                             <div class="service-box_txt">
                                                                 Check our goal, specification and xx for the project!Check our goal, specification and xx for the project!
                                                             </div>
-                                                            <div class="btn-align"><a href="https://www.youtube.com/watch?v=BNsLWntWg-o&feature=em-upload_owner" class="btn btn-inverse btn-normal btn-primary " target="_self">Read more</a></div>
+                                                            <div class="btn-align"><a href="https://www.youtube.com/watch?v=BNsLWntWg-o&feature=em-upload_owner" id="video-popup" class="btn btn-inverse btn-normal btn-primary " target="_self">Read more</a></div>
+                                                            <!-- Element to pop up -->
+                                                            <div id="video_to_pop_up" style="display:none;"><iframe width="640" height="360" src="http://www.youtube.com/embed/BNsLWntWg-o?rel=0" frameborder="0" allowfullscreen></iframe></div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="span3 ">
                                                     <div class="service-box ">
                                                         <div class="service-box_body">
-                                                            <h3 class="title">Members</h3>
-                                                            <h4 class="sub-title">introduction</h4>
+                                                            <h3 class="title">Live</h3>
+                                                            <h4 class="sub-title">tutorial</h4>
                                                             <div class="service-box_txt">Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt.</div>
-                                                            <div class="btn-align"><a href="portfolio/" title="Read more" class="btn btn-inverse btn-normal btn-primary " target="_self">Read more</a></div>
+                                                            <div class="btn-align"><a href="{% url 'index:tutorial' %}" title="Read more" class="btn btn-inverse btn-normal btn-primary " target="_self">Read more</a></div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -147,7 +177,7 @@
                                 <div class = "Discovery project">
                                     <section class="parallax-box image-parallax-box parallax-1">
                                         <div class="parallax-content">
-                                            <p style="text-align: center;"><a href="blog/"  class="btn btn-default btn-large btn-inline ">Discovery our project!</a></p>
+                                            <p style="text-align: center;"><a href="{% url 'index:project_intro' %}"  class="btn btn-default btn-large btn-inline ">Discovery our project!</a></p>
                                             <div class="clear"></div>
                                         </div>
                                         <div class="parallax-bg" data-parallax-type="image" data-img-url="{%static 'pic/project.jpg' %}" data-speed="slow" data-invert="false"></div>
