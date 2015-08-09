@@ -97,67 +97,8 @@
 <!-- /.navbar-top-links -->
 
 
+{#        ///////////////////////////////////////////////////////////////////////////////////////////////////////////#}
 
-<header class="motopress-wrapper header">
-    <div class="container">
-        <div class="row">
-            <div class="span12" data-motopress-wrapper-file="wrapper/wrapper-header.php" data-motopress-wrapper-type="header">
-                <div class="stuck_wrapper">
-                    <div class="container">
-                        <div class="row">
-                            <div class="span5" data-motopress-type="static" data-motopress-static-file="static/static-logo.php">
-                                <div class="logo pull-left">
-                                  <img src="{% static 'pic/log.png'%}" alt="NISS LOGO" style="margin-top:-10px;height:60px;width:60px;" >
-                                </div>
-                            </div>
-                            <!-- Logout -->
-                              <div class="span7" data-motopress-type="static" data-motopress-static-file="static/static-nav.php">
-                                <div class="login-wrap">
-                                    <div class="login-toggle icon-user"></div>
-                                   
-                                    <div  id="loginform" >
-                              
-                                          <div class ="custome_margin" style="margin-bottom:10px"><a class="btn btn-sucess btn-sm btn-block" href="{% url 'userprofile:viewprofile' username %}">Profile</a><br></div>
-                                            <div class ="custome_margin" style="margin-bottom:10px"><a class="btn btn-sucess btn-sm btn-block" href="{% url 'index:register' %}">Favoriate</a><br></div>
-                                            <div class ="custome_margin" style="margin-bottom:10px"><a class="btn btn-sucess btn-block" href="{% url 'userprofile:setprofile' username %}">Settings</a><br></div>
-                                       <div class ="custome_margin" style="margin-bottom:10px"> <a class="btn btn-sucess btn-block" href="{% url 'index:logout' %}">Lougout</a></div>
-                                    
-                                    </div>
-                                
-                                </div>
-                                <nav class="nav nav__primary clearfix">
-                                    <ul id="topnav" class="sf-menu">
-                                        <li id="menu-item-1807" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-203 current_page_item">
-                                            <a href="{%url 'secure:index' username %}">Home</a>
-                                        </li>
-                                        <li id="menu-item-1810" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
-                                            <a href="{% url 'basic_search:index' username %}">Search</a>
-                                        </li>
-                                        <li id="menu-item-1808" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="#">Patient Data<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
-                                            <ul class="sub-menu">
-                                                <li id="menu-item-1815" class="menu-item menu-item-type-post_type menu-item-object-page">
-                                                    <a href="{% url 'patientinfo:index' username %}">Patient info</a>
-                                                </li>
-                                                <li id="menu-item-1814" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
-                                                <a href="{% url 'patientinfo:index_data' username %}">Patient data</a></li>
-                                                </li>
-                                                <li id="menu-item-1813" class="menu-item menu-item-type-post_type menu-item-object-page">
-                                                   <li><a href="{% url 'patientinfo:index_manage' username %}">Managing patient </a></li>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li id="menu-item-1804" class="menu-item menu-item-type-post_type menu-item-object-page">
-                                            <a href="#">Blast+<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
-                                            <ul class="sub-menu">
-                                                <li id="menu-item-1815" class="menu-item menu-item-type-post_type menu-item-object-page">
-                                                    <a href="{% url 'nocoblast:blastn' username %}">Blast N</a>
-                                                </li>
-                                                <li id="menu-item-1814" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
-                                                <a href="{% url 'nocoblast:tblastn' username %}">T Blast N</a></li>
-                                            </ul>
-                                        </li>
-                                        <li id="menu-item-1804" class="menu-item menu-item-type-post_type menu-item-object-page">
-                                            <a href="{% url 'phylo:index' username %}">Phylib</a>
 
 <div class="navbar-default sidebar" role="navigation">
     <div class="sidebar-nav navbar-collapse">
