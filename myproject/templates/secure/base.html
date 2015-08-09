@@ -52,7 +52,7 @@
 {#    </script>#}
 
     <link href="{% static 'css/stickyfooter.css' %}" rel="stylesheet"/>
-    <link href="{% static 'css/navbarstyle.css' %}" rel="stylesheet"/>
+{#    <link href="{% static 'css/navbarstyle.css' %}" rel="stylesheet"/>#}
     <link href="{% static 'bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'metisMenu/dist/metisMenu.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/timeline.css' %}" rel="stylesheet">
@@ -61,6 +61,8 @@
     <link href="{% static 'font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
 
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+{#    <script src="{% static 'bootstrap-css/js/bootstrap.min.js' %}"></script>#}
     <script src="{% static 'bootstrap/dist/js/bootstrap.min.js' %}"></script>
     <script src="{% static 'metisMenu/dist/metisMenu.min.js' %}"></script>
     <script src="{% static 'raphael/raphael-min.js' %}"></script>
@@ -72,7 +74,6 @@
       body {
         padding-top: 20px;
         padding-bottom: 40px;
-        margin-left: 40px;
 
       }
 
@@ -92,22 +93,24 @@
 
     {% endblock %}
 
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="{% static 'bootstrap-css/js/bootstrap.min.js' %}"></script>
 </head>
 <body>
-{% include "secure/navigation.html" %}
+<div id="wrapper"><!-- Navigation -->
+    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
 
-<div id="warpper">
-<div id="page-wrapper">
-    <div class="container-fluid">
-        {% block maincontent %}
-        <!--maincontainer -->
-        {% endblock %}
-    </div>
+    {% include "secure/navigation.html" %}
+    </nav>
 </div>
+
+<div id="wrapper"><!-- Main -->
+    <div id="page-wrapper">
+
+        <div class="container-fluid">
+            {% block maincontent %}
+            <!--maincontainer -->
+            {% endblock %}
+        </div>
+    </div>
 </div>
 
 
