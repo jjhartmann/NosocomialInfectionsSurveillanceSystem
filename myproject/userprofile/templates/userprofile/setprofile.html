@@ -17,7 +17,7 @@ list-style-type: none;
 
     <form action="{% url 'userprofile:setprofile' username %}" method="post" enctype="multipart/form-data"> {% csrf_token %}
 
-    <ul class="list-unstyled" style="font-size:16px;line-height: 4">
+    <ul class="list-unstyled" style="font-size:12px;line-height: 4">
       <li>
         <label for="id_profile_picture">Profile picture:</label> 
         <input id="id_profile_picture" name="profile_picture" style="line-height:0.5;" type="file"></li>
