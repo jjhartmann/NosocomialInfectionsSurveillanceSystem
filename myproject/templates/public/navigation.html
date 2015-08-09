@@ -88,16 +88,16 @@ jQuery(document).ready(function(){
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li><a href="#">Services</a>
+                                        <li><a href="#">Features</a>
                                             <ul class="sub-menu">
                                                 <li>
-                                                    <a href="#">DAN Search</a>
+                                                    <a href="{% url 'index:database_search' %}">NCBI Data Search</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Blast+</a>
+                                                    <a href="{% url 'index:blast' %}">Blast+</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Phylic</a>
+                                                    <a href="{% url 'index:phylip_intro'%}">Phylip</a>
                                                 </li>
                                             </ul>
                                         </li>

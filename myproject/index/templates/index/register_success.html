@@ -1,11 +1,18 @@
 {% extends "public/base.html" %}
 
 {% block maincontent%}
+<ul>
+	<h2> Congratulations! </h2>
+    <h2> You have registered a new account</h2>
+</ul>
 
-    <h2> You have registered!</h2>
-    <P>Click <a href="{% url 'index:login' %}">here </a> to login again </P>
-
-
-
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="submit"></label>
+          <div class="col-md-4">  
+            <a href="{% url 'index:login' %}"class="btn btn-primary">Back to login</a>
+          </div>
+        </div>
+            
+        
 {% endblock %}
 
