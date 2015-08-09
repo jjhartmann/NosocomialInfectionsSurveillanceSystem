@@ -4,20 +4,20 @@
 {% block javascript %}
     <script type="application/javascript" src="{% static 'js/PhyloCanvas.js' %}"></script>
     <script type="application/javascript">
-      window.onload = function() {
-        // Initializing tree object
+        window.onload = function () {
+            // Initializing tree object
 
-       var phylocanvas = new PhyloCanvas.Tree('phylocanvasDivDiagonal');
-        var newick_file = "../treebuilder/phylocanvas/example.nwk";
-        phylocanvas.load('{{ newick }}');
-        phylocanvas.setTreeType('diagonal');
+            var phylocanvas = new PhyloCanvas.Tree('phylocanvasDivDiagonal');
+            var newick_file = "../treebuilder/phylocanvas/example.nwk";
+            phylocanvas.load('{{ newick }}');
+            phylocanvas.setTreeType('diagonal');
 
-        var phylocanvas = new PhyloCanvas.Tree('phylocanvasDivHierarchy');
-        var newick_file = "../treebuilder/phylocanvas/example.nwk";
-        phylocanvas.load('{{ newick }}');
-        phylocanvas.setTreeType('hierarchy');
+            var phylocanvas = new PhyloCanvas.Tree('phylocanvasDivHierarchy');
+            var newick_file = "../treebuilder/phylocanvas/example.nwk";
+            phylocanvas.load('{{ newick }}');
+            phylocanvas.setTreeType('hierarchy');
 
-      }
+        }
         function myFunction() {
             window.open("{% url 'graph:index' username %}", "_blank", "resizable=yes, status =no, left=500,top=300,width=1500, height=800")
         }
@@ -26,17 +26,83 @@
 
 
 {% block maincontent %}
-    <button class="btn btn-success btn-sm" onclick="myFunction()">Display Graph</button>
-    <form action="phyloview2.html">
-    <input type="submit" value="Go to radial and rectangular view" class="btn btn-success btn-sm" style="float: right">
-    </form>
 
-    <center> Diagonal Representation </center><br>
-    <div id="phylocanvasDivDiagonal"></div><br>
-    <center> Hierarchial Representation </center><br>
-    <div id="phylocanvasDivHierarchy"></div><br>
 
-        
+
+    <div class="row">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Nocosomial Surveillance Phyapp: Phylogenetic Analysis Tool</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-gears fa-fw"></i>
+                        Generate Graph
+                    </div>
+                    <div class="panel-body">
+                        <button class="btn btn-success btn-block" onclick="myFunction()">Display Graph</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-gears fa-fw"></i>
+                        Rectangular View
+                    </div>
+                    <div class="panel-body">
+
+                        <form action="phyloview2.html">
+                            <input type="submit" value="Go to radial and rectangular view"
+                                   class="btn btn-success btn-block" style="float: right">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">Diagonal Representation</div>
+                <div class="panel-body">
+
+                    <div class="row">
+
+                        <div id="phylocanvasDivDiagonal"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <br>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">Hierarchial Representation</div>
+                <div class="panel-body">
+                    <div class="row">
+                        <br>
+                        <div id="phylocanvasDivHierarchy"></div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 
 {% endblock %}
