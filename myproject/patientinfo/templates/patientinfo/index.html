@@ -1,46 +1,63 @@
 {% extends "secure/base.html" %}
 
 
-    {% block maincontent%}
-  
+{% block maincontent %}
 
-<div class="container">
-  <h1>Patient Information</h1>
+    <div class="row">
 
-  {% if patientinfos %}
-<li><a href="{% url 'patientinfo:create' username %}">Create New Patient Info</a></li>
-          
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Feature</th>
-      </tr>
-    </thead>
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Patient Information</h1>
+            </div>
+        </div>
 
-    <tbody>
-    {% for patientinfo in patientinfos %} 
-      <tr>
-        <td>{{ patientinfo.firstname }}</td>
-        <td>{{ patientinfo.lastname }}</td>
-        <td><a href="{% url 'patientinfo:detail' username patientinfo.id %}" class="btn btn-success btn-sm">View Patient detail</a></td>
-      </tr>
-    {% endfor %}
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Info:</div>
+                    <div class="panel-body">
 
-    </tbody>
-  </table>
-  {% else %}
-  <div id="noinfo" >
+                        <div class="row">
 
-  <p> You don't have any patient info yet, clicl the button to creat new </p>
+                            {% if patientinfos %}
+                                <li><a href="{% url 'patientinfo:create' username %}">Create New Patient Info</a></li>
 
-  <a href="{% url 'patientinfo:create' username %}" class="btn btn-success btn-sm">Create New Patient Info</a>
-  </div>
-  {% endif %}
+                                <table class="table table-striped">
+                                    <thead>
+                                    <tr>
+                                        <th>Firstname</th>
+                                        <th>Lastname</th>
+                                        <th>Feature</th>
+                                    </tr>
+                                    </thead>
 
-</div>
+                                    <tbody>
+                                    {% for patientinfo in patientinfos %}
+                                        <tr>
+                                            <td>{{ patientinfo.firstname }}</td>
+                                            <td>{{ patientinfo.lastname }}</td>
+                                            <td><a href="{% url 'patientinfo:detail' username patientinfo.id %}"
+                                                   class="btn btn-success btn-sm">View Patient detail</a></td>
+                                        </tr>
+                                    {% endfor %}
 
+                                    </tbody>
+                                </table>
+                            {% else %}
+                                <div id="noinfo">
 
-    {% endblock %}
+                                    <p> You don't have any patient info yet, clicl the button to creat new </p>
+
+                                    <a href="{% url 'patientinfo:create' username %}" class="btn btn-success btn-sm">Create
+                                        New Patient Info</a>
+                                </div>
+                            {% endif %}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
 

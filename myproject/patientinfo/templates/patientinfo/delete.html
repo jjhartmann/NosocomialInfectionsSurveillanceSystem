@@ -1,13 +1,30 @@
 {% extends "secure/base.html" %}
 
 
-    {% block maincontent%}
-<h1> patient information has been deleted </hi>
+{% block maincontent %}
 
-		<div class="form-group">
-           
-    
-			<a href="{% url 'patientinfo:index_manage' username %}"><input class="btn btn-success btn-sm" value="Back to Patient List"></a>
-		</div>
-    {% endblock %}
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">patient information has been deleted</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">Search:</div>
+                <div class="panel-body">
+
+                    <div class="row">
+                        <div class="form-group">
+                            <a href="{% url 'patientinfo:index_manage' username %}"><input
+                                    class="btn btn-success btn-sm" value="Back to Patient List"></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
 

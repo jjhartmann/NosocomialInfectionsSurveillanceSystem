@@ -1,36 +1,60 @@
 {% extends "secure/base.html" %}
 
 
-    {% block maincontent%}
+{% block maincontent %}
 
-<!--  jQuery Media Plugin site:http://www.jqueryrain.com/?rb4amMEf-->
-<script type="text/javascript" src="http://github.com/malsup/media/raw/master/jquery.media.js?v0.92"></script> 
-<script type="text/javascript" src="jquery.metadata.js"></script> 
-<script> 
-$('a.media').media({width:500, height:400});
-</script>
-<h1> patient data: </h1>
+    <!--  jQuery Media Plugin site:http://www.jqueryrain.com/?rb4amMEf-->
+    <script type="text/javascript" src="http://github.com/malsup/media/raw/master/jquery.media.js?v0.92"></script>
+    <script type="text/javascript" src="jquery.metadata.js"></script>
+    <script>
+        $('a.media').media({width: 500, height: 400});
+    </script>
 
-{% if patientinfo.patient_data %}
-<p><a class="media" href="/static/{{patientinfo.patient_data}}" width="800px">Patient Data File</a></p>
+    <div class="row">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">patient data: </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Search:</div>
+                    <div class="panel-body">
+
+                        <div class="row">
+
+                            {% if patientinfo.patient_data %}
+                                <p><a class="media" href="/static/{{ patientinfo.patient_data }}" width="800px">Patient
+                                    Data File</a></p>
 
 
-{% else %}
-<h2> No Data Here! </h2>
-<a href="{% url 'patientinfo:uploaddata' username patientinfo.id %}" class="btn btn-success btn-sm">Upload Patient Data</a>
+                            {% else %}
+                                <h2> No Data Here! </h2>
+                                <a href="{% url 'patientinfo:uploaddata' username patientinfo.id %}"
+                                   class="btn btn-success btn-sm">Upload Patient Data</a>
 
-{% endif %}
-
-
-
-
-<div id="sidebar">
-	{% block sidebar %}
-
-	<h2><a href="{% url 'patientinfo:index_data' username %}"class="btn btn-success btn-sm">Back to Patient List</a></h2>
+                            {% endif %}
 
 
-	{% endblock %}
-</div>
 
-    {% endblock %}
+
+                            <div id="sidebar">
+                                {% block sidebar %}
+
+                                    <h2><a href="{% url 'patientinfo:index_data' username %}"
+                                           class="btn btn-success btn-sm">Back to Patient List</a></h2>
+
+
+                                {% endblock %}
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
