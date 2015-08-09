@@ -1,201 +1,211 @@
 {
   "nodes": [
     {
+      "date": 2, 
+      "host": 0, 
+      "group": 0, 
+      "name": "EU521927", 
+      "sequences": 4
+    }, 
+    {
+      "date": 2, 
+      "host": 0, 
+      "group": 0, 
+      "name": "EU521928", 
+      "sequences": 3
+    }, 
+    {
+      "date": 2, 
+      "host": 0, 
+      "group": 0, 
+      "name": "EU521929", 
+      "sequences": 9
+    }, 
+    {
+      "date": 2, 
+      "host": 0, 
+      "group": 0, 
+      "name": "EU521930", 
+      "sequences": 5
+    }, 
+    {
+      "date": 2, 
+      "host": 0, 
+      "group": 0, 
+      "name": "EU521931", 
+      "sequences": 7
+    }, 
+    {
+      "date": 2, 
+      "host": 0, 
+      "group": 0, 
+      "name": "EU521932", 
+      "sequences": 6
+    }, 
+    {
+      "date": 2, 
+      "host": 0, 
+      "group": 0, 
+      "name": "EU521933", 
+      "sequences": 2
+    }, 
+    {
+      "date": 2, 
+      "host": 0, 
+      "group": 0, 
+      "name": "EU521934", 
+      "sequences": 7
+    }, 
+    {
       "date": 1, 
       "host": 0, 
       "group": 0, 
-      "name": "S73497", 
+      "name": "ABN50527", 
       "sequences": 0
     }, 
     {
       "date": 0, 
-      "host": 1, 
-      "group": 1, 
-      "name": "V01087", 
-      "sequences": 9
-    }, 
-    {
-      "date": 8, 
-      "host": 2, 
-      "group": 2, 
-      "name": "LN612606", 
-      "sequences": 8
-    }, 
-    {
-      "date": 2, 
-      "host": 2, 
-      "group": 3, 
-      "name": "AGX16788", 
-      "sequences": 1
-    }, 
-    {
-      "date": 3, 
-      "host": 2, 
-      "group": 3, 
-      "name": "AGX23910", 
-      "sequences": 1
-    }, 
-    {
-      "date": 5, 
-      "host": 2, 
-      "group": 3, 
-      "name": "AGX15766", 
-      "sequences": 1
-    }, 
-    {
-      "date": 6, 
-      "host": 2, 
-      "group": 3, 
-      "name": "AGZ59967", 
-      "sequences": 1
-    }, 
-    {
-      "date": 7, 
-      "host": 2, 
-      "group": 3, 
-      "name": "AGZ59989", 
-      "sequences": 1
-    }, 
-    {
-      "date": 4, 
-      "host": 2, 
-      "group": 3, 
-      "name": "AGX15677", 
-      "sequences": 1
-    }, 
-    {
-      "date": 9, 
-      "host": 2, 
-      "group": 3, 
-      "name": "AGX21295", 
-      "sequences": 1
+      "host": 0, 
+      "group": 0, 
+      "name": "ABL77037", 
+      "sequences": 0
     }
   ], 
   "links": [
     {
       "source": 0, 
       "target": 1, 
-      "value": 1
+      "value": 6
+    }, 
+    {
+      "source": 0, 
+      "target": 2, 
+      "value": 6
     }, 
     {
       "source": 0, 
       "target": 3, 
-      "value": 1
+      "value": 6
+    }, 
+    {
+      "source": 0, 
+      "target": 4, 
+      "value": 6
     }, 
     {
       "source": 0, 
       "target": 5, 
-      "value": 1
+      "value": 6
     }, 
     {
       "source": 0, 
       "target": 6, 
-      "value": 1
+      "value": 6
     }, 
     {
       "source": 0, 
       "target": 7, 
-      "value": 1
+      "value": 6
+    }, 
+    {
+      "source": 1, 
+      "target": 2, 
+      "value": 6
     }, 
     {
       "source": 1, 
       "target": 3, 
-      "value": 1
+      "value": 6
+    }, 
+    {
+      "source": 1, 
+      "target": 4, 
+      "value": 6
     }, 
     {
       "source": 1, 
       "target": 5, 
-      "value": 1
+      "value": 6
+    }, 
+    {
+      "source": 1, 
+      "target": 6, 
+      "value": 6
+    }, 
+    {
+      "source": 1, 
+      "target": 7, 
+      "value": 6
     }, 
     {
       "source": 2, 
       "target": 3, 
-      "value": 1
+      "value": 6
+    }, 
+    {
+      "source": 2, 
+      "target": 4, 
+      "value": 6
     }, 
     {
       "source": 2, 
       "target": 5, 
-      "value": 1
+      "value": 6
     }, 
     {
       "source": 2, 
-      "target": 8, 
-      "value": 2
+      "target": 6, 
+      "value": 6
+    }, 
+    {
+      "source": 2, 
+      "target": 7, 
+      "value": 6
     }, 
     {
       "source": 3, 
       "target": 4, 
-      "value": 3
+      "value": 6
     }, 
     {
       "source": 3, 
       "target": 5, 
-      "value": 5
+      "value": 6
     }, 
     {
       "source": 3, 
       "target": 6, 
-      "value": 2
+      "value": 6
     }, 
     {
       "source": 3, 
       "target": 7, 
-      "value": 2
-    }, 
-    {
-      "source": 3, 
-      "target": 8, 
-      "value": 4
-    }, 
-    {
-      "source": 3, 
-      "target": 9, 
-      "value": 3
+      "value": 6
     }, 
     {
       "source": 4, 
       "target": 5, 
-      "value": 3
+      "value": 6
     }, 
     {
       "source": 4, 
       "target": 6, 
-      "value": 3
+      "value": 6
     }, 
     {
       "source": 4, 
       "target": 7, 
-      "value": 3
-    }, 
-    {
-      "source": 4, 
-      "target": 8, 
-      "value": 3
-    }, 
-    {
-      "source": 4, 
-      "target": 9, 
-      "value": 4
+      "value": 6
     }, 
     {
       "source": 5, 
       "target": 6, 
-      "value": 2
+      "value": 6
     }, 
     {
       "source": 5, 
       "target": 7, 
-      "value": 2
-    }, 
-    {
-      "source": 5, 
-      "target": 8, 
-      "value": 5
-    }, 
-    {
-      "source": 5, 
-      "target": 9, 
-      "value": 3
+      "value": 6
     }, 
     {
       "source": 6, 
@@ -203,29 +213,9 @@
       "value": 6
     }, 
     {
-      "source": 6, 
-      "target": 8, 
-      "value": 2
-    }, 
-    {
-      "source": 6, 
-      "target": 9, 
-      "value": 2
-    }, 
-    {
-      "source": 7, 
-      "target": 8, 
-      "value": 2
-    }, 
-    {
-      "source": 7, 
-      "target": 9, 
-      "value": 2
-    }, 
-    {
       "source": 8, 
       "target": 9, 
-      "value": 3
+      "value": 2
     }
   ]
 }

@@ -1,249 +1,479 @@
 {% extends "secure/base.html" %}
-    {% load staticfiles %}
+{% load staticfiles %}
 
-    {% block javascript %}
-        <!-- Include jquery Django doesn't inherit scripts -->
-{#        <script type="text/javascript" src="{% static "js/jquery_1_7_2_min.js" %}"/>#}
-{#        <script src="../bower_components/jquery/dist/jquery.min.js"/>#}
-{#        <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"/>#}
-{#        <script src="../bower_components/metisMenu/dist/metisMenu.min.js"/>#}
-{#        <script src="{% static 'datatables/media/js/jquery.dataTables.min.js' %}"></script>#}
-{#        <script src="{% static 'datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js' %}"></script>#}
-{#        <script src="../dist/js/sb-admin-2.js"/>#}
-    {% endblock %}
+{% block javascript %}
+    <!-- Include jquery Django doesn't inherit scripts -->
+    {#        <script type="text/javascript" src="{% static "js/jquery_1_7_2_min.js" %}"/>#}
+    {#        <script src="../bower_components/jquery/dist/jquery.min.js"/>#}
+    {#        <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"/>#}
+    {#        <script src="../bower_components/metisMenu/dist/metisMenu.min.js"/>#}
+    {#        <script src="{% static 'datatables/media/js/jquery.dataTables.min.js' %}"></script>#}
+    {#        <script src="{% static 'datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js' %}"></script>#}
+    {#        <script src="../dist/js/sb-admin-2.js"/>#}
+    <!-- Java script -->
+    <script type="text/javascript" src="{% static 'datatables/media/js/jquery.dataTables.min.js' %}"></script>
+    <script type="text/javascript"
+            src="{% static 'datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js' %}"></script>
 
-    {% block css %}
-        <link type="text/css" rel="stylesheet" href="{% static 'datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css' %}"/>
-        <link type="text/css" rel="stylesheet" href="{% static 'datatables-responsive/css/dataTables.responsive.css' %}"/>
-        <link type="text/css" rel="stylesheet" href="{% static 'css/sb-admin-2.css' %}">
-        <link type="text/css" rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
-    {% endblock %}
+    <script>
 
-
-    {% block maincontent %}
-
-        <!-- Java script -->
-        <script type="text/javascript" src="{% static 'datatables/media/js/jquery.dataTables.min.js' %}"></script>
-        <script type="text/javascript" src="{% static 'datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js' %}"></script>
-
-        <script>
-
-            $(document).ready(function() {
-                $('#dataTables-example').DataTable({
-                        responsive: true
-                });
+        $(document).ready(function () {
+            $('#dataTables-example').DataTable({
+                responsive: true
             });
+        });
 
-        </script>
+    </script>
+{% endblock %}
 
-        <!--Display chart after search result (temparary)-->
-        {% block graph %}
+{% block css %}
+    <link type="text/css" rel="stylesheet"
+          href="{% static 'datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css' %}"/>
+    <link type="text/css" rel="stylesheet" href="{% static 'datatables-responsive/css/dataTables.responsive.css' %}"/>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/sb-admin-2.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
+{% endblock %}
+
+
+{% block maincontent %}
+
+    <!--Display chart after search result (temparary)-->
+    {% block graph %}
         <button onclick="myFunction()">Display Graph</button>
-        <script type = "text/javascript">
-        function myFunction() {
-            window.open("{% url 'graph:index' username %}", "_blank", "resizable=yes, status =no, left=auto,right=auto,top=300,width=1500, height=400")
-        }
+        <script type="text/javascript">
+            function myFunction() {
+                window.open("{% url 'graph:index' username %}", "_blank", "resizable=yes, status =no, left=auto,right=auto,top=300,width=1500, height=400")
+            }
         </script>
-        {% endblock %}
+    {% endblock %}
 
     <style type="text/css">
         .mygrid-wrapper-div {
-           border: solid red 5px;
-           overflow: scroll;
-           height: 70%;
+            border: solid red 5px;
+            overflow: scroll;
+            height: 70%;
         }
     </style>
 
     <!-- Display matrix in a popup window -->
     <script>
-    function popupform(myform, windowname) {
-        if (! window.focus)
+        function popupform(myform, windowname) {
+            if (!window.focus)
+                return true;
+            window.open('', windowname, "scrollbars=yes, resizable=yes, left=200, width=1000, height=1000")
+            myform.target = windowname;
             return true;
-        window.open('', windowname, "scrollbars=yes, resizable=yes, left=200, width=1000, height=1000")
-        myform.target=windowname;
-        return true;
-     }
+        }
     </script>
 
     <!-- Select All Checkboxes -->
     <script type="text/javascript">
         function selectall(source) {
             checkboxes = document.getElementsByClassName("NACheckbox");
-            for (var i= 0, n=checkboxes.length; i< n; i++) {
+            for (var i = 0, n = checkboxes.length; i < n; i++) {
                 checkboxes[i].checked = source.checked;
             }
         }
 
         function selectallA(source) {
             checkboxes = document.getElementsByClassName("AACheckbox");
-            for (var i= 0, n=checkboxes.length; i< n; i++) {
+            for (var i = 0, n = checkboxes.length; i < n; i++) {
                 checkboxes[i].checked = source.checked;
             }
         }
     </script>
 
-<!-- Insert checkbox to select rows to be displayed in matrix -->
-<form class="form-group" action="{% url 'coc:parse_data' username %}"
-      method="post" onsubmit="popupform(this, 'join')">
-    {% csrf_token %}
+    <!-- Insert checkbox to select rows to be displayed in matrix -->
+    <form class="form-group" action="{% url 'coc:parse_data' username %}"
+          method="post" onsubmit="popupform(this, 'join')">
+        {% csrf_token %}
 
-<div class="row">
-<div class="col-lg-12">
-    <h1 class="page-header">Search NCBI Influenca Database</h1>
-</div>
-</div>
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Search NCBI Influenca Database</h1>
+            </div>
+        </div>
 
-<div class="row">
-    <div class="col-lg-12">
-        <div class="panel panel-default">
-            <div class="panel-heading">Influenza NA</div>
-            <div class="panel-body">
-                <div class="dataTable_wrapper">
-                    <div id="dataTables-example_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div id="dataTables-example_length" class="dataTables_length">
-                                    <label>
-                                        Show
-                                        <select class="form-control input-sm" name="dataTables-example_length"
-                                                aria-controls="dataTables-example">
-                                            <option value="10">10</option>
-                                            <option value="25">25</option>
-                                            <option value="50">50</option>
-                                            <option value="100">100</option>
-                                        </select>
-                                        entries
-                                    </label>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Influenza NA</div>
+                    <div class="panel-body">
+                        <div class="dataTable_wrapper">
+                            <div id="dataTables-example_wrapper"
+                                 class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div id="dataTables-example_length" class="dataTables_length">
+                                            <label>
+                                                Show
+                                                <select class="form-control input-sm" name="dataTables-example_length"
+                                                        aria-controls="dataTables-example">
+                                                    <option value="10">10</option>
+                                                    <option value="25">25</option>
+                                                    <option value="50">50</option>
+                                                    <option value="100">100</option>
+                                                </select>
+                                                entries
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div id="dataTables-example_filter" class="dataTables_filter">
+                                            <label>
+                                                Search:
+                                                <input class="form-control input-sm" type="search" placeholder=""
+                                                       aria-controls="dataTables-example">
+                                            </label>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div id="dataTables-example_filter" class="dataTables_filter">
-                                    <label>
-                                        Search:
-                                        <input class="form-control input-sm" type="search" placeholder=""
-                                               aria-controls="dataTables-example">
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
+                                <div class="row">
+                                    <div class="col-sm-12" style="height: 500px; overflow: scroll">
+                                        <table id="dataTables-example"
+                                               class="table table-striped table-bordered table-hover dataTable no-footer"
+                                               role="grid" aria-describedby="dataTables-example_info">
+                                            <thead>
+                                            <tr role="row">
+                                                <th class="sorting" tabindex="0" aria-controls="dataTables-example"
+                                                    rowspan="1" colspan="1" style="width: 50px;"
+                                                    aria-label="Rendering engine: activate to sort column ascending">
+                                                    Genbank Accession Number
+                                                </th>
+                                                <th class="sorting" tabindex="0" aria-controls="dataTables-example"
+                                                    rowspan="1" colspan="1" style="width: 50px;"
+                                                    aria-label="Rendering engine: activate to sort column ascending">
+                                                    Host
+                                                </th>
+                                                <th class="sorting" tabindex="0" aria-controls="dataTables-example"
+                                                    rowspan="1" colspan="1" style="width: 50px;"
+                                                    aria-label="Rendering engine: activate to sort column ascending">
+                                                    Genome Segment
+                                                </th>
+                                                <th class="sorting" tabindex="0" aria-controls="dataTables-example"
+                                                    rowspan="1" colspan="1" style="width: 50px;"
+                                                    aria-label="Rendering engine: activate to sort column ascending">
+                                                    Subtype
+                                                </th>
+                                                <th class="sorting" tabindex="0" aria-controls="dataTables-example"
+                                                    rowspan="1" colspan="1" style="width: 50px;"
+                                                    aria-label="Rendering engine: activate to sort column ascending">
+                                                    Country
+                                                </th>
+                                                <th class="sorting" tabindex="0" aria-controls="dataTables-example"
+                                                    rowspan="1" colspan="1" style="width: 50px;"
+                                                    aria-label="Rendering engine: activate to sort column ascending">
+                                                    Date
+                                                </th>
+                                                <th class="sorting" tabindex="0" aria-controls="dataTables-example"
+                                                    rowspan="1" colspan="1" style="width: 50px;"
+                                                    aria-label="Rendering engine: activate to sort column ascending">
+                                                    Length
+                                                </th>
+                                                <th class="sorting" tabindex="0" aria-controls="dataTables-example"
+                                                    rowspan="1" colspan="1" style="width: 50px;"
+                                                    aria-label="Rendering engine: activate to sort column ascending">
+                                                    Virus Name
+                                                </th>
+                                                <th class="sorting" tabindex="0" aria-controls="dataTables-example"
+                                                    rowspan="1" colspan="1" style="width: 50px;"
+                                                    aria-label="Rendering engine: activate to sort column ascending">Age
+                                                </th>
+                                                <th class="sorting" tabindex="0" aria-controls="dataTables-example"
+                                                    rowspan="1" colspan="1" style="width: 50px;"
+                                                    aria-label="Rendering engine: activate to sort column ascending">
+                                                    Gender
+                                                </th>
+                                                <th class="sorting" tabindex="0" aria-controls="dataTables-example"
+                                                    rowspan="1" colspan="1" style="width: 100px;"
+                                                    aria-label="Rendering engine: activate to sort column ascending">
+                                                    Complete-ness
+                                                </th>
+                                                <th class="sorting" tabindex="0" aria-controls="dataTables-example"
+                                                    rowspan="1" colspan="1" style="width: 50px;"
+                                                    aria-label="Rendering engine: activate to sort column ascending">
+                                                    Nucleotide Sequence
+                                                </th>
+                                                <th>Display Matrix <input type="checkbox" id="select_all"
+                                                                          onclick="selectall(this)"/>
+                                                </th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            {% for row in queryEntriesNA %}
+                                                <tr>
+                                                    <td>{{ row.genbank_accession_number }}</td>
+                                                    <td>{{ row.host }}</td>
+                                                    <td>{{ row.genomesegment_or_proteinname }}</td>
+                                                    <td>{{ row.subtype }}</td>
+                                                    <td>{{ row.country }}</td>
+                                                    <td nowrap>{{ row.date_discovered }}</td>
+                                                    <td>{{ row.sequence_length }}</td>
+                                                    <td>{{ row.virus_name }}</td>
+                                                    <td>{{ row.age }}</td>
+                                                    <td>{{ row.gender }}</td>
+                                                    <td>{{ row.completeness }}</td>
+                                                    <td style="word-wrap: break-word; max-width: 300px;">
+                                                        <div style="overflow-x: hidden; overflow-y: scroll; max-height: 150px;">
+                                                            {{ row.influenza_fna.fasta_nucleotide_description }}
+                                                        </div>
+                                                    </td>
 
-
-                        <div class="row">
-                            <div class="col-sm-12">
-
-                                <table id="dataTables-example" class="table table-striped table-bordered table-hover dataTable no-footer" role="grid" aria-describedby="dataTables-example_info">
-                                    <thead>
-                                        <tr role="row">
-                                            <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: auto;" aria-label="Rendering engine: activate to sort column ascending">Genbank Accession Number</th>
-                                            <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: auto;" aria-label="Rendering engine: activate to sort column ascending">Host</th>
-                                            <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: auto;" aria-label="Rendering engine: activate to sort column ascending">Genome Segment</th>
-                                            <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: auto;" aria-label="Rendering engine: activate to sort column ascending">Subtype</th>
-                                            <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: auto;" aria-label="Rendering engine: activate to sort column ascending">Country</th>
-                                            <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: auto;" aria-label="Rendering engine: activate to sort column ascending">Date</th>
-                                            <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: auto;" aria-label="Rendering engine: activate to sort column ascending">Length</th>
-                                            <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: auto;" aria-label="Rendering engine: activate to sort column ascending">Virus Name</th>
-                                            <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: auto;" aria-label="Rendering engine: activate to sort column ascending">Age</th>
-                                            <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: auto;" aria-label="Rendering engine: activate to sort column ascending">Gender</th>
-                                            <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: auto;" aria-label="Rendering engine: activate to sort column ascending">Complete-ness</th>
-                                            <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" style="width: auto;" aria-label="Rendering engine: activate to sort column ascending">Nucleotide Sequence</th>
-                                            <th>Display Matrix <input type="checkbox" id="select_all"
-                                                                      onclick="selectall(this)"/>
-                                            </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {% for row in queryEntriesNA %}
-                                            <tr>
-                                                <td>{{ row.genbank_accession_number }}</td>
-                                                <td>{{ row.host }}</td>
-                                                <td>{{ row.genomesegment_or_proteinname }}</td>
-                                                <td>{{ row.subtype }}</td>
-                                                <td>{{ row.country }}</td>
-                                                <td nowrap>{{ row.date_discovered }}</td>
-                                                <td>{{ row.sequence_length }}</td>
-                                                <td>{{ row.virus_name }}</td>
-                                                <td>{{ row.age }}</td>
-                                                <td>{{ row.gender }}</td>
-                                                <td>{{ row.completeness }}</td>
-                                                <td style="word-wrap: break-word; max-width: 300px;">
-                                                    <div style="overflow-x: hidden; overflow-y: scroll; max-height: 150px;">
-                                                        {{ row.influenza_fna.fasta_nucleotide_description }}
-                                                    </div>
-                                                </td>
-
-                                                <td><input class="NACheckbox" type="checkbox" name="displays"
+                                                    <td><input class="NACheckbox" type="checkbox" name="displays"
                                                                value="{{ row.genbank_accession_number }}"/></td>
 
-                                            </tr>
-                                        {% endfor %}
-                                    </tbody>
-                                </table>
+                                                </tr>
+                                            {% endfor %}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
 
-
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div id="dataTables-example_info" class="dataTables_info" role="status"
+                                             aria-live="polite">Showing 1 to 10 of 57 entries
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div id="dataTables-example_paginate"
+                                             class="dataTables_paginate paging_simple_numbers">
+                                            <ul class="pagination">
+                                                <li id="dataTables-example_previous"
+                                                    class="paginate_button previous disabled"
+                                                    aria-controls="dataTables-example" tabindex="0">
+                                                <li class="paginate_button active" aria-controls="dataTables-example"
+                                                    tabindex="0">
+                                                    <a href="#">1</a>
+                                                </li>
+                                                <li class="paginate_button " aria-controls="dataTables-example"
+                                                    tabindex="0">
+                                                    <a href="#">2</a>
+                                                </li>
+                                                <li class="paginate_button " aria-controls="dataTables-example"
+                                                    tabindex="0">
+                                                    <a href="#">3</a>
+                                                </li>
+                                                <li class="paginate_button " aria-controls="dataTables-example"
+                                                    tabindex="0">
+                                                    <a href="#">4</a>
+                                                </li>
+                                                <li class="paginate_button " aria-controls="dataTables-example"
+                                                    tabindex="0">
+                                                    <a href="#">5</a>
+                                                </li>
+                                                <li class="paginate_button " aria-controls="dataTables-example"
+                                                    tabindex="0">
+                                                    <a href="#">6</a>
+                                                </li>
+                                                <li id="dataTables-example_next" class="paginate_button next"
+                                                    aria-controls="dataTables-example" tabindex="0">
+                                                    <a href="#">Next</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
-       </div>
-    </div>
-</div>
-
-
-
+        </div>
 
 
         <br>
         <hr class="fade"/>
-        <div class="container">
-            <h2 class="text-muted">Influenza AA</h2>
-            <table class="table table-stripes" style="padding-left:10px;">
-                <thead>
-                    <tr>
-                        <td>Genbank Accession Number</td>
-                        <td>Host</td>
-                        <td>Genome Segment</td>
-                        <td>Subtype</td>
-                        <td>Country</td>
-                        <td nowrap>Date</td>
-                        <td>Length</td>
-                        <td>Virus Name</td>
-                        <td>Age</td>
-                        <td>Gender</td>
-                        <td>Complete-ness</td>
-                        <td>Protein Sequence</td>
-                        <td>Display Matrix <input type="checkbox" id="select_all" onclick="selectallA(this)"/></td>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for row in queryEntriesAA %}
-                        <tr>
-                            <td>{{ row.genbank_accession_number }}</td>
-                            <td>{{ row.host }}</td>
-                            <td>{{ row.genomesegment_or_proteinname }}</td>
-                            <td>{{ row.subtype }}</td>
-                            <td>{{ row.country }}</td>
-                            <td nowrap>{{ row.date_discovered }}</td>
-                            <td>{{ row.sequence_length }}</td>
-                            <td>{{ row.virus_name }}</td>
-                            <td>{{ row.age }}</td>
-                            <td>{{ row.gender }}</td>
-                            <td>{{ row.completeness }}</td>
-                            <td style="word-wrap: break-word; max-width: 300px;">
-                                <div style="overflow-x: hidden; overflow-y: scroll; max-height: 150px;">
-                                    {{ row.influenza_faa.fasta_protein_description }}
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Influenza AA</div>
+                    <div class="panel-body">
+                        <div class="dataTable_wrapper">
+                            <div id="dataTables-example_wrapper"
+                                 class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div id="dataTables-example_length" class="dataTables_length">
+                                            <label>
+                                                Show
+                                                <select class="form-control input-sm" name="dataTables-example_length"
+                                                        aria-controls="dataTables-example">
+                                                    <option value="10">10</option>
+                                                    <option value="25">25</option>
+                                                    <option value="50">50</option>
+                                                    <option value="100">100</option>
+                                                </select>
+                                                entries
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div id="dataTables-example_filter" class="dataTables_filter">
+                                            <label>
+                                                Search:
+                                                <input class="form-control input-sm" type="search" placeholder=""
+                                                       aria-controls="dataTables-example">
+                                            </label>
+                                        </div>
+                                    </div>
                                 </div>
-                            </td>
-                            <td><input class="AACheckbox" type="checkbox" name="displays" value="{{row.genbank_accession_number}}" /></td>
-                        </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-                <div style="text-align:right;">
-                    <input class="btn btn-default" type="submit" value="Submit" />
+                                <div class="row">
+                                    <div class="col-sm-12" style="height: 500px; overflow: scroll">
+                                        <table id="dataTables-example"
+                                               class="table table-striped table-bordered table-hover dataTable no-footer"
+                                               role="grid" aria-describedby="dataTables-example_info">
+                                            <thead>
+                                            <tr role="row">
+                                                <th class="sorting" tabindex="0" aria-controls="dataTables-example"
+                                                    rowspan="1" colspan="1" style="width: 50px;"
+                                                    aria-label="Rendering engine: activate to sort column ascending">
+                                                    Genbank Accession Number
+                                                </th>
+                                                <th class="sorting" tabindex="0" aria-controls="dataTables-example"
+                                                    rowspan="1" colspan="1" style="width: 50px;"
+                                                    aria-label="Rendering engine: activate to sort column ascending">
+                                                    Host
+                                                </th>
+                                                <th class="sorting" tabindex="0" aria-controls="dataTables-example"
+                                                    rowspan="1" colspan="1" style="width: 50px;"
+                                                    aria-label="Rendering engine: activate to sort column ascending">
+                                                    Genome Segment
+                                                </th>
+                                                <th class="sorting" tabindex="0" aria-controls="dataTables-example"
+                                                    rowspan="1" colspan="1" style="width: 50px;"
+                                                    aria-label="Rendering engine: activate to sort column ascending">
+                                                    Subtype
+                                                </th>
+                                                <th class="sorting" tabindex="0" aria-controls="dataTables-example"
+                                                    rowspan="1" colspan="1" style="width: 50px;"
+                                                    aria-label="Rendering engine: activate to sort column ascending">
+                                                    Country
+                                                </th>
+                                                <th class="sorting" tabindex="0" aria-controls="dataTables-example"
+                                                    rowspan="1" colspan="1" style="width: 50px;"
+                                                    aria-label="Rendering engine: activate to sort column ascending">
+                                                    Date
+                                                </th>
+                                                <th class="sorting" tabindex="0" aria-controls="dataTables-example"
+                                                    rowspan="1" colspan="1" style="width: 50px;"
+                                                    aria-label="Rendering engine: activate to sort column ascending">
+                                                    Length
+                                                </th>
+                                                <th class="sorting" tabindex="0" aria-controls="dataTables-example"
+                                                    rowspan="1" colspan="1" style="width: 50px;"
+                                                    aria-label="Rendering engine: activate to sort column ascending">
+                                                    Virus Name
+                                                </th>
+                                                <th class="sorting" tabindex="0" aria-controls="dataTables-example"
+                                                    rowspan="1" colspan="1" style="width: 50px;"
+                                                    aria-label="Rendering engine: activate to sort column ascending">Age
+                                                </th>
+                                                <th class="sorting" tabindex="0" aria-controls="dataTables-example"
+                                                    rowspan="1" colspan="1" style="width: 50px;"
+                                                    aria-label="Rendering engine: activate to sort column ascending">
+                                                    Gender
+                                                </th>
+                                                <th class="sorting" tabindex="0" aria-controls="dataTables-example"
+                                                    rowspan="1" colspan="1" style="width: 100px;"
+                                                    aria-label="Rendering engine: activate to sort column ascending">
+                                                    Complete-ness
+                                                </th>
+                                                <th class="sorting" tabindex="0" aria-controls="dataTables-example"
+                                                    rowspan="1" colspan="1" style="width: 50px;"
+                                                    aria-label="Rendering engine: activate to sort column ascending">
+                                                    Nucleotide Sequence
+                                                </th>
+                                                <th>Display Matrix <input type="checkbox" id="select_all"
+                                                                          onclick="selectallA(this)"/>
+                                                </th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            {% for row in queryEntriesAA %}
+                                                <tr>
+                                                    <td>{{ row.genbank_accession_number }}</td>
+                                                    <td>{{ row.host }}</td>
+                                                    <td>{{ row.genomesegment_or_proteinname }}</td>
+                                                    <td>{{ row.subtype }}</td>
+                                                    <td>{{ row.country }}</td>
+                                                    <td nowrap>{{ row.date_discovered }}</td>
+                                                    <td>{{ row.sequence_length }}</td>
+                                                    <td>{{ row.virus_name }}</td>
+                                                    <td>{{ row.age }}</td>
+                                                    <td>{{ row.gender }}</td>
+                                                    <td>{{ row.completeness }}</td>
+                                                    <td style="word-wrap: break-word; max-width: 300px;">
+                                                        <div style="overflow-x: hidden; overflow-y: scroll; max-height: 150px;">
+                                                            {{ row.influenza_faa.fasta_protein_description }}
+                                                        </div>
+                                                    </td>
+                                                    <td><input class="AACheckbox" type="checkbox" name="displays"
+                                                               value="{{ row.genbank_accession_number }}"/></td>
+                                                </tr>
+                                            {% endfor %}
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div id="dataTables-example_info" class="dataTables_info" role="status"
+                                             aria-live="polite">Showing 1 to 10 of 57 entries
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div id="dataTables-example_paginate"
+                                             class="dataTables_paginate paging_simple_numbers">
+                                            <ul class="pagination">
+                                                <li id="dataTables-example_previous"
+                                                    class="paginate_button previous disabled"
+                                                    aria-controls="dataTables-example" tabindex="0">
+                                                <li class="paginate_button active" aria-controls="dataTables-example"
+                                                    tabindex="0">
+                                                    <a href="#">1</a>
+                                                </li>
+                                                <li class="paginate_button " aria-controls="dataTables-example"
+                                                    tabindex="0">
+                                                    <a href="#">2</a>
+                                                </li>
+                                                <li class="paginate_button " aria-controls="dataTables-example"
+                                                    tabindex="0">
+                                                    <a href="#">3</a>
+                                                </li>
+                                                <li class="paginate_button " aria-controls="dataTables-example"
+                                                    tabindex="0">
+                                                    <a href="#">4</a>
+                                                </li>
+                                                <li class="paginate_button " aria-controls="dataTables-example"
+                                                    tabindex="0">
+                                                    <a href="#">5</a>
+                                                </li>
+                                                <li class="paginate_button " aria-controls="dataTables-example"
+                                                    tabindex="0">
+                                                    <a href="#">6</a>
+                                                </li>
+                                                <li id="dataTables-example_next" class="paginate_button next"
+                                                    aria-controls="dataTables-example" tabindex="0">
+                                                    <a href="#">Next</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-       </div>
-</form>
+            </div>
+        </div>
+        <div style="text-align:right;">
+            <input class="btn btn-default" type="submit" value="Submit"/>
+        </div>
+
+    </form>
 
 {% endblock %}

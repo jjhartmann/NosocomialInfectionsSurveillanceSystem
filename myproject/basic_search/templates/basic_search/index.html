@@ -1,206 +1,252 @@
-{% extends "secure/base.html" %}
+{% extends 'secure/base.html' %}
 {% load staticfiles %}
 
-    {% block maincontent%}
+{% block css %}
+{% endblock %}
 
-        <script type="application/javascript" >
-            function validateForm()
-            {
-                var toyear = document.forms["search_form"]["toyear"].value;
-                var fromyear = document.forms["search_form"]["fromyear"].value;
 
-                if (toyear != "")
-                {
-                    if (toyear.length < 4)
-                    {
-                        alert("To Year must contain a 4 digit year")
-                        return false;
-                    }
-                    if (!jQuery.isNumeric(toyear))
-                    {
-                        alert("To Year must be numeric")
-                        return false;
-                    }
+{% block javascript %}
+{% endblock %}
+
+{% block maincontent %}
+
+    <script type="application/javascript">
+        function validateForm() {
+            var toyear = document.forms["search_form"]["toyear"].value;
+            var fromyear = document.forms["search_form"]["fromyear"].value;
+
+            if (toyear != "") {
+                if (toyear.length < 4) {
+                    alert("To Year must contain a 4 digit year")
+                    return false;
                 }
-
-                if (fromyear != "") {
-                    if (fromyear.length < 4) {
-                        alert("From Year must contain a 4 digit year")
-                        return false;
-                    }
-                    if (!jQuery.isNumeric(fromyear))
-                    {
-                        alert("To Year must be numeric")
-                        return false;
-                    }
+                if (!jQuery.isNumeric(toyear)) {
+                    alert("To Year must be numeric")
+                    return false;
                 }
             }
-        </script>
 
-        <h1>Welcome: {{ user.username }}</h1>
+            if (fromyear != "") {
+                if (fromyear.length < 4) {
+                    alert("From Year must contain a 4 digit year")
+                    return false;
+                }
+                if (!jQuery.isNumeric(fromyear)) {
+                    alert("To Year must be numeric")
+                    return false;
+                }
+            }
+        }
+    </script>
 
+    <div class="row">
 
-        <p> Prepare for the search!</p>
-
-        <form id="search_form" class="form-horizontal" method="post" action="{% url 'basic_search:details'  username=user.username %}" onsubmit="return validateForm()">
-            {% csrf_token %}
-            <fieldset>
-
-            <!-- Form Name -->
-            <legend>Search</legend>
-
-            <!-- Search input-->
-            <div class="form-group">
-              <label class="col-md-4 control-label" for="genbank_an">GenBank Accession Number</label>
-              <div class="col-md-4">
-                <input id="genbank_an" name="genbank_na_accnum" type="search" placeholder="GBA Number" class="form-control input-md" maxlength="10">
-
-              </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Search NCBI Influenca Database</h1>
             </div>
+        </div>
 
-             <!-- Multiple Radios -->
-            <div class="form-group">
-              <label class="col-md-4 control-label" for="virus_type">Virus Type</label>
-              <div class="col-md-4">
-              <div class="radio">
-                <label for="virus_type-0">
-                  <input type="radio" name="virus_type" id="virus_type-0" value="0" checked="checked">
-                  All
-                </label>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Search:</div>
+                    <div class="panel-body">
+
+                        <div class="row">
+
+                            <form role="form" id="search_form" class="form-horizontal" method="post"
+                                  action="{% url 'basic_search:details'  username=user.username %}"
+                                  onsubmit="return validateForm()">
+                                {% csrf_token %}
+                                <fieldset>
+
+                                    <!-- Search input-->
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label" for="genbank_an">GenBank Accession
+                                            Number</label>
+
+                                        <div class="col-md-4">
+                                            <input id="genbank_an" name="genbank_na_accnum" type="search"
+                                                   placeholder="GBA Number" class="form-control input-md"
+                                                   maxlength="10">
+
+                                        </div>
+                                    </div>
+
+                                    <!-- Multiple Radios -->
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label" for="virus_type">Virus Type</label>
+
+                                        <div class="col-md-4">
+                                            <div class="radio">
+                                                <label for="virus_type-0">
+                                                    <input type="radio" name="virus_type" id="virus_type-0" value="0"
+                                                           checked="checked">
+                                                    All
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label for="virus_type-1">
+                                                    <input type="radio" name="virus_type" id="virus_type-1" value="1">
+                                                    A
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label for="virus_type-2">
+                                                    <input type="radio" name="virus_type" id="virus_type-2" value="2">
+                                                    B
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label for="virus_type-3">
+                                                    <input type="radio" name="virus_type" id="virus_type-3" value="3">
+                                                    C
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label for="virus_type-4">
+                                                    <input type="radio" name="virus_type" id="virus_type-4" value="4">
+                                                    Provisional Influenza D
+                                                </label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <!-- Select Multiple -->
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label" for="genome_portein_seg">Genome or Protein
+                                            Segments</label>
+
+                                        <div class="col-md-4">
+                                            <select id="genome_portein_seg" name="genomesegment_or_proteinname"
+                                                    class="form-control" multiple="multiple">
+                                                <option value="all" class="default" selected>ALL</option>
+                                                {% for segment in segments %}
+                                                    <option value="{{ forloop.counter }}">{{ segment.1 }}</option>
+                                                {% endfor %}
+
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Search input-->
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label" for="strain_name">Strain Name</label>
+
+                                        <div class="col-md-4">
+                                            <input id="strain_name" name="virus_name" type="search"
+                                                   placeholder="i.e. B/Alaska/16/2000" class="form-control input-md">
+
+                                            <p class="help-block">* use comma to separate mutliple</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Search input-->
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label" for="subtype">SUB TYPE</label>
+
+                                        <div class="col-md-4">
+                                            <input id="subtype" name="subtype" type="search" placeholder="i.e. H1N1"
+                                                   class="form-control input-md">
+
+                                            <p class="help-block">* use comma to separate multiple entries</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Select Multiple -->
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label" for="country">Country</label>
+
+                                        <div class="col-md-4">
+                                            <select id="country" name="country" class="form-control"
+                                                    multiple="multiple">
+                                                <option value="ALL" class="default" selected>ALL</option>
+                                                {% for country in countries %}
+                                                    <option value="{{ country.1 }}">{{ country.1 }}</option>
+                                                {% endfor %}
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Multiple Radios -->
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label" for="complete_seq">Sequence
+                                            Completion</label>
+
+                                        <div class="col-md-4">
+                                            <div class="radio">
+                                                <label for="complete_seq-0">
+                                                    <input type="radio" name="complete_seq" id="complete_seq-0"
+                                                           value="0" checked="checked">
+                                                    All
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label for="complete_seq-1">
+                                                    <input type="radio" name="complete_seq" id="complete_seq-1"
+                                                           value="1">
+                                                    Only Complete
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label for="complete_seq-2">
+                                                    <input type="radio" name="complete_seq" id="complete_seq-2"
+                                                           value="2">
+                                                    Nearly Complete
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label for="complete_seq-3">
+                                                    <input type="radio" name="complete_seq" id="complete_seq-3"
+                                                           value="3">
+                                                    Partially Complete
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Search input-->
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label" for="fromyear">From Year:</label>
+
+                                        <div class="col-md-4">
+                                            <input id="fromyear" name="fromyear" type="search" placeholder="YYYY"
+                                                   class="form-control input-md" maxlength="4" type="number">
+
+                                        </div>
+                                    </div>
+
+                                    <!-- Search input-->
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label" for="toyear">To Year:</label>
+
+                                        <div class="col-md-4">
+                                            <input id="toyear" name="toyear" type="search" placeholder="YYYY"
+                                                   class="form-control input-md" maxlength="4" type="number">
+
+                                        </div>
+                                    </div>
+
+                                    <!-- Button -->
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label" for="search"></label>
+
+                                        <div class="col-md-4">
+                                            <button id="search" name="search" class="btn btn-success">Search</button>
+                                        </div>
+                                    </div>
+
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-              <div class="radio">
-                <label for="virus_type-1">
-                  <input type="radio" name="virus_type" id="virus_type-1" value="1">
-                  A
-                </label>
-                </div>
-              <div class="radio">
-                <label for="virus_type-2">
-                  <input type="radio" name="virus_type" id="virus_type-2" value="2">
-                  B
-                </label>
-              </div>
-              <div class="radio">
-                <label for="virus_type-3">
-                  <input type="radio" name="virus_type" id="virus_type-3" value="3">
-                  C
-                </label>
-              </div>
-              <div class="radio">
-                <label for="virus_type-4">
-                  <input type="radio" name="virus_type" id="virus_type-4" value="4">
-                  Provisional Influenza D
-                </label>
-              </div>
-
-              </div>
             </div>
-
-            <!-- Select Multiple -->
-            <div class="form-group">
-              <label class="col-md-4 control-label" for="genome_portein_seg">Genome or Protein Segments</label>
-              <div class="col-md-4">
-                <select id="genome_portein_seg" name="genomesegment_or_proteinname" class="form-control" multiple="multiple">
-                  <option value="all" class="default" selected >ALL</option>
-                  {% for segment in segments %}
-                      <option value="{{ forloop.counter }}">{{ segment.1 }}</option>
-                  {% endfor %}
-
-                </select>
-              </div>
-            </div>
-
-            <!-- Search input-->
-            <div class="form-group">
-              <label class="col-md-4 control-label" for="strain_name">Strain Name</label>
-              <div class="col-md-4">
-                <input id="strain_name" name="virus_name" type="search" placeholder="i.e. B/Alaska/16/2000" class="form-control input-md">
-                <p class="help-block">* use comma to separate mutliple</p>
-              </div>
-            </div>
-
-            <!-- Search input-->
-            <div class="form-group">
-              <label class="col-md-4 control-label" for="subtype">SUB TYPE</label>
-              <div class="col-md-4">
-                <input id="subtype" name="subtype" type="search" placeholder="i.e. H1N1" class="form-control input-md">
-                <p class="help-block">* use comma to separate multiple entries</p>
-              </div>
-            </div>
-
-            <!-- Select Multiple -->
-            <div class="form-group">
-              <label class="col-md-4 control-label" for="country">Country</label>
-              <div class="col-md-4">
-                <select id="country" name="country" class="form-control" multiple="multiple">
-                  <option value="ALL" class="default" selected >ALL</option>
-                  {% for country in countries %}
-                      <option value="{{ country.1 }}">{{ country.1 }}</option>
-                  {% endfor %}
-                </select>
-              </div>
-            </div>
-
-            <!-- Multiple Radios -->
-            <div class="form-group">
-              <label class="col-md-4 control-label" for="complete_seq">Sequence Completion</label>
-              <div class="col-md-4">
-              <div class="radio">
-                <label for="complete_seq-0">
-                  <input type="radio" name="complete_seq" id="complete_seq-0" value="0" checked="checked">
-                  All
-                </label>
-                </div>
-              <div class="radio">
-                <label for="complete_seq-1">
-                  <input type="radio" name="complete_seq" id="complete_seq-1" value="1">
-                  Only Complete
-                </label>
-                </div>
-              <div class="radio">
-                <label for="complete_seq-2">
-                  <input type="radio" name="complete_seq" id="complete_seq-2" value="2">
-                  Nearly Complete
-                </label>
-                </div>
-              <div class="radio">
-                <label for="complete_seq-3">
-                  <input type="radio" name="complete_seq" id="complete_seq-3" value="3">
-                  Partially Complete
-                </label>
-                </div>
-              </div>
-            </div>
-
-            <!-- Search input-->
-            <div class="form-group">
-              <label class="col-md-4 control-label" for="fromyear">From Year:</label>
-              <div class="col-md-4">
-                <input id="fromyear" name="fromyear" type="search" placeholder="YYYY" class="form-control input-md" maxlength="4" type="number">
-
-              </div>
-            </div>
-
-            <!-- Search input-->
-            <div class="form-group">
-              <label class="col-md-4 control-label" for="toyear">To Year:</label>
-              <div class="col-md-4">
-                <input id="toyear" name="toyear" type="search" placeholder="YYYY" class="form-control input-md" maxlength="4" type="number">
-
-              </div>
-            </div>
-
-            <!-- Button -->
-            <div class="form-group">
-              <label class="col-md-4 control-label" for="search"></label>
-              <div class="col-md-4">
-                <button id="search" name="search" class="btn btn-success">Search</button>
-              </div>
-            </div>
-
-            </fieldset>
-        </form>
+        </div>
+    </div>
 
 
-    {% endblock %}
+{% endblock %}
 
