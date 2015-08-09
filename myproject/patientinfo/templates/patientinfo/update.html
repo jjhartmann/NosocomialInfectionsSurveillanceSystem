@@ -1,34 +1,56 @@
 {% extends "secure/base.html" %}
-    {% block maincontent%}
+{% block maincontent %}
 
- <!-- datepicker plugin site:http://jqueryui.com/datepicker/#dropdown-month-year-->
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <script>
-  $(function() {
-    $( "#id_date_of_birth" ).datepicker({
-      changeMonth: true,
-      changeYear: true
-    });
-  });
-  </script>
-<h1> patient data:</h1>
+    <!-- datepicker plugin site:http://jqueryui.com/datepicker/#dropdown-month-year-->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#id_date_of_birth").datepicker({
+                changeMonth: true,
+                changeYear: true
+            });
+        });
+    </script>
 
-<form action="{% url 'patientinfo:update'  username patientinfo.id %}" method="post" enctype="multipart/form-data">{% csrf_token %}
-<ul>
-	{{form.as_ul}}
-</ul>
+    <div class="row">
 
-<input type= "submit"  name="submit" value="Update Patient Info" class="btn btn-success btn-sm">
-</form>
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header"> patient data:</h1>
+            </div>
+        </div>
 
-<div id="sidebar">
-	{% block sidebar %}
-	<h2><a href="{% url 'patientinfo:index'  username %}" class="btn btn-success btn-sm">Cancle</a></h2>
-	{% endblock %}
-	
-</div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Details:</div>
+                    <div class="panel-body">
 
-    {% endblock %}
+                        <div class="row">
+
+
+                            <form action="{% url 'patientinfo:update'  username patientinfo.id %}" method="post"
+                                  enctype="multipart/form-data">
+                                {% csrf_token %}
+                                <table>
+                                    {{ form.as_table }}
+                                </table>
+
+                                <div id="row">
+                                    <input type="submit" name="submit" value="Update Patient Info"
+                                           class="btn btn-success btn-large">
+                                    <a href="{% url 'patientinfo:index'  username %}"
+                                               class="btn btn-success btn-large">Cancel</a>
+                                </div>
+                            </form>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
