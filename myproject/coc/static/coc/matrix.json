@@ -1,21 +1,6 @@
 [
 {
   "fields": {
-<<<<<<< HEAD
-    "completeness": "c\n",
-    "virus_name": "Influenza A Virus (A/Fiji/15899/83(H1N1))",
-    "date_discovered": "1983-01-01",
-    "country": "Fiji",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H1N1",
-    "host": "Human",
-    "gender": "",
-    "sequence_length": 2341
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "AJ564805"
-=======
     "completeness": "p\n",
     "virus_name": "Influenza A virus (A/seal/Mass/1/1980(H7N7))",
     "date_discovered": "1980-01-01",
@@ -2061,25 +2046,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AGX16788"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/Hong Kong/483/1997(H5N1))",
-    "date_discovered": "1997-01-01",
-    "country": "Hong Kong",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H5N1",
-    "host": "Human",
-    "gender": "",
-    "sequence_length": 2341
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "AF258839"
-=======
     "virus_name": "Influenza B virus (B/Auckland/14/2007)",
     "date_discovered": "2007-09-24",
     "country": "New Zealand",
@@ -2092,25 +2062,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AGX23910"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/Hong Kong/532/1997(H5N1))",
-    "date_discovered": "1997-01-01",
-    "country": "Hong Kong",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H5N1",
-    "host": "Human",
-    "gender": "",
-    "sequence_length": 2341
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "AF258843"
-=======
     "virus_name": "Influenza B virus (B/Auckland/144/2008)",
     "date_discovered": "2008-08-25",
     "country": "New Zealand",
@@ -2123,41 +2078,18 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AGX15766"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A Virus (A/Maryland/12/1991(H1N1))",
-    "date_discovered": "1991-01-01",
-    "country": "USA",
-=======
     "virus_name": "Influenza B virus (B/Auckland/157/2008)",
     "date_discovered": "2008-09-08",
     "country": "New Zealand",
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
     "age": null,
     "genomesegment_or_proteinname": "BM2",
     "subtype": "",
     "host": "Human",
     "gender": "",
-<<<<<<< HEAD
-    "sequence_length": 2307
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "CY039916"
-},
-{
-  "fields": {
-    "completeness": "p\n",
-    "virus_name": "Influenza A virus (A/New Jersey/8/1976(H1N1))",
-    "date_discovered": "1976-01-01",
-    "country": "USA",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H1N1",
-=======
     "sequence_length": 109
   },
   "model": "basic_search.influenza_aa",
@@ -2172,15 +2104,10 @@
     "age": null,
     "genomesegment_or_proteinname": "BM2",
     "subtype": "",
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
     "host": "Human",
     "gender": "",
     "sequence_length": 109
   },
-<<<<<<< HEAD
-  "model": "basic_search.influenza_na",
-  "pk": "CY039998"
-=======
   "model": "basic_search.influenza_aa",
   "pk": "AGZ59989"
 },
@@ -2199,25 +2126,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AGX24779"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A Virus (A/New York/1669/2009(H1N1))",
-    "date_discovered": "2009-04-26",
-    "country": "USA",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H1N1",
-    "host": "Human",
-    "gender": "",
-    "sequence_length": 2288
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "CY039900"
-=======
     "virus_name": "Influenza B virus (B/Auckland/16/2002)",
     "date_discovered": "2002-06-20",
     "country": "New Zealand",
@@ -2230,25 +2142,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AGX16964"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/New York/1670/2009(H3N2))",
-    "date_discovered": "2009-04-27",
-    "country": "USA",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H3N2",
-    "host": "Human",
-    "gender": "",
-    "sequence_length": 2298
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "CY050459"
-=======
     "virus_name": "Influenza B virus (B/Auckland/2/2008)",
     "date_discovered": "2008-04-22",
     "country": "New Zealand",
@@ -2261,25 +2158,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AGX16393"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/New York/1671/2009(H3N2))",
-    "date_discovered": "2009-04-27",
-    "country": "USA",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H3N2",
-    "host": "Human",
-    "gender": "",
-    "sequence_length": 2293
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "CY050467"
-=======
     "virus_name": "Influenza B virus (B/Auckland/21/2005)",
     "date_discovered": "2005-05-23",
     "country": "New Zealand",
@@ -2292,25 +2174,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AGX17655"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A Virus (A/New York/1682/2009(H1N1))",
-    "date_discovered": "2009-04-27",
-    "country": "USA",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H1N1",
-    "host": "Human",
-    "gender": "",
-    "sequence_length": 2295
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "CY039908"
-=======
     "virus_name": "Influenza B virus (B/Auckland/23/2008)",
     "date_discovered": "2008-07-08",
     "country": "New Zealand",
@@ -2323,25 +2190,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AGX19482"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/New York/473/2003(H3N2))",
-    "date_discovered": "2003-11-24",
-    "country": "USA",
-    "age": 20.0,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H3N2",
-    "host": "Human",
-    "gender": "F",
-    "sequence_length": 2306
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "CY008875"
-=======
     "virus_name": "Influenza B virus (B/Auckland/26/2002)",
     "date_discovered": "2002-07-04",
     "country": "New Zealand",
@@ -2354,25 +2206,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AGX17129"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/New York/474/2003(H3N2))",
-    "date_discovered": "2003-12-31",
-    "country": "USA",
-    "age": 83.0,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H3N2",
-    "host": "Human",
-    "gender": "F",
-    "sequence_length": 2306
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "CY008883"
-=======
     "virus_name": "Influenza B virus (B/Auckland/27/2011)",
     "date_discovered": "2011-07-06",
     "country": "New Zealand",
@@ -2385,25 +2222,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AGX21066"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/New York/476/2003(H3N2))",
-    "date_discovered": "2003-12-15",
-    "country": "USA",
-    "age": 26.0,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H3N2",
-    "host": "Human",
-    "gender": "F",
-    "sequence_length": 2306
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "CY008899"
-=======
     "virus_name": "Influenza B virus (B/Auckland/3/2005)",
     "date_discovered": "2005-04-10",
     "country": "New Zealand",
@@ -2416,25 +2238,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AGX22667"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/New York/478/2003(H3N2))",
-    "date_discovered": "2003-11-21",
-    "country": "USA",
-    "age": 35.0,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H3N2",
-    "host": "Human",
-    "gender": "F",
-    "sequence_length": 2306
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "CY008907"
-=======
     "virus_name": "Influenza B virus (B/Auckland/3/2007)",
     "date_discovered": "2007-06-28",
     "country": "New Zealand",
@@ -2447,41 +2254,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AGX23536"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/New York/498/2004(H3N2))",
-    "date_discovered": "2004-01-13",
-    "country": "USA",
-    "age": 0.25,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H3N2",
-    "host": "Human",
-    "gender": "M",
-    "sequence_length": 2306
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "CY008915"
-},
-{
-  "fields": {
-    "completeness": "p\n",
-    "virus_name": "Influenza A virus (A/camel/Mongolia/1982(H1N1))",
-    "date_discovered": "1982-01-01",
-    "country": "Mongolia",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H1N1",
-    "host": "Camel",
-    "gender": "",
-    "sequence_length": 379
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "M73972"
-=======
     "virus_name": "Influenza B virus (B/Auckland/3/2008)",
     "date_discovered": "2008-05-13",
     "country": "New Zealand",
@@ -2510,25 +2286,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AGX22755"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A Virus (A/dog/Thailand-Suphanburi/KU-08/04(H5N1))",
-    "date_discovered": "2004-01-01",
-    "country": "Thailand",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H5N1",
-    "host": "Canine",
-    "gender": "",
-    "sequence_length": 2287
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "DQ530170"
-=======
     "virus_name": "Influenza B virus (B/Auckland/33/2008)",
     "date_discovered": "2008-07-11",
     "country": "New Zealand",
@@ -2541,25 +2302,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AGX24372"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A Virus (A/goose/Czech Republic/1848-K9/2009(H7N9))",
-    "date_discovered": "2009-02-04",
-    "country": "Czech Republic",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H7N9",
-    "host": "Avian",
-    "gender": "",
-    "sequence_length": 2308
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "GU060479"
-=======
     "virus_name": "Influenza B virus (B/Auckland/35/2002)",
     "date_discovered": "2002-08-27",
     "country": "New Zealand",
@@ -2572,25 +2318,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AGX17468"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A Virus (A/goose/Czech Republic/1848-T14/2009(H7N9))",
-    "date_discovered": "2009-02-04",
-    "country": "Czech Republic",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H7N9",
-    "host": "Avian",
-    "gender": "",
-    "sequence_length": 2308
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "HQ244412"
-=======
     "virus_name": "Influenza B virus (B/Auckland/36/2002)",
     "date_discovered": "2002-10-02",
     "country": "New Zealand",
@@ -2603,25 +2334,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AGX17534"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A Virus (A/mallard/Czech Republic/14333-1K/2011(H3N8))",
-    "date_discovered": "2011-09-16",
-    "country": "Czech Republic",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H3N8",
-    "host": "Avian",
-    "gender": "",
-    "sequence_length": 2308
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "JQ737210"
-=======
     "virus_name": "Influenza B virus (B/Auckland/36/2008)",
     "date_discovered": "2008-07-16",
     "country": "New Zealand",
@@ -2634,41 +2350,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AGX19504"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A Virus (A/mallard/Czech Republic/14602-37K/2011(H5N2))",
-    "date_discovered": "2011-09-21",
-    "country": "Czech Republic",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H5N2",
-    "host": "Avian",
-    "gender": "",
-    "sequence_length": 2308
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "JQ737218"
-},
-{
-  "fields": {
-    "completeness": "p\n",
-    "virus_name": "Influenza A Virus (A/mallard/Czech Republic/15902-14K/2009(H6N2))",
-    "date_discovered": "2009-09-30",
-    "country": "Czech Republic",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H6N2",
-    "host": "Avian",
-    "gender": "",
-    "sequence_length": 1087
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "KC599288"
-=======
     "virus_name": "Influenza B virus (B/Auckland/4/2005)",
     "date_discovered": "2005-04-18",
     "country": "New Zealand",
@@ -2697,25 +2382,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AGX23547"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A Virus (A/mallard/Czech Republic/15902-17K/2009(H6N2))",
-    "date_discovered": "2009-09-30",
-    "country": "Czech Republic",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H6N2",
-    "host": "Avian",
-    "gender": "",
-    "sequence_length": 2293
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "HQ244427"
-=======
     "virus_name": "Influenza B virus (B/Auckland/41/2008)",
     "date_discovered": "2008-07-17",
     "country": "New Zealand",
@@ -2728,121 +2398,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AGX16436"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A Virus (A/mallard/Czech Republic/15902-18K/2009(H6N9))",
-    "date_discovered": "2009-09-30",
-    "country": "Czech Republic",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H6N9",
-    "host": "Avian",
-    "gender": "",
-    "sequence_length": 2308
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "KC599295"
-},
-{
-  "fields": {
-    "completeness": "p\n",
-    "virus_name": "Influenza A Virus (A/mallard/Czech Republic/15902-18T/2009(H6))",
-    "date_discovered": "2009-09-30",
-    "country": "Czech Republic",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H6",
-    "host": "Avian",
-    "gender": "",
-    "sequence_length": 1087
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "KC599303"
-},
-{
-  "fields": {
-    "completeness": "p\n",
-    "virus_name": "Influenza A Virus (A/mallard/Czech Republic/15902-23K/2009(H6N2))",
-    "date_discovered": "2009-09-30",
-    "country": "Czech Republic",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H6N2",
-    "host": "Avian",
-    "gender": "",
-    "sequence_length": 1087
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "KC599309"
-},
-{
-  "fields": {
-    "completeness": "p\n",
-    "virus_name": "Influenza A Virus (A/mallard/Czech Republic/15902-25K/2009(H11N9))",
-    "date_discovered": "2009-09-30",
-    "country": "Czech Republic",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H11N9",
-    "host": "Avian",
-    "gender": "",
-    "sequence_length": 1087
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "KC599317"
-},
-{
-  "fields": {
-    "completeness": "p\n",
-    "virus_name": "Influenza A Virus (A/mallard/Czech Republic/15902-9K/2009)",
-    "date_discovered": "2009-09-30",
-    "country": "Czech Republic",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "",
-    "host": "Avian",
-    "gender": "",
-    "sequence_length": 1087
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "KC599277"
-},
-{
-  "fields": {
-    "completeness": "p\n",
-    "virus_name": "Influenza A Virus (A/mallard/Czech Republic/15962-4T/2010(H6N9))",
-    "date_discovered": "2010-11-01",
-    "country": "Czech Republic",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H6N9",
-    "host": "Avian",
-    "gender": "",
-    "sequence_length": 1198
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "KC599325"
-},
-{
-  "fields": {
-    "completeness": "p\n",
-    "virus_name": "Influenza A virus (A/mallard/Italy/43/2001(H7N3))",
-    "date_discovered": "2001-01-01",
-    "country": "Italy",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H7N3",
-    "host": "Avian",
-    "gender": "",
-    "sequence_length": 1002
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "AY586445"
-=======
     "virus_name": "Influenza B virus (B/Auckland/44/2011)",
     "date_discovered": "2011-07-26",
     "country": "New Zealand",
@@ -2951,25 +2510,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AGX21471"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/Swine/Indiana/1726/1988(H1N1))",
-    "date_discovered": "1988-01-01",
-    "country": "USA",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H1N1",
-    "host": "Swine",
-    "gender": "",
-    "sequence_length": 2292
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "CY039932"
-=======
     "virus_name": "Influenza B virus (B/Auckland/66/2011)",
     "date_discovered": "2011-09-10",
     "country": "New Zealand",
@@ -2982,41 +2526,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AGX21559"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/swine/Wisconsin/1915/1988(H1N1))",
-    "date_discovered": "1988-01-01",
-    "country": "USA",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H1N1",
-    "host": "Swine",
-    "gender": "",
-    "sequence_length": 2293
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "CY039924"
-},
-{
-  "fields": {
-    "completeness": "p\n",
-    "virus_name": "Influenza A virus (A/turkey/Italy/214845/2002(H7N3))",
-    "date_discovered": "2002-01-01",
-    "country": "Italy",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H7N3",
-    "host": "Avian",
-    "gender": "",
-    "sequence_length": 1029
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "AY586439"
-=======
     "virus_name": "Influenza B virus (B/Auckland/7/2011)",
     "date_discovered": "2011-05-30",
     "country": "New Zealand",
@@ -3045,25 +2558,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AGX21603"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/chicken/Germany/R28/03(H7N7))",
-    "date_discovered": "2003-01-01",
-    "country": "Germany",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H7N7",
-    "host": "Avian",
-    "gender": "",
-    "sequence_length": 2330
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "AJ620347"
-=======
     "virus_name": "Influenza B virus (B/Auckland/73/2011)",
     "date_discovered": "2011-10-19",
     "country": "New Zealand",
@@ -3076,25 +2574,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AGX21690"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/(Puerto Rico/8/1934-Korea/426/1968)(H2N2))",
-    "date_discovered": null,
-    "country": "LAB",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H2N2",
-    "host": "Human",
-    "gender": "",
-    "sequence_length": 2300
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "CY037302"
-=======
     "virus_name": "Influenza B virus (B/Auckland/8/2005)",
     "date_discovered": "2005-05-03",
     "country": "New Zealand",
@@ -3107,25 +2590,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AGX22678"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/AA/Huston/1945(H1N1))",
-    "date_discovered": "1945-01-01",
-    "country": "USA",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H1N1",
-    "host": "Human",
-    "gender": "",
-    "sequence_length": 2309
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "CY021716"
-=======
     "virus_name": "Influenza B virus (B/Auckland/84/2008)",
     "date_discovered": "2008-08-31",
     "country": "New Zealand",
@@ -3138,25 +2606,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AGX19955"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/AA/Marton/1943(H1N1))",
-    "date_discovered": "1943-01-01",
-    "country": "USA",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H1N1",
-    "host": "Human",
-    "gender": "",
-    "sequence_length": 2300
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "CY020292"
-=======
     "virus_name": "Influenza B virus (B/Auckland/91/2008)",
     "date_discovered": "2008-08-04",
     "country": "New Zealand",
@@ -3169,25 +2622,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AGX19636"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/Aalborg/INS132/2009(H1N1))",
-    "date_discovered": "2009-11-23",
-    "country": "Denmark",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H1N1",
-    "host": "Human",
-    "gender": "",
-    "sequence_length": 2316
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "CY083917"
-=======
     "virus_name": "Influenza B virus (B/Auckland/97/2008)",
     "date_discovered": "2008-08-07",
     "country": "New Zealand",
@@ -3200,25 +2638,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AGX24537"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/Aalborg/INS133/2009(H1N1))",
-    "date_discovered": "2009-12-02",
-    "country": "Denmark",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H1N1",
-    "host": "Human",
-    "gender": "",
-    "sequence_length": 2293
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "CY063613"
-=======
     "virus_name": "Influenza B virus (B/Auckland/98/2005)",
     "date_discovered": "2005-06-18",
     "country": "New Zealand",
@@ -3231,25 +2654,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AGX17754"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/Aalborg/INS282/2009(H1N1))",
-    "date_discovered": "2009-11-25",
-    "country": "Denmark",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H1N1",
-    "host": "Human",
-    "gender": "",
-    "sequence_length": 2316
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "CY083782"
-=======
     "virus_name": "Influenza B virus (B/Auckland/99/2005)",
     "date_discovered": "2005-06-20",
     "country": "New Zealand",
@@ -3262,25 +2670,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AGX22821"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/Aalborg/INS283/2009(H1N1))",
-    "date_discovered": "2009-12-07",
-    "country": "Denmark",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H1N1",
-    "host": "Human",
-    "gender": "",
-    "sequence_length": 2293
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "CY073732"
-=======
     "virus_name": "Influenza B virus (B/Bangkok/141/1994)",
     "date_discovered": "1994-05-07",
     "country": "Thailand",
@@ -3293,25 +2686,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "ABN50670"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/Aarhus/INS116/2009(H1N1))",
-    "date_discovered": "2009-11-24",
-    "country": "Denmark",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H1N1",
-    "host": "Human",
-    "gender": "",
-    "sequence_length": 2293
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "CY062698"
-=======
     "virus_name": "Influenza B virus (B/Bangkok/143/1994)",
     "date_discovered": "1994-05-07",
     "country": "Thailand",
@@ -3324,25 +2702,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "ABN50681"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/Aarhus/INS118/2009(H1N1))",
-    "date_discovered": "2009-11-27",
-    "country": "Denmark",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H1N1",
-    "host": "Human",
-    "gender": "",
-    "sequence_length": 2293
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "CY062706"
-=======
     "virus_name": "Influenza B virus (B/Bangkok/153/1990)",
     "date_discovered": "1990-01-01",
     "country": "Thailand",
@@ -3355,25 +2718,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "ABN50615"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/Aarhus/INS236/2009(H1N1))",
-    "date_discovered": "2009-11-19",
-    "country": "Denmark",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H1N1",
-    "host": "Human",
-    "gender": "",
-    "sequence_length": 2293
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "CY066942"
-=======
     "virus_name": "Influenza B virus (B/Bangkok/163/1990)",
     "date_discovered": "1990-01-01",
     "country": "Thailand",
@@ -3386,25 +2734,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "ABN50626"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/Aarhus/INS237/2009(H1N1))",
-    "date_discovered": "2009-11-23",
-    "country": "Denmark",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H1N1",
-    "host": "Human",
-    "gender": "",
-    "sequence_length": 2293
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "CY066950"
-=======
     "virus_name": "Influenza B virus (B/Bangkok/460/2003)",
     "date_discovered": "2003-01-01",
     "country": "Thailand",
@@ -3417,25 +2750,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "CAH03841"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/Aarhus/INS238/2009(H1N1))",
-    "date_discovered": "2009-11-24",
-    "country": "Denmark",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H1N1",
-    "host": "Human",
-    "gender": "",
-    "sequence_length": 2293
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "CY066958"
-=======
     "virus_name": "Influenza B virus (B/Bangladesh/3333/2007)",
     "date_discovered": "2007-01-01",
     "country": "Bangladesh",
@@ -3448,25 +2766,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AFH58306"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/Aarhus/INS240/2009(H1N1))",
-    "date_discovered": "2009-11-26",
-    "country": "Denmark",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H1N1",
-    "host": "Human",
-    "gender": "",
-    "sequence_length": 2293
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "CY066966"
-=======
     "virus_name": "Influenza B virus (B/Bangladesh/5945/2009)",
     "date_discovered": "2009-01-01",
     "country": "Bangladesh",
@@ -3479,25 +2782,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AFH58449"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/Aarhus/INS241/2009(H1N1))",
-    "date_discovered": "2009-11-26",
-    "country": "Denmark",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H1N1",
-    "host": "Human",
-    "gender": "",
-    "sequence_length": 2293
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "CY066974"
-=======
     "virus_name": "Influenza B virus (B/Barcelona/215/2003)",
     "date_discovered": "2003-01-01",
     "country": "Spain",
@@ -3510,25 +2798,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "CAH03817"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/Aarhus/INS242/2009(H1N1))",
-    "date_discovered": "2009-11-24",
-    "country": "Denmark",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H1N1",
-    "host": "Human",
-    "gender": "",
-    "sequence_length": 2293
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "CY066982"
-=======
     "virus_name": "Influenza B virus (B/Beijing/184/93)",
     "date_discovered": "1993-01-01",
     "country": "China",
@@ -3541,25 +2814,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "CAH03807"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/Aarhus/INS251/2009(H1N1))",
-    "date_discovered": "2009-11-21",
-    "country": "Denmark",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H1N1",
-    "host": "Human",
-    "gender": "",
-    "sequence_length": 2293
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "CY067038"
-=======
     "virus_name": "Influenza B virus (B/Beijing/184/93)",
     "date_discovered": "1993-01-01",
     "country": "China",
@@ -3572,25 +2830,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AAD29187"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/Aarhus/INS252/2009(H1N1))",
-    "date_discovered": "2009-11-21",
-    "country": "Denmark",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H1N1",
-    "host": "Human",
-    "gender": "",
-    "sequence_length": 2293
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "CY067046"
-=======
     "virus_name": "Influenza B virus (B/Boston/DB02/2011)",
     "date_discovered": "2011-03-18",
     "country": "USA",
@@ -3603,25 +2846,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AFE00362"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/Aarhus/INS253/2009(H1N1))",
-    "date_discovered": "2009-11-22",
-    "country": "Denmark",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H1N1",
-    "host": "Human",
-    "gender": "",
-    "sequence_length": 2293
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "CY067054"
-=======
     "virus_name": "Influenza B virus (B/Boston/YGB_01002/2013)",
     "date_discovered": "2013-01-01",
     "country": "USA",
@@ -3634,25 +2862,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AHM00988"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/Aarhus/INS254/2009(H1N1))",
-    "date_discovered": "2009-11-28",
-    "country": "Denmark",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H1N1",
-    "host": "Human",
-    "gender": "",
-    "sequence_length": 2293
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "CY067062"
-=======
     "virus_name": "Influenza B virus (B/Boston/YGB_01005/2013)",
     "date_discovered": "2013-01-31",
     "country": "USA",
@@ -3665,25 +2878,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AHM00999"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/Aarhus/INS3_653/2011(H1N1))",
-    "date_discovered": "2011-01-25",
-    "country": "Denmark",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H1N1",
-    "host": "Human",
-    "gender": "",
-    "sequence_length": 2316
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "CY176577"
-=======
     "virus_name": "Influenza B virus (B/Boston/YGB_01006/2013)",
     "date_discovered": "2013-02-10",
     "country": "USA",
@@ -3696,41 +2894,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AHM01010"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/Aarhus/INS3_654/2011(H1N1))",
-    "date_discovered": "2011-01-14",
-    "country": "Denmark",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H1N1",
-    "host": "Human",
-    "gender": "",
-    "sequence_length": 2316
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "CY176585"
-},
-{
-  "fields": {
-    "completeness": "c\n",
-    "virus_name": "Influenza A virus (A/Aarhus/INS3_655/2011(H1N1))",
-    "date_discovered": "2011-02-07",
-    "country": "Denmark",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H1N1",
-    "host": "Human",
-    "gender": "",
-    "sequence_length": 2316
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "CY176593"
-=======
     "virus_name": "Influenza B virus (B/Boston/YGB_01007/2013)",
     "date_discovered": "2013-02-13",
     "country": "USA",
@@ -3759,25 +2926,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AHM01032"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/Aarhus/INS609/2011(H1N1))",
-    "date_discovered": "2011-01-25",
-    "country": "Denmark",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H1N1",
-    "host": "Human",
-    "gender": "",
-    "sequence_length": 2293
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "CY129917"
-=======
     "virus_name": "Influenza B virus (B/Boston/YGB_01009/2013)",
     "date_discovered": "2013-02-20",
     "country": "USA",
@@ -3790,25 +2942,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AHM01043"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/Aarhus/INS610/2011(H1N1))",
-    "date_discovered": "2011-01-21",
-    "country": "Denmark",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H1N1",
-    "host": "Human",
-    "gender": "",
-    "sequence_length": 2293
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "CY129925"
-=======
     "virus_name": "Influenza B virus (B/Boston/YGB_01010/2013)",
     "date_discovered": "2013-02-23",
     "country": "USA",
@@ -3821,25 +2958,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AHM01054"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/Aarhus/INS612/2011(H1N1))",
-    "date_discovered": "2011-01-19",
-    "country": "Denmark",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H1N1",
-    "host": "Human",
-    "gender": "",
-    "sequence_length": 2293
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "CY129933"
-=======
     "virus_name": "Influenza B virus (B/Boston/YGB_01017/2013)",
     "date_discovered": "2013-03-14",
     "country": "USA",
@@ -3852,25 +2974,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AHM01065"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/Aarhus/INS613/2011(H1N1))",
-    "date_discovered": "2011-01-20",
-    "country": "Denmark",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H1N1",
-    "host": "Human",
-    "gender": "",
-    "sequence_length": 2293
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "CY129941"
-=======
     "virus_name": "Influenza B virus (B/Boston/YGB_01018/2013)",
     "date_discovered": "2013-03-14",
     "country": "USA",
@@ -3883,25 +2990,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AHM01076"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/Aarhus/INS615/2011(H1N1))",
-    "date_discovered": "2011-02-04",
-    "country": "Denmark",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H1N1",
-    "host": "Human",
-    "gender": "",
-    "sequence_length": 2293
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "CY129949"
-=======
     "virus_name": "Influenza B virus (B/Boston/YGB_01019/2013)",
     "date_discovered": "2013-03-16",
     "country": "USA",
@@ -3914,25 +3006,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AHM01087"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/Aarhus/INS82/2009(H1N1))",
-    "date_discovered": "2009-11-20",
-    "country": "Denmark",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H1N1",
-    "host": "Human",
-    "gender": "",
-    "sequence_length": 2286
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "CY056954"
-=======
     "virus_name": "Influenza B virus (B/Boston/YGB_01020/2013)",
     "date_discovered": "2013-03-17",
     "country": "USA",
@@ -3945,25 +3022,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AHM01098"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/Addis Ababa/WR2848T/2009(H1N1))",
-    "date_discovered": "2009-12-01",
-    "country": "Ethiopia",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H1N1",
-    "host": "Human",
-    "gender": "",
-    "sequence_length": 2280
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "CY071823"
-=======
     "virus_name": "Influenza B virus (B/Boston/YGB_01021/2013)",
     "date_discovered": "2013-03-18",
     "country": "USA",
@@ -3976,25 +3038,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AHM01109"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/Adelie penguin/Antarctica/178/2013(H11N2))",
-    "date_discovered": "2013-02-02",
-    "country": "Antarctica",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H11N2",
-    "host": "Penguin",
-    "gender": "",
-    "sequence_length": 2297
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "KJ729372"
-=======
     "virus_name": "Influenza B virus (B/Boston/YGB_01022/2013)",
     "date_discovered": "2013-03-20",
     "country": "USA",
@@ -4007,25 +3054,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AHM01120"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/Adelie penguin/Antarctica/184/2013(H11N2))",
-    "date_discovered": "2013-02-03",
-    "country": "Antarctica",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H11N2",
-    "host": "Penguin",
-    "gender": "",
-    "sequence_length": 2297
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "KJ729356"
-=======
     "virus_name": "Influenza B virus (B/Boston/YGB_01023/2013)",
     "date_discovered": "2013-03-21",
     "country": "USA",
@@ -4038,25 +3070,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AHM01131"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/Adelie penguin/Antarctica/226/2013(H11N2))",
-    "date_discovered": "2013-02-08",
-    "country": "Antarctica",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H11N2",
-    "host": "Penguin",
-    "gender": "",
-    "sequence_length": 2297
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "KJ729364"
-=======
     "virus_name": "Influenza B virus (B/Boston/YGB_01025/2013)",
     "date_discovered": "2013-03-25",
     "country": "USA",
@@ -4069,25 +3086,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AHM01142"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/Adelie penguin/Antarctica/270/2013(H11N2))",
-    "date_discovered": "2013-02-10",
-    "country": "Antarctica",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H11N2",
-    "host": "Penguin",
-    "gender": "",
-    "sequence_length": 2297
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "KJ729348"
-=======
     "virus_name": "Influenza B virus (B/Boston/YGB_01030/2013)",
     "date_discovered": "2013-03-29",
     "country": "USA",
@@ -4100,25 +3102,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AHM01153"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/African Stonechat/Vietnam/8/2009(H9N2))",
-    "date_discovered": "2009-11-01",
-    "country": "Viet Nam",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H9N2",
-    "host": "Avian",
-    "gender": "",
-    "sequence_length": 2309
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "AB753214"
-=======
     "virus_name": "Influenza B virus (B/Boston/YGB_01031/2013)",
     "date_discovered": "2013-03-31",
     "country": "USA",
@@ -4131,25 +3118,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AHM01164"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/African starling/England-Q/983/1979(H7N1))",
-    "date_discovered": "1979-01-01",
-    "country": "United Kingdom",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H7N1",
-    "host": "Avian",
-    "gender": "",
-    "sequence_length": 2341
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "AY724256"
-=======
     "virus_name": "Influenza B virus (B/Boston/YGB_01032/2013)",
     "date_discovered": "2013-04-01",
     "country": "USA",
@@ -4162,25 +3134,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AHM01175"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/Aichi/198/2009(H1N1))",
-    "date_discovered": "2009-06-15",
-    "country": "Japan",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H1N1",
-    "host": "Human",
-    "gender": "",
-    "sequence_length": 2280
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "GU136058"
-=======
     "virus_name": "Influenza B virus (B/Boston/YGB_01033/2013)",
     "date_discovered": "2013-04-01",
     "country": "USA",
@@ -4193,25 +3150,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AHM01186"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/Aichi/2/1968(H3N2))",
-    "date_discovered": "1968-01-01",
-    "country": "Japan",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H3N2",
-    "host": "Human",
-    "gender": "",
-    "sequence_length": 2316
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "CY121124"
-=======
     "virus_name": "Influenza B virus (B/Boston/YGB_01034/2013)",
     "date_discovered": "2013-04-02",
     "country": "USA",
@@ -4224,25 +3166,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AHM01197"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/Aichi/202/2009(H1N1))",
-    "date_discovered": "2009-06-16",
-    "country": "Japan",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H1N1",
-    "host": "Human",
-    "gender": "",
-    "sequence_length": 2280
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "GU136059"
-=======
     "virus_name": "Influenza B virus (B/Boston/YGB_01035/2013)",
     "date_discovered": "2013-04-02",
     "country": "USA",
@@ -4255,25 +3182,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AHM01208"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/Akita/1/2009(H1N1))",
-    "date_discovered": "2009-06-11",
-    "country": "Japan",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H1N1",
-    "host": "Human",
-    "gender": "",
-    "sequence_length": 2280
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "GQ365417"
-=======
     "virus_name": "Influenza B virus (B/Boston/YGB_01036/2013)",
     "date_discovered": "2013-04-03",
     "country": "USA",
@@ -4286,25 +3198,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AHM01219"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/Akita/4/1993(H3N2))",
-    "date_discovered": "1993-01-01",
-    "country": "Japan",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H3N2",
-    "host": "Human",
-    "gender": "",
-    "sequence_length": 2314
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "CY113964"
-=======
     "virus_name": "Influenza B virus (B/Boston/YGB_01038/2013)",
     "date_discovered": "2013-04-04",
     "country": "USA",
@@ -4317,25 +3214,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AHM01230"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/Alabama/01/2010(H1N1))",
-    "date_discovered": "2010-01-04",
-    "country": "USA",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H1N1",
-    "host": "Human",
-    "gender": "",
-    "sequence_length": 2280
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "KC781898"
-=======
     "virus_name": "Influenza B virus (B/Boston/YGB_01039/2013)",
     "date_discovered": "2013-04-04",
     "country": "USA",
@@ -4348,25 +3230,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AHM01241"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/Alabama/02/2009(H1N1))",
-    "date_discovered": "2009-04-27",
-    "country": "USA",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H1N1",
-    "host": "Human",
-    "gender": "",
-    "sequence_length": 2280
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "GQ200229"
-=======
     "virus_name": "Influenza B virus (B/Boston/YGB_01040/2013)",
     "date_discovered": "2013-04-05",
     "country": "USA",
@@ -4379,25 +3246,10 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AHM01252"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 },
 {
   "fields": {
     "completeness": "c\n",
-<<<<<<< HEAD
-    "virus_name": "Influenza A virus (A/Alabama/03/2010(H1N1))",
-    "date_discovered": "2010-03-01",
-    "country": "USA",
-    "age": null,
-    "genomesegment_or_proteinname": "1",
-    "subtype": "H1N1",
-    "host": "Human",
-    "gender": "",
-    "sequence_length": 2280
-  },
-  "model": "basic_search.influenza_na",
-  "pk": "KC781165"
-=======
     "virus_name": "Influenza B virus (B/Boston/YGB_01042/2013)",
     "date_discovered": "2013-04-08",
     "country": "USA",
@@ -4410,6 +3262,5 @@
   },
   "model": "basic_search.influenza_aa",
   "pk": "AHM01263"
->>>>>>> d623cb541d2a11793d6bb55bfa595ecae84b42f1
 }
 ]
