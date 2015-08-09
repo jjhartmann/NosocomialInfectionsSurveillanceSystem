@@ -37,16 +37,6 @@
 
 {% block maincontent %}
 
-    <!--Display chart after search result (temparary)-->
-    {% block graph %}
-        <button onclick="myFunction()">Display Graph</button>
-        <script type="text/javascript">
-            function myFunction() {
-                window.open("{% url 'graph:index' username %}", "_blank", "resizable=yes, status =no, left=auto,right=auto,top=300,width=1500, height=400")
-            }
-        </script>
-    {% endblock %}
-
     <style type="text/css">
         .mygrid-wrapper-div {
             border: solid red 5px;
