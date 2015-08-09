@@ -5,68 +5,94 @@
 {% endblock %}
 
 {% block maincontent %}
+    <div class="row">
 
-    <table style="width:80%; margin:0 auto;" cellpadding="5px">
-        <tr>
-            <td align="center"><h2> Nocosomial Surveillance Phyapp: Phylogenetic Analysis Tool </h2></td>
-        </tr>
-        <tr>
-            <td>
-                <div>
-                    <h4> Phylogenetic Analysis using ClustalW </h4>
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Nocosomial Surveillance Phyapp: Phylogenetic Analysis Tool</h1>
+            </div>
+        </div>
 
-                    <p> Phylogenetic Analysis has been one of the very powerful ways to analyze the evolutionary
-                        relationship between different species/organisms. In our scenario, it is very crucial to
-                        identify and establish an evolutionary relationship between the input patient sequence, which
-                        may comprise of certain sub-sequences which might match with the infectious agents. On the other
-                        hand, if no match is to be found, it would still be able to find out the closest relative
-                        through the relationship tree, and this could be visualized in several ways for deeper
-                        understanding and analysis. This would help us, in determining the line of treatment, or
-                        possible drug-resistance to the particular strains recognized by the analyses.</p>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Phylogentic Tree</div>
+                    <div class="panel-body">
 
-                    <p> List of parameters used: </p>
-                    <ul>
-                        <li> GAP OPEN = 10</li>
-                        <li> GAP EXTENSION = 0.1</li>
-                        <li> DNA WEIGHT MATRIX = CLUSTAL</li>
-                    </ul>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <div>
-                    <!-- Retrieves the fasta file created in the nocoblast analysis, location: myproject/nocoblast/fast_temp.fa -->
-                    <p> Retrieve the FASTA sequences from the BLAST results </p>
-                    {% csrf_token %}
-                    <!-- Just need to run the script on click event of this button -->
-                    <div class="nbsite_boxstyle">
-                        <table class="table table-hover table-condensed">
-                            <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>FASTA Results</th>
-                                <th>Gen.</th>
-                            </tr>
-                            </thead>
+                        <div class="row">
 
-                            <tbody>
-                            {% for row in fastatable %}
+                            <table style="width:80%; margin:0 auto;" cellpadding="5px">
                                 <tr>
-                                    <th scope="row">{{ forloop.counter }}</th>
-                                    <td>{{ row.desc }}</td>
-                                    <td><a href="{% url 'phylo:generate' username row.id %}" class="btn btn-success btn-sm">Generate</a></td>
-                                </tr>
-                            {% endfor %}
+                                    <td>
+                                        <div>
+                                            <h4> Phylogenetic Analysis using ClustalW </h4>
 
-                            </tbody>
-                        </table>
+                                            <p> Phylogenetic Analysis has been one of the very powerful ways to analyze
+                                                the evolutionary
+                                                relationship between different species/organisms. In our scenario, it is
+                                                very crucial to
+                                                identify and establish an evolutionary relationship between the input
+                                                patient sequence, which
+                                                may comprise of certain sub-sequences which might match with the
+                                                infectious agents. On the other
+                                                hand, if no match is to be found, it would still be able to find out the
+                                                closest relative
+                                                through the relationship tree, and this could be visualized in several
+                                                ways for deeper
+                                                understanding and analysis. This would help us, in determining the line
+                                                of treatment, or
+                                                possible drug-resistance to the particular strains recognized by the
+                                                analyses.</p>
+
+                                            <p> List of parameters used: </p>
+                                            <ul>
+                                                <li> GAP OPEN = 10</li>
+                                                <li> GAP EXTENSION = 0.1</li>
+                                                <li> DNA WEIGHT MATRIX = CLUSTAL</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <!-- Retrieves the fasta file created in the nocoblast analysis, location: myproject/nocoblast/fast_temp.fa -->
+                                            <p> Retrieve the FASTA sequences from the BLAST results </p>
+                                            {% csrf_token %}
+                                            <!-- Just need to run the script on click event of this button -->
+                                            <div class="nbsite_boxstyle">
+                                                <table class="table table-hover table-condensed">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>FASTA Results</th>
+                                                        <th>Gen.</th>
+                                                    </tr>
+                                                    </thead>
+
+                                                    <tbody>
+                                                    {% for row in fastatable %}
+                                                        <tr>
+                                                            <th scope="row">{{ forloop.counter }}</th>
+                                                            <td>{{ row.desc }}</td>
+                                                            <td><a href="{% url 'phylo:generate' username row.id %}"
+                                                                   class="btn btn-primary">Generate</a></td>
+                                                        </tr>
+                                                    {% endfor %}
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
-            </td>
-        </tr>
-    </table>
-
+            </div>
+        </div>
+    </div>
 {% endblock %}
 
 
