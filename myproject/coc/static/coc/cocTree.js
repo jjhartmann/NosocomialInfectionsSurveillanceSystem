@@ -3,7 +3,7 @@
  *All rights reserved.
  */
 
-var margin = {top: 20, right: 0, bottom: 10, left: 40},
+var margin = {top: 60, right: 0, bottom: 10, left: 60},
     width = 800,
     height = 800;
 
