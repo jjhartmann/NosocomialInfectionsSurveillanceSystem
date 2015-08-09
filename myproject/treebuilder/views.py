@@ -20,4 +20,11 @@ def generate(request, username, id):
 
     files = TreebuilderFiles.objects.get(user=username)
     newick = files.newick_file.replace('\n', '')
-    return render(request, 'treebuilder/phyloview1.html', {'username': username, 'newick': newick})
+    return render(request, 'treebuilder/phyloview1.html', {'username': username, 'newick': newick, 'id': id, })
+
+@login_required
+def generate2(request, username, id):
+
+    files = get_object_or_404(TreebuilderFiles, user=username)
+    newick = files.newick_file.replace('\n', '')
+    return render(request, 'treebuilder/phyloview2.html', {'username': username, 'newick': newick, 'id': id, })
