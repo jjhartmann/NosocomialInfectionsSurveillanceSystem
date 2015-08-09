@@ -193,6 +193,3 @@ def contact_us(request):
   args.update(csrf(request))
   args['form'] = contactsForm()
   return render_to_response('index/contact_us.html',args)
-
-def thanks(request):
-  return render_to_response('index/thanks.html')
