@@ -1,0 +1,61 @@
+{% extends "public/base.html" %}
+{% load staticfiles %}
+{% block maincontent %}
+
+	<style>
+	li {
+		
+		font-size: 15px;
+		text-decoration: none;
+	line-height: 3;
+	}
+	h2 {
+		font-size: 28px;
+		line-height: 3;
+
+	}
+	</style>
+	<div class="container">
+		<div class="margin" style="margin-bottom: 150px;">
+			<h2>FAQs</h2>
+
+			<li> Who we are?</li>
+				<p>We are Simon Fraser and Univeristy of British Columbia students.</p>
+			<li> What is nosocomial infection?</li>
+				<p>Please refer to <a href="{% url 'index:symptoms' %}">Everything about nosocomial infection. </a></p>
+			<li> What is our project about? </li>
+			<p>
+			The goal would be to provide a nosocomial surveillance system in which infectious outbreaks in a hospital can be compared   and analysed against a database of catalogued pathogens in order to strive for an effective treatment against the infection. </p>
+				<p>Pleae refer to <a href="{% url 'index:project_intro' %}">Discover Our Project.</a></p>
+			<li> What technology do we implement in our website?</li>
+			<div style="margin-left:2em;">
+			<p>1. Django(https://www.djangoproject.com/)
+			<p>Use the python framework django to build the main components of the application. These components will include:(1) a main front end, where the public will have  access to the main resources and database; (2) Interactive phylogenetic tree, where users are can interact with the cataloged bacterium; (3) a main administrator back end to update components in the front end.</p>
+			<p>2. D3.js ​ (http://d3js.org/)</p>
+			<p>The Javascript framework that will be used to create interactive charting diagrams.</p>
+			<p>3. BLAST ​ (http://www.ncbi.nlm.nih.gov/books/NBK279690/)</p>
+			<p>A command tool developed in by the NCBI that will be utilized when comparing or searching for a sequence of nucleotide base pairs or amino acids against the database of human microbiome DNA.</p>
+			<p>4. PHYLIP​ (http://evolution.genetics.washington.edu/phylip.html)</p>
+			A free package of programs to infer phylogenies with the help of genomic sequences.</p>
+			<p>5. CLUSTALW2​ (http://helixweb.nih.gov/multi­align/man/clustalw.1.html)</p>
+			<p>To carry out multiple sequence alignment of three or more biological sequences,generally protein, DNA, or RNA.</p>
+
+			<p>6. MySQL ​ (https://www.mysql.com/)</p>
+			<p>Use a database relational storage to hold relevant/persistent information for the web application and genome sequences.</p>
+
+			<p>7. WSGI ​ (http://wsgi.readthedocs.org/en/latest/index.html)</p>
+			<p>A python oriented ​ Web Server Gateway Interface.</p>
+
+			<p>8. Apache ​ (http://httpd.apache.org/)</p>
+			<p>A HTTP server used alongside WSGI through the module mod_wsgi that is provided by Apache.</p>
+			</div>
+
+			<li> How to use our website? </li>
+				<p>PLease refer to <a href="{% url 'index:tutorial' %}">Live Tutorial.</a></p>
+			<li> How to contact us?</li>
+				<p>Please contact us via group9_470@gmail.com</p>
+			<span style="float:right;"><img src="{% static "pic/faq_small.png" %}" style="height:200px;weigth:auto;" alt="FAQ"></span>
+		</div>
+	</div>
+
+{% endblock %}

@@ -1,40 +1,40 @@
 {% extends "public/base.html" %}
-  
+  {% load staticfiles %}
   {% block maincontent %}
-  <style>
-p{
-font-size: 15px;
-line-height: 2;
-text-decoration: none;
-}
-li {
-	
+	<style>
+	p{
 	font-size: 15px;
-	text-decoration: none;
-line-height: 2;
-}
-h1,h2 {
-	font-size: 28px;
 	line-height: 2;
+	text-decoration: none;
+	}
+	li {
+		
+		font-size: 15px;
+		text-decoration: none;
+	line-height: 2;
+	}
+	h1,h2 {
+		font-size: 28px;
+		line-height: 2;
 
-}
-</style>
-<script type="text/javascript">
-<!--//
-function alert2()
-{
-alert ("Don't forget the curly "+
-"brackets - \nThey are essential!");
-}
-//-->
-</script>
-<div class="motopress-wrapper content-holder clearfix">
+	}
+	</style>
+	<script type="text/javascript">
+	<!--//
+	function alert2()
+	{
+	alert ("Don't forget the curly "+
+	"brackets - \nThey are essential!");
+	}
+	//-->
+	</script>
 	<div class="container">
-		<div class="margin" style="margin-bottom: 800px;">
-			<h2>Cause (temporary section)</h2>
-
+		<div class="margin" style="margin-bottom: 20em;">
+			<h2>Four Hospital-acquired Infectious Organisms and/or Diseases</h2>
+			<img src="{% static "pic/causes1.png" %}" alt="Phylip_tree"/> 
+			<img src="{% static "pic/cause_2.png" %}" alt="Phylip_tree"/> 
+			<img src="{% static "pic/cause_3.png" %}" alt="Phylip_tree"/> 
 		</div>
 	</div>
-</div>
 
 {% endblock %}

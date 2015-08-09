@@ -3,7 +3,21 @@
 
 @import url('../css/flaticon');
 
-body { font-family: 'ubuntu'; padding:0;margin:0;}
+body { font-family: 'ubuntu';}
+body {
+height: 100%;
+/* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+.entire_body {
+min-height: 100%;
+height: auto !important;
+height: 100%;
+/* Negative indent footer by it's height */
+margin: 0 auto -60px;
+}
+
 h1, h2, h3, h4, h5, h6 { margin:2; }
 h1 { }
 h2 { font-weight:300 !important; }

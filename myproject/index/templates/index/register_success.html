@@ -1,6 +1,12 @@
 {% extends "public/base.html" %}
 
 {% block maincontent%}
+
+	<div class="container" style="margin-bottom: 650px;">
+		<h2> You have registered!</h2>
+		<P>Click <a href="{% url 'index:login' %}">here </a> to login again </P>
+	</div>
+
 <ul>
 	<h2> Congratulations! </h2>
     <h2> You have registered a new account</h2>
@@ -14,5 +20,6 @@
         </div>
             
         
+
 {% endblock %}
 

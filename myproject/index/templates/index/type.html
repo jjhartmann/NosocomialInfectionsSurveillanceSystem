@@ -1,0 +1,45 @@
+{% extends "public/base.html" %}
+
+{% block maincontent%}
+{% load staticfiles %}
+<style>
+h1 {
+  font-size:40px;
+  padding: 20px 0 15px 0;
+}
+p,li {
+  font-size: 15px;
+  padding: 10px 0 10px 0;
+}
+
+</style>
+  <div class="container" style="margin-bottom: 20em;">
+    <div class="transmission_type">
+    <h2>The Transmission Of Disease</h2>
+    <h3>Contact Transmission</h3>
+    <p>Direct contact (person-to-person) involves close physical contact between the source of the disease and a susceptible host (sexual contact falls into this category, n’est-ce pas?).</p>
+    <img src="{% static "pic/trans1.jpg" %}" alt="contact transmission"/> 
+    <li>Indirect contact involves transmission by fomites (inanimate objects).</li>
+    <img src="{% static "pic/trans3.jpg" %}" alt="contact transmission"/> 
+    <li>Droplet transmission is transmission via droplet nuclei (mucus droplets) in coughing or sneezing, laughing or talking.</li> 
+    <img src="{% static "pic/trans5.jpg" %}" alt="contact transmission"/> 
+    <h3>Vehicle Transmission</h3>
+    <p>Common vehicle transmission is transmission by a medium such as water, food or air.</p>
+    <li>Waterborne</li>
+     <img src="{% static "pic/trans6.jpg" %}" alt="contact transmission"/> 
+    <li>Foodborne</li>
+    <img src="{% static "pic/trans7.jpg" %}" alt="contact transmission"/> 
+    <li>Airborne - pathogens are carried on droplet nuclei in dust for a distance greater than 1 meter.</li>
+    <img src="{% static "pic/trans8.jpg" %}" alt="contact transmission"/> 
+    
+    <h3>Vector Transmission</h3>
+    <p>Arthropod vectors carry pathogens from one host to another by both mechanical and biological transmission.</p>
+    <img src="{% static "pic/trans9.jpg" %}" alt="contact transmission"/> 
+    <li>Mechanical transmission is the passive transport of a pathogen on a vector 's feet or other body parts.</li>
+    <li>Biological transmission involves reproduction of the pathogen in the vector and transmission in saliva or feces.</li>
+    </div>
+  </div>
+{% endblock %}
+
+
+
