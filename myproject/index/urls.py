@@ -24,5 +24,9 @@ urlpatterns = [
     url(r'^tutorial/$', views.tutorial, name='tutorial'),
     url(r'^website_intro/$', views.website_intro, name='website_intro'),
     url(r'^project/$', views.project_intro, name='project_intro'),
+    url(r'^transmission/$', views.transmission_type, name='transmission_type'),
+    url(r'^prevention/$', views.prevention, name='prevention'),
+    url(r'^FAQs/$', views.FAQs, name='FAQs'),
+    url(r'^contact_us/$', views.contact_us, name='contact_us'),
 ]
 

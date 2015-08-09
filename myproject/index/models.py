@@ -1,14 +1,11 @@
 from django.db import models
-# from django.contrib.auth.models import User
-# # Create your models here.
+from django.forms import ModelForm
+# Create your models here.
+class contacts(models.Model):
+	name = models.CharField (max_length = 200)
+	email = models.EmailField (max_length = 254, blank = True)
+	phone = models.CharField(max_length = 200, blank = True)
+	message = models.CharField (max_length = 500, blank = True)
 
-### recreated the UserProfile models in userprofile app ( by Palmer)
-# class UserProfile(models.Model):
-#     user = models.OneToOneField(User)
-#     profile_picture = models.ImageField(upload_to='profile_image', blank=True)
-
-#     def __unicode__(self):
-#         return self.user.username
-
-# User.profile = property(lambda u: UserProfile.objects.get_or_create(user=u)[0])
-
+	def __unicode__(self):
+		return u'%s %s' % (self.name, self.email)

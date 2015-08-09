@@ -1,17 +1,12 @@
 {% extends "public/base.html" %}
 
 {% block maincontent%}
-
-<div class="motopress-wrapper content-holder clearfix">
 	<div class="container">
-	    <legend style="margin-left:200px; margin-top:30px;margin-bottom:50px;"> Register</legend>
-	    <form style="margin-bottom:300px;margin-left:200px;" action="{% url 'index:register' %}"  method="post"> {% csrf_token %}
+		<legend style="margin-left:200px; margin-top:30px;margin-bottom:50px;"> Register</legend>
+		<form style="margin-bottom:300px;margin-left:200px;" action="{% url 'index:register' %}"  method="post"> {% csrf_token %}
 		{{form.as_ul}}
-	    <input style="margin-top:10px;" class="btn btn-success" type="submit" value="Register" />
-	    </form>
-	 </div>
- </div>
-
-
+		<input style="margin-top:10px;" class="btn btn-success" type="submit" value="Register" />
+		</form>
+	</div>
 {% endblock %}
 

@@ -1,40 +1,45 @@
 {% extends "public/base.html" %}
-  
-  {% block maincontent %}
-  <style>
-p{
-font-size: 15px;
-line-height: 2;
-text-decoration: none;
-}
-li {
-	
+{% load staticfiles %}
+{% block maincontent %}
+
+	<style>
+	p,li {
 	font-size: 15px;
-	text-decoration: none;
-line-height: 2;
-}
-h1,h2 {
-	font-size: 28px;
 	line-height: 2;
 
-}
-</style>
-<script type="text/javascript">
-<!--//
-function alert2()
-{
-alert ("Don't forget the curly "+
-"brackets - \nThey are essential!");
-}
-//-->
-</script>
-<div class="motopress-wrapper content-holder clearfix">
+	}
+	li {
+		margin-left:2em;
+	}
+	}
+	h2 {
+		font-size: 28px;
+		line-height: 3;
+
+	}
+	</style>
 	<div class="container">
-		<div class="margin" style="margin-bottom: 800px;">
-			<h2>EXPLORE WEBSITE (temporary section) </h2>
-			
-		</div>
-	</div>
+		<div class="margin" style="margin-bottom: 200px;">
+		<h2>Database</h2>
+		<h3><img src="{% static "pic/ncbi.png" %}" style="height:50px;weigth:30px;" alt="NCBI_LOGO"/> Database  </h3> 
+		<p> Our data are taken directly from National Center for Biotechnology Information (NCBI) </p>
+		<p>The National Center for Biotechnology Information (NCBI) is part of the United States National Library of Medicine (NLM), a branch of the National Institutes of Health.The NCBI houses a series of databases relevant to biotechnology and biomedicine. Major databases include GenBank for DNA sequences and PubMed, a bibliographic database for the biomedical literature. Other databases include the NCBI Epigenomics database. </p>
+
+		<p>Our database contains the following files:
+		<li>genomeset.dat - Table with supplementary genomeset data</li>
+		<li>influenza_na.dat - Table with supplementary nucleotide data</li>
+		<li>influenza_aa.dat - Table with supplementary protein data</li>
+		<li>influenza.fna - FASTA nucleotide</li>
+		<li>influenza.faa - FASTA protein</li></p>
+
+		<p>The genomeset.dat, influenza_na.dat and influenza_aa.dat files are tab-delimitated tables which have the following fields:
+		GenBank accession number Host Genome segment number or protein name	Subtype	Country	Year/month/date	Sequence length	Virus name	Age	Gender.</p>
+
+		<p>The influenza_na.dat and influenza_aa.dat files have an additional field in the last column to indicate the completeness of a sequence - "c" for complete sequences that include start and stop codons; "nc" for nearly complete sequences that are missing only start and/or stop codons; "p" for partial sequences.</p>
+		<img src="{% static "pic/search_1.png" %}"  alt="database_screen"/>
+		<img src="{% static "pic/screenshot.png" %}"  alt="database_screen"/>
+
+</div>
 </div>
 
 {% endblock %}

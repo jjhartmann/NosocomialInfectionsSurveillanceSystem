@@ -67,11 +67,12 @@
     <div id="motopress-main" class="main-holder">
     <!-- navigation.html -->
     {% include "public/navigation.html" %}
+    <div class="motopress-wrapper content-holder clearfix">
 
     {% block maincontent %}
         <!-- home page content in index/index.html -->
     {% endblock %} 
-
+    </div>
  {% include "public/footer.html" %}
  </div>
  <div id="back-top-wrapper" class="visible-desktop">

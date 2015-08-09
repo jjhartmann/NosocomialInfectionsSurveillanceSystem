@@ -1,0 +1,60 @@
+{% extends "public/base.html" %}
+{% load staticfiles %}
+{% block maincontent %}
+  <style>
+
+  h3 {
+    padding-top: 30px;
+
+  }
+  p,ul,li {
+    font-size:15px;
+    padding-bottom: 10px;}
+
+  </style>
+
+  <div class="container" style="margin-bottom:20em;">
+    <h2>INFECTION PREVENTIONS</h2>
+
+    <h3>ISOLATION</h3>
+    <p>Whenever possible, avoid crowding wards.</p>
+    <P>Implement specific policies and procedures for patients with communicable diseases:</P>
+    <listyle="padding-left:2em">Private rooms and wards for patients with specific diseases</li>
+    <li style="padding-left:2em">Private rooms and wards for patients with specific diseases</li>
+    <li style="padding-left:2em">Visitation policies </li>
+    <li style="padding-left:2em">Hand washing and use of gloves </li>
+    <li style="padding-left:2em">Gowns, when appropriate</li>
+    <li style="padding-left:2em">Masks, eye protection, gowns</li>
+    <li style="padding-left:2em">Precautions with sharp instruments and needles</li>
+    <img id="d1" src="{% static 'pic/prevention1.jpg' %}" />
+
+
+    <h3>CLEAN ENVIRONMENT</h3>
+    <li>Establish policies and procedures to prevent food and water contamination</li>
+    <li>Establish a regular schedule of hospital cleaning with appropriate disinfectants in, for example, wards, operating theaters, and laundry</li>
+    <li>Dispose of medical waste safely</li>
+    <li>Needles and syringes should be incinerated </li>
+    <li>Other infected waste can be incinerated or autoclaved for landfill disposal</li>
+    <li>Bag and isolate soiled linen from normal hospital traffic</li>
+    <img id="d2" src="{% static 'pic/prevention2.jpg' %}" />
+
+    <h3>FOOD AND WATER PRECAUTIONS</h3>
+    <li>Contamination of food and water supply frequently occurs in hospitals.</li>
+    <li>Inadequate cooking may lead to overgrowth of pathogenic bacteria.</li>
+    <li>Food handlers may contract an infectious disease.</li>
+    <li>Policies and procedures to prevent food and water contamination are necessary.</li>
+    <img id="d4" src="{% static 'pic/prevention3.jpg' %}" />
+
+    <h3>EDUCATION EMPLOYEES</h3>
+    <li>Treat work-related illnesses</li>
+    <li>Provide vaccinations to decrease infections</li>
+    <li style="padding-left:2em">Routine vaccinations (e.g., diphtheria, tetanus, polio, measles, mumps, rubella, varicella, hepatitis A and B, BCG)</li>
+    <li style="padding-left:2em">Vaccinations during epidemics (e.g., meningitis, typhoid, influenza)</li>
+    <li>Train health workers in— </li>
+    <li style="padding-left:2em">Appropriate sterile techniques </li>
+    <li style="padding-left:2em">Infection control procedures</li>
+    <li style="padding-left:2em">Use of barrier precautions (e.g., gloves) for certain procedures</li>
+    <img id="d3" src="{% static 'pic/prevention4.png' %}" />
+  </div>
+
+{% endblock %}

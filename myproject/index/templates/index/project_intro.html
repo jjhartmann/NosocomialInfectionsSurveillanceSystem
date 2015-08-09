@@ -1,40 +1,20 @@
-{% extends "public/base.html" %}
-  
-  {% block maincontent %}
-  <style>
-p{
-font-size: 15px;
-line-height: 2;
-text-decoration: none;
-}
-li {
-	
-	font-size: 15px;
-	text-decoration: none;
-line-height: 2;
-}
-h1,h2 {
-	font-size: 28px;
-	line-height: 2;
+{% load staticfiles %}
+<style>
 
+img{
+    min-height:20%;
+    min-width:20%;
+    height:auto;
+    width:100%;
+    position:absolute;
+    top:0%; bottom:-50%;
+    left:-50%; right:-50%;
+    margin:auto;
 }
 </style>
-<script type="text/javascript">
-<!--//
-function alert2()
-{
-alert ("Don't forget the curly "+
-"brackets - \nThey are essential!");
-}
-//-->
-</script>
-<div class="motopress-wrapper content-holder clearfix">
-	<div class="container">
-		<div class="margin" style="margin-bottom: 800px;">
-			<h2>Project Poster should go here</h2>
+<div>
 
-		</div>
-	</div>
+	<img src="{% static "pic/NISS.jpg" %}" alt="NISS"/> 
+
 </div>
 
-{% endblock %}

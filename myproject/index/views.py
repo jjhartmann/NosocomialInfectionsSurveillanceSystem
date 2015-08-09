@@ -7,11 +7,11 @@ from django.template import RequestContext
 
 #added by palmer
 from django.core.context_processors import csrf
-from forms import MyRegistrationForm
+from forms import MyRegistrationForm,contactsForm
 from collections import Counter
 from basic_search.models import *
 # Create your views here.
-
+from index.models import contacts
 
 # Main function to call the index for the main front page.
 
@@ -173,3 +173,26 @@ def website_intro(request):
 
 def project_intro(request):
   return render_to_response('index/project_intro.html')
+
+def transmission_type(request):
+  return render_to_response('index/type.html')
+
+def prevention(request):
+  return render_to_response('index/prevention.html')
+
+def FAQs(request):
+  return render_to_response('index/FAQs.html')
+
+def contact_us(request):
+  if request.method == 'POST':
+    form = contactsForm(request.POST)
+    if form.is_valid():
+      new_contact = form.save()
+      return HttpResponseRedirect(reverse('index:index'))
+  args = {}
+  args.update(csrf(request))
+  args['form'] = contactsForm()
+  return render_to_response('index/contact_us.html',args)
+
+def thanks(request):
+  return render_to_response('index/thanks.html')
