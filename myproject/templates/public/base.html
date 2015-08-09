@@ -31,6 +31,9 @@
     <!-- popup window -->
     <script type='text/javascript' src="{% static 'js/jquery.bpopup.min.js' %}"></script>
     <script type="text/javascript">
+    function timedRefresh(timeoutPeriod) {
+    setTimeout("location.reload(true);",timeoutPeriod);
+    }
         // Init navigation menu
         jQuery(function() {
             // main navigation init
@@ -63,22 +66,21 @@
     </script>
 </head>
 
-<body>
+<body>  
     <div id="motopress-main" class="main-holder">
     <!-- navigation.html -->
-    {% include "public/navigation.html" %}
-    <div class="motopress-wrapper content-holder clearfix">
-
-    {% block maincontent %}
-        <!-- home page content in index/index.html -->
-    {% endblock %} 
+        {% include "public/navigation.html" %}
+        <div class="motopress-wrapper content-holder clearfix">
+            {% block maincontent %}
+            <!-- home page content in index/index.html -->
+            {% endblock %} 
+        </div>
+            {% include "public/footer.html" %}
+        </div>
+        <div id="back-top-wrapper" class="visible-desktop">
+        <p id="back-top" style="display: none;">
+        <a href="#top"><span></span></a> </p>
     </div>
- {% include "public/footer.html" %}
- </div>
- <div id="back-top-wrapper" class="visible-desktop">
-<p id="back-top" style="display: none;">
-<a href="#top"><span></span></a> </p>
-</div>
 
 </body>
 </html>
