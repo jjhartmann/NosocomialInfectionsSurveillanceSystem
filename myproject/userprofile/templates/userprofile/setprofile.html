@@ -1,27 +1,45 @@
  {% extends "secure/base.html" %}
+<style>
+ul
+{
+list-style-type: none;
+}
 
+</style>
   {% block maincontent%}
-     <h1> Profile</h1>
+  <h1>Welcome: {{ user.username }}</h1>
+     <h2> Please Update Your Profile</h2>
 
      {% for field in form %}
         {{field.error}}
 
      {% endfor %}
 
-
     <form action="{% url 'userprofile:setprofile' username %}" method="post" enctype="multipart/form-data"> {% csrf_token %}
 
-    <ul>
-    {{form.as_ul}}
+    <ul class="list-unstyled" style="font-size:16px;line-height: 4">
+      <li>
+        <label for="id_profile_picture">Profile picture:</label> 
+        <input id="id_profile_picture" name="profile_picture" style="line-height:0.5;" type="file"></li>
+      <li>
+        <label for="id_address">Address:</label> 
+        <input id="id_address" maxlength="50" name="address" style="line-height:2; width: 20em;" type="text"></li>
+      <li>
+        <label for="id_phone">Phone:&nbsp;&nbsp;&nbsp;</label> 
+        <input id="id_phone" maxlength="20" name="phone" style="line-height:2;width: 20em;" type="text"></li>
+      <li>
+        <label for="id_gender">Gender:&nbsp;</label> 
+        <select id="id_gender" name="gender">
+          <option value="" selected="selected">---------</option>
+          <option value="M">Male</option>
+          <option value="F">Female</option>
+        </select>
+      </li>
     </ul>
 
     <input type="submit" value="Update" class="btn btn-success btn-sm">
+  <a href="{% url 'userprofile:viewprofile'  username %}" style="margin-left:1em;" class="btn btn-success btn-sm">Cancle</a>
     </form>
 
-    <div id="sidebar">
-    {% block sidebar %}
-    <h2><a href="{% url 'userprofile:viewprofile'  username %}" class="btn btn-success btn-sm">Cancle</a></h2>
-    {% endblock %}
-    
-</div>
   {% endblock %}
+
