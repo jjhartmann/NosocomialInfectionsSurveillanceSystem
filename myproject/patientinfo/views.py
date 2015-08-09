@@ -6,6 +6,7 @@ from forms import PatientinfoForm
 from forms import PatientDataForm
 from django.http import HttpResponseRedirect, HttpResponse
 from django.core.context_processors import csrf
+from django.contrib.auth.models import User
 
 
 # Create your views here.
@@ -13,6 +14,11 @@ from django.core.context_processors import csrf
 @login_required
 def index(request, username):
     return render(request, 'patientinfo/index.html', {'patientinfos': Patientinfo.objects.all(), 'username': username})
+
+@login_required
+def mypatients(request, username):
+    patients = Patientinfo.objects.filter(doctor=request.user.id)
+    return render(request, 'patientinfo/index.html', {'patientinfos': patients, 'username': username})
 
 
 @login_required
@@ -36,6 +42,7 @@ def create(request, username):
     if request.POST:
         form = PatientinfoForm(request.POST, request.FILES)
         if form.is_valid():
+            form.cleaned_data['doctor'] = request.user.id
             form.save()
 
             return HttpResponseRedirect(reverse('patientinfo:index', kwargs={'username': username}))
