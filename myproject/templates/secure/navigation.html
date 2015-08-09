@@ -1,59 +1,102 @@
 {% load staticfiles %}
+<!-- load js for navigation -->
 
-    <link rel='stylesheet' id='theme54037-css' href="{% static 'css/main2.css' %}" media='all' />
-    <script type='text/javascript' src='http://www.suzukimotorcyclesbh.com/wp-content/plugins/cherry-plugin/lib/js/elasti-carousel/jquery.elastislide.js@ver=1.1'></script>     
-    <script type='text/javascript' src='http://www.cobaltmorning.com/wp-content/themes/cobaltmorning2/includes/plugins/cherry-parallax/js/cherry.parallax.js'></script>
-    <!-- display iamge -->
-    <script type='text/javascript' src="{%static 'js/superfish.js'%}"></script>
-    <script type='text/javascript' src="{% static 'js/devicemin.js' %}"></script>
-    <script type='text/javascript' src="{% static 'js/parrallaxSlider.js' %}"></script>
-    <!-- for login -->
-    <script type='text/javascript' src="{% static 'js/jquery_magnific_popup_min.js' %}"></script>
-    <script type='text/javascript' src="{% static 'js/jqueryClever.js' %}"></script>
-<!-- font -->
-    <link rel='stylesheet' id='font-awesome-css' href='//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css?ver=3.2.1' type='text/css' media='all' />
+<div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+    <div class="logo pull-left">
+        <a href="{% url 'secure:index' username %}" class=""><img src="{% static 'pic/log.png'%}" alt="NISS LOGO" style="margin-top:-10px;height:60px;width:60px;" ></a>
+    </div>
+    <a class="navbar-brand" href="{% url 'secure:index' username %}">NISS Portal</a>
+</div>
+<!-- /.navbar-header -->
 
-    <script type='text/javascript' src="{% static 'js/mousewheel.js' %}"></script>
-<script>
-var
-        _window = jQuery(window);
-    ;
+<ul class="nav navbar-top-links navbar-right">
+    <!-- /.dropdown -->
+    <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
+        </a>
+        <ul class="dropdown-menu dropdown-alerts">
+            <li>
+                <a href="#">
+                    <div>
+                        <i class="fa fa-comment fa-fw"></i> New Comment
+                        <span class="pull-right text-muted small">4 minutes ago</span>
+                    </div>
+                </a>
+            </li>
+            <li class="divider"></li>
+            <li>
+                <a href="#">
+                    <div>
+                        <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                        <span class="pull-right text-muted small">12 minutes ago</span>
+                    </div>
+                </a>
+            </li>
+            <li class="divider"></li>
+            <li>
+                <a href="#">
+                    <div>
+                        <i class="fa fa-envelope fa-fw"></i> Message Sent
+                        <span class="pull-right text-muted small">4 minutes ago</span>
+                    </div>
+                </a>
+            </li>
+            <li class="divider"></li>
+            <li>
+                <a href="#">
+                    <div>
+                        <i class="fa fa-tasks fa-fw"></i> New Task
+                        <span class="pull-right text-muted small">4 minutes ago</span>
+                    </div>
+                </a>
+            </li>
+            <li class="divider"></li>
+            <li>
+                <a href="#">
+                    <div>
+                        <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                        <span class="pull-right text-muted small">4 minutes ago</span>
+                    </div>
+                </a>
+            </li>
+            <li class="divider"></li>
+            <li>
+                <a class="text-center" href="#">
+                    <strong>See All Alerts</strong>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+        <!-- /.dropdown-alerts -->
+    </li>
+    <!-- /.dropdown -->
+    <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+        </a>
+        <ul class="dropdown-menu dropdown-user">
+            <li><a href="{% url 'userprofile:viewprofile' username %}"><i class="fa fa-user fa-fw"></i> User Profile</a>
+            </li>
+            <li><a href="{% url 'userprofile:setprofile' username %}"><i class="fa fa-gear fa-fw"></i> Settings</a>
+            </li>
+            <li class="divider"></li>
+            <li><a href="{% url 'index:logout' %}"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+            </li>
+        </ul>
+        <!-- /.dropdown-user -->
+    </li>
+    <!-- /.dropdown -->
+</ul>
+<!-- /.navbar-top-links -->
 
-jQuery(document).ready(function(){
 
-    var
-        _window = jQuery(window);
-        not_resizes = false;
-    ;
-
-    _window.on("resize", function(){
-        resizeFunction();
-    })
-    resizeFunction();
-
-    function resizeFunction(){
-        if(!not_resizes){
-            var
-                newWidth = _window.width()
-            ,   marginHalf = _window.width()/-2;
-            ;
-            if (jQuery('body').hasClass('cherry-fixed-layout')) {
-                var
-                    newWidth = jQuery('.main-holder').width()
-                ,   marginHalf =jQuery('.main-holder').width()/-2;
-                ;
-            }
-
-            jQuery('.wide').css({width: newWidth, "margin-left": marginHalf, left: '50%'});
-        }
-    }
-
-    $('.login-toggle').click(function(){
-      $('#loginform').slideToggle("mediom");
-      $( this ).toggleClass( "active" );
-    })
-});
-</script>
 
 <header class="motopress-wrapper header">
     <div class="container">
@@ -116,48 +159,62 @@ jQuery(document).ready(function(){
                                         <li id="menu-item-1804" class="menu-item menu-item-type-post_type menu-item-object-page">
                                             <a href="{% url 'phylo:index' username %}">Phylib</a>
 
-                                         <li>
+<div class="navbar-default sidebar" role="navigation">
+    <div class="sidebar-nav navbar-collapse">
+        <ul class="nav" id="side-menu">
+            <li class="sidebar-search">
+                <div class="input-group custom-search-form">
+                    <input type="text" class="form-control" placeholder="Search...">
+                        <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </span>
+                </div>
+                <!-- /input-group -->
+            </li>
+            <li>
+                <a href="{% url 'secure:index' username %}"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+            </li>
 
-                       
-                      </ul>
+            <!-- Parient Info -->
+            <li>
+                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Patient Information<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li>
+                        <a href="{% url 'patientinfo:index'  username %}">General</a>
+                    </li>
+                    <li>
+                        <a href="#">Your Patients</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'patientinfo:create' username %}">Add Patient</a>
                     </li>
                 </ul>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="hidden-phone span12" data-motopress-type="static" data-motopress-static-file="static/static-search.php"></div>
-                </div>
-            </div>
-        </div>
-    </div>          
-    <script type="text/javascript">
-        jQuery(document).ready(function($) {
-            if (!device.mobile() && !device.tablet()) {
-                liteModeSwitcher = false;
-            } else {
-                liteModeSwitcher = true;
-            }
-            if ($.browser.msie && parseInt($.browser.version) < 9) {
-                liteModeSwitcher = true;
-            }
+                <!-- /.nav-second-level -->
+            </li>
 
-            jQuery('#parallax-slider').parallaxSlider({
-                parallaxEffect: "parallax_effect_normal",
-                parallaxInvert: false,
-                animateLayout: "simple-fade-eff",
-                duration: 1500,
-                autoSwitcher: true,
-                autoSwitcherDelay: 10000,
-                scrolling_description: true,
-                slider_navs: true,
-                slider_pagination: "none_pagination",
-                liteMode: liteModeSwitcher
-            });
-
-        });
-    </script>
-</header>
+            <!--  -->
+            <li>
+                <a href="{% url 'basic_search:index' username %}"><i class="fa fa-table fa-fw"></i> Search Database </a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-wrench fa-fw"></i> BLAST <span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li>
+                        <a href="{% url 'nocoblast:tblastn' username %}">tBLASTn</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'nocoblast:blastn' username %}">BLASTn</a>
+                    </li>
+                </ul>
+                <!-- /.nav-second-level -->
+            </li>
+            <li>
+                <a href="{% url 'phylo:index' username %}"><i class="fa fa-edit fa-fw"></i> PhyloTree </a>
+            </li>
+        </ul>
+    </div>
+    <!-- /.sidebar-collapse -->
+</div>
+<!-- /.navbar-static-side -->

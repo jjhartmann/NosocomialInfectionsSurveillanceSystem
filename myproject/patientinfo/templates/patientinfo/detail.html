@@ -17,8 +17,12 @@
             </div>
             <div class="panel-body">
               <div class="row">
+              <!-- display image  -->
+                {% if patientinfo.patient_picture %}
                 <div class="col-md-3 col-lg-3 " align="center"> <img img src="/static/{{patientinfo.patient_picture}}" class="img-circle img-responsive"> </div>
-                
+                {% else %}
+                <div class="col-md-3 col-lg-3 " align="center"> <p> No patient picture uploaded </p> </div>
+                {% endif %}
                 <div class=" col-md-9 col-lg-9 "> 
                   <table class="table table-striped">
                     <tbody>
