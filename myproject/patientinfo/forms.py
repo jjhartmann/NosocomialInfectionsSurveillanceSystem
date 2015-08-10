@@ -17,10 +17,12 @@ class PatientinfoForm(forms.ModelForm):
                           'provice',
                           'postal_code',
                           'patient_picture',
-                          'patient_data'                          
+                          'patient_data',
+                          'doctor',
                           )
 
 class PatientDataForm(forms.ModelForm):
+
 
         class Meta:
                 model = Patientinfo

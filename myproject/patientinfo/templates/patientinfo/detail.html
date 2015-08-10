@@ -1,111 +1,122 @@
 {% extends "secure/base.html" %}
 
 
-    {% block maincontent%}
-<div class="container">
-      <div class="row">
-      <div class="col-md-5  toppad  pull-right col-md-offset-3 ">
-    
+{% block maincontent %}
 
-      </div>
-        <div class="toppad" >
-   
-   
-          <div class="panel panel-info">
+<div class="row">
+<br>
+<br>
+    <div class="col-md-5  toppad  pull-right ">
+    </div>
+    <div class="toppad">
+
+
+        <div class="panel panel-primary">
             <div class="panel-heading">
-              <h3 class="panel-title">Patient Info.</h3>
+                <h3 class="panel-title">Patient Info.</h3>
             </div>
             <div class="panel-body">
-              <div class="row">
-              <!-- display image  -->
-                {% if patientinfo.patient_picture %}
-                <div class="col-md-3 col-lg-3 " align="center"> <img img src="/static/{{patientinfo.patient_picture}}" class="img-circle img-responsive"> </div>
-                {% else %}
-                <div class="col-md-3 col-lg-3 " align="center"> <p> No patient picture uploaded </p> </div>
-                {% endif %}
-                <div class=" col-md-9 col-lg-9 "> 
-                  <table class="table table-striped">
-                    <tbody>
- 
-                      <tr>
-                        <td>First Name:</td>
-                        <td>{{ patientinfo.firstname }}</td>
-                      </tr>
+                <div class="row">
+                    <!-- display image  -->
+                    {% if patientinfo.patient_picture %}
+                        <div class="col-md-3 col-lg-3 " align="center"><img img
+                                                                            src="/static/{{ patientinfo.patient_picture }}"
+                                                                            class="img-circle img-responsive">
+                        </div>
+                    {% else %}
+                        <div class="col-md-3 col-lg-3 " align="center"><p> No patient picture uploaded </p>
+                        </div>
+                    {% endif %}
+                    <div class=" col-md-9 col-lg-9 ">
+                        <table class="table table-striped">
+                            <tbody>
 
-                      <tr>
-                        <td>Last Name:</td>
-                        <td>{{ patientinfo.lastname }}</td>
-                      </tr>
+                            <tr>
+                                <td>First Name:</td>
+                                <td>{{ patientinfo.firstname }}</td>
+                            </tr>
 
-                      <tr>
-                        <td>Date of Birth:</td>
-                        <td>{{ patientinfo.date_of_birth }}</td>
-                      </tr>
-                   
-                         <tr>
-                        <td>Gender:</td>
-                        <td>{{ patientinfo.gender }}</td>
-                      </tr>
+                            <tr>
+                                <td>Last Name:</td>
+                                <td>{{ patientinfo.lastname }}</td>
+                            </tr>
 
-                        <tr>
-                        <td>Age:</td>
-                        <td>{{ patientinfo.age }}</td>
-                      </tr>
+                            <tr>
+                                <td>Date of Birth:</td>
+                                <td>{{ patientinfo.date_of_birth }}</td>
+                            </tr>
 
-                      <tr>
-                        <td>Email:</td>
-                        <td>{{ patientinfo.email }}</td>
-                      </tr>
+                            <tr>
+                                <td>Gender:</td>
+                                <td>{{ patientinfo.gender }}</td>
+                            </tr>
 
-                      <tr>
-                        <td>Phone Number:</td>
-                        <td>{{ patientinfo.phone }}
-                        </td>
-                      </tr>
+                            <tr>
+                                <td>Age:</td>
+                                <td>{{ patientinfo.age }}</td>
+                            </tr>
 
-                      <tr>
-                        <td>Street Address:</td>
-                        <td>{{ patientinfo.street_address }}
-                        </td>
-                      </tr>
+                            <tr>
+                                <td>Email:</td>
+                                <td>{{ patientinfo.email }}</td>
+                            </tr>
 
-                      <tr>
-                        <td>City:</td>
-                        <td>{{ patientinfo.city }}
-                        </td>
-                      </tr>
+                            <tr>
+                                <td>Phone Number:</td>
+                                <td>{{ patientinfo.phone }}
+                                </td>
+                            </tr>
 
-                      <tr>
-                        <td>Provice:</td>
-                        <td>{{ patientinfo.provice }}
-                        </td>
-                      </tr>
+                            <tr>
+                                <td>Street Address:</td>
+                                <td>{{ patientinfo.street_address }}
+                                </td>
+                            </tr>
 
-                      <tr>
-                        <td>Postal Code:</td>
-                        <td>{{ patientinfo.postal_code }}</td>
-                      </tr>
+                            <tr>
+                                <td>City:</td>
+                                <td>{{ patientinfo.city }}
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Provice:</td>
+                                <td>{{ patientinfo.provice }}
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Postal Code:</td>
+                                <td>{{ patientinfo.postal_code }}</td>
+                            </tr>
+
+                            <tr>
+                                <td>Current Doctor:</td>
+                                <td>{{ patientinfo.doctor }}</td>
+                            </tr>
 
 
-                     
-                    </tbody>
-                  </table>
-                  
-                  <a href="{% url 'patientinfo:viewdata' username patientinfo.id %}" class="btn btn-primary">View Patient Data</a>
-                  
-                </div>
-              </div>
-            </div>
-                 <div class="panel-footer">
-                        <a href="{% url 'patientinfo:index' username %}" class="btn btn-success btn-sm">Back to Patient List</a>
-                        <span class="pull-right">
-                            <a href="{% url 'patientinfo:update' username patientinfo.id %}" class="btn btn-success btn-sm">Update</a>
-                            <a href="{% url 'patientinfo:delete' username patientinfo.id %}" class="btn btn-success btn-sm">Delete</a>
-                        </span>
+                            </tbody>
+                        </table>
+
+                        <a href="{% url 'patientinfo:viewdata' username patientinfo.id %}"
+                           class="btn btn-primary">View Patient Data</a>
+
                     </div>
-            
-          </div>
+                </div>
+            </div>
+            <div class="panel-footer">
+                <a href="{% url 'patientinfo:index' username %}" class="btn btn-success btn-sm">Back to Patient
+                    List</a>
+                <span class="pull-right">
+                    <a href="{% url 'patientinfo:update' username patientinfo.id %}"
+                       class="btn btn-success btn-sm">Update</a>
+                    <a href="{% url 'patientinfo:delete' username patientinfo.id %}"
+                       class="btn btn-success btn-sm">Delete</a>
+                </span>
+            </div>
+
         </div>
-      </div>
     </div>
-    {% endblock %}
+</div>
+{% endblock %}

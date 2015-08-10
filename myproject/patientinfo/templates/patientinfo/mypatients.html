@@ -7,7 +7,7 @@
 
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Patient Information</h1>
+                <h1 class="page-header">Current Patients under {{ username }}</h1>
             </div>
         </div>
 
@@ -20,14 +20,13 @@
                         <div class="row">
 
                             {% if patientinfos %}
-                                <a class="btn btn-success btn-large"  href="{% url 'patientinfo:create' username %}">Create New Patient Info</a>
+                                <a class="btn btn-success btn-large" href="{% url 'patientinfo:create' username %}">Create New Patient Info</a>
 
                                 <table class="table table-striped">
                                     <thead>
                                     <tr>
                                         <th>Firstname</th>
                                         <th>Lastname</th>
-                                        <th>Doctor</th>
                                         <th>Feature</th>
                                     </tr>
                                     </thead>
@@ -37,7 +36,6 @@
                                         <tr>
                                             <td>{{ patientinfo.firstname }}</td>
                                             <td>{{ patientinfo.lastname }}</td>
-                                            <td>{{ patientinfo.doctor.username }}</td>
                                             <td><a href="{% url 'patientinfo:detail' username patientinfo.id %}"
                                                    class="btn btn-success btn-sm">View Patient detail</a></td>
                                         </tr>
