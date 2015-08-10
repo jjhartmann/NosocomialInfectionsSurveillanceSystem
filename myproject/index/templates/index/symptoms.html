@@ -218,32 +218,13 @@ $(document).ready(function () {
 	color: white;
 	text-decoration: none;
 	}
-	.go-link {
-    position: fixed;
-    width:80px;height:80px;border-radius:60px;font-size:20px;color:#fff;line-height:80px;text-align:center;background:#000;
-    bottom: 0.75em;
-    right: 2em;
-    text-decoration: none;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.25);
-    font-size: 12px;
-    padding: 10px;
-    display: none;
-    margin: 0;
-	}
-	.go-link:hover {
-	background-color: rgba(0, 0, 0, 0.6);
-	color: white;
-	text-decoration: none;
-	}
   </style>
 </head>
 <body>
 	<body style="background: #fff">
 	<div class="bubbleChart"/>
 	</div>
-	<a href="http://www.rightdiagnosis.com/n/nosocomial_infections/symptoms.htm" class="go-link" style="display: inline;">Check Details!</a>
-	<a href="{% url 'index:index'%}" class="go-back" style="display: inline;">Back Home</a>
+	<a href="{% url 'index:public_resource'%}" class="go-back" style="display: inline;">Back</a>
 </body>
 </html>
 
