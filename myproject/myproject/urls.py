@@ -50,6 +50,7 @@ urlpatterns = [
     url(r'^(?P<username>\w+)/search/details/matrix/', include('coc.urls', namespace='coc')),
     url(r'^(?P<username>\w+)/userprofile/', include('userprofile.urls', namespace='userprofile')),
     url(r'^(?P<username>\w+)/phylo/', include('treebuilder.urls', namespace='phylo')),
-  
+    url(r'^(?P<username>\w+)/api/', include(router.urls)),
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 ]
 
