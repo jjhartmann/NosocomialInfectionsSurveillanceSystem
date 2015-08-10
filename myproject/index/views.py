@@ -65,7 +65,7 @@ def doctor_login(request):
             print "Invalid login detials: {0}, {1}".format(username, password)
 
             # TODO: Create template for this??
-            return HttpResponse("Invalid login details supplied")
+            return HttpResponse("Invalid login details, pleasae go back to log in.")
 
     else:
         # nothing is in database
@@ -92,7 +92,7 @@ def doctor_register_success(request):
 def data_graph_json(request):
     #pip install Counter
   import json, os
-  
+
   a = Influenza_NA.objects.all()
   countries=[]
   #for i in a:
