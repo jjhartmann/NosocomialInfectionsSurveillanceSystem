@@ -77,4 +77,9 @@ def index(request, username, id):
 
     files = get_object_or_404(TreebuilderFiles, user=username)
     newick_file = files.newick_file.replace('\n', '')
-    return render(request, 'graph/graph.html', {'username': username})
+
+    t = Tree(newick_file)
+    jsonResult = get_json(t)
+    jsonStr = repr(jsonResult).replace("'", '"')
+
+    return render(request, 'graph/graph.html', {'username': username, 'parsedjson':  jsonStr})
