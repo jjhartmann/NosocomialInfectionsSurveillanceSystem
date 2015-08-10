@@ -11,14 +11,20 @@
 	}
 	h2 {
 		font-size: 28px;
-		line-height: 3;
+		line-height: 2;
 
 	}
 	</style>
-	<div class="container">
-		<div class="margin" style="margin-bottom: 150px;">
-			<h2>FAQs</h2>
 
+	<div class="container">
+		<section class="title-section">
+		<h2>FAQs</h2>
+		<ul class="breadcrumb breadcrumb__t" style="margin-bottom: 2em;">
+		<li><a href="{% url 'index:index' %}">Home</a></li>
+		<li class="divider"></li>
+		<li class="active">FAQs</li>
+		</ul></section>
+		<div class="margin" style="margin-bottom: 150px;">
 			<li> Who we are?</li>
 				<p>We are Simon Fraser and Univeristy of British Columbia students.</p>
 			<li> What is nosocomial infection?</li>
