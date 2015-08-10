@@ -43,7 +43,7 @@ def run_phylo(user, fasta):
 
     # Phylo.draw_ascii(tree)
     tree.rooted = True
-    Phylo.draw_graphviz(tree, prog="neato", node_size=0)
+    # Phylo.draw_graphviz(tree, prog="neato", node_size=0)
 
     # pylab.savefig(phylo_dot)
 
