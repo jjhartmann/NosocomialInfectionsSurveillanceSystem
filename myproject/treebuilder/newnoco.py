@@ -4,7 +4,7 @@ from Bio.Align.Applications import ClustalwCommandline
 from Bio import AlignIO
 import os
 import sys
-import pylab
+# import pylab
 import matplotlib.pyplot as plt
 from Bio import Phylo
 import platform
@@ -47,7 +47,7 @@ def run_phylo(user, fasta):
     tree.rooted = True
     Phylo.draw_graphviz(tree, prog="neato", node_size=0)
 
-    pylab.savefig(phylo_dot)
+    # pylab.savefig(phylo_dot)
 
     nwk = StringIO.StringIO()
     xml = StringIO.StringIO()
