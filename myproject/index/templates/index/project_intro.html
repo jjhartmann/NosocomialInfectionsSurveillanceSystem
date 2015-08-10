@@ -114,10 +114,10 @@ var ddimagepanner={
 			s.imagesize=nd
 			s.curzoom=newzoom
 			s.pos=[newpos[0], newpos[1]]
-		})
+			})
+		}
 	}
-}
-jQuery.fn.imgmover=function(options){
+	jQuery.fn.imgmover=function(options){
 	var $=jQuery
 	return this.each(function(){ //return jQuery obj
 		if (this.tagName!="IMG")
@@ -131,26 +131,25 @@ jQuery.fn.imgmover=function(options){
 		else{
 			$imgref.bind('load', function(){
 				ddimagepanner.init($, $imgref, options)
-			})
-		}
-	})
-}
+				})
+			}
+		})
+	}
 
-jQuery(document).ready(function($){ //By default look for DIVs with class="pancontainer"
-	var $pancontainer=$('div.pancontainer')
-	$pancontainer.each(function(){
-		var $this=$(this).css({position:'relative', overflow:'hidden', cursor:'move'})
-		var $img=$this.find('img:eq(0)') //image to pan
-		var options={$pancontainer:$this, pos:$this.attr('data-orient'), curzoom:1, canzoom:$this.attr('data-canzoom'), wrappersize:[$this.width(), $this.height()]}
-		$img.imgmover(options)
+	jQuery(document).ready(function($){ //By default look for DIVs with class="pancontainer"
+		var $pancontainer=$('div.pancontainer')
+		$pancontainer.each(function(){
+			var $this=$(this).css({position:'relative', overflow:'hidden', cursor:'move'})
+			var $img=$this.find('img:eq(0)') //image to pan
+			var options={$pancontainer:$this, pos:$this.attr('data-orient'), curzoom:1, canzoom:$this.attr('data-canzoom'), wrappersize:[$this.width(), $this.height()]}
+			$img.imgmover(options)
+		})
 	})
-})
 
 </script>
 </head>
 <body>
-	<div class="pancontainer" data-orient="center" data-canzoom="yes" ">
-	<!-- <img src="http://i44.tinypic.com/1hezvm.jpg"/> -->
+	<div class="pancontainer" data-orient="center" data-canzoom="yes">
 	<img src="{% static "pic/NISS.jpg" %}" style="height:100%;" alt="NISS"/> 
 	</div>
 </body>
