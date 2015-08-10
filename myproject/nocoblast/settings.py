@@ -10,8 +10,8 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 # BLAST_DB_NUCL = os.path.join(BASE_DIR, 'nocoblast/sampledata/sample_db')
 
 # tuple of databases -  to select in form
-BLAST_DB_NUCL_CHOICE = ((os.path.join(BASE_DIR, 'sampledata/sample_db1/sample_db'), "Sample database 1", ),
-                        (os.path.join(BASE_DIR, 'sampledata/sample_db2/sample_db2'), "Sample database 2", ),)
+BLAST_DB_NUCL_CHOICE = ((os.path.join(BASE_DIR, 'sampledata/sample_db1/') + "sample_db", "Sample database 1", ),
+                        (os.path.join(BASE_DIR, 'sampledata/sample_db2/') + "sample_db2", "Sample database 2", ),)
 print BLAST_DB_NUCL_CHOICE
 
 # path to example files
