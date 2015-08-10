@@ -39,7 +39,7 @@ jQuery.noConflict()
 var ddimagepanner={
 
 	// set default HTML for "zoom in" and "zoom out" controls, respectively
-	magnifyicons: ['<img src="{% static 'pic/magnify.gif'%}" class="zoomcontrols" style="right:40px; bottom: 5px;" />', '<img src="{% static 'pic/magnify.gif'%}" class="zoomcontrols" style="right:5px; bottom: 5px;" />'],
+	magnifyicons: ['<img src="{% static 'pic/magnify.gif'%}" class="zoomcontrols" style="right:250px; bottom: 100px;" />', '<img src="{% static 'pic/magnify.gif'%}" class="zoomcontrols" style="right:200px; bottom: 100px;" />'],
 	maxzoom: 4, //set maximum zoom level (from 1x)
 
 	init:function($, $img, options){
@@ -152,7 +152,7 @@ jQuery(document).ready(function($){ //By default look for DIVs with class="panco
 </script>
 </head>
 <body>
-	<div class="pancontainer" data-orient="center" data-canzoom="yes" style="width:1900px; height:900px;">
+	<div class="pancontainer" data-orient="center" data-canzoom="yes" style="width:1800px; height:900px;">
 	<!-- <img src="http://i44.tinypic.com/1hezvm.jpg" style="width:700px; height:525px" /> -->
 	<img src="{% static "pic/NISS.jpg" %}" style="width:1000px; height:auto;" alt="NISS"/> 
 	</div>
