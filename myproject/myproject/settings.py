@@ -46,6 +46,7 @@ INSTALLED_APPS = (
     'coc',
     'userprofile',
     'treebuilder',
+    'rest_framework',
 
 )
 
@@ -131,3 +132,12 @@ PROJECT_ROOT = os.path.abspath(os.path.dirname(settings_dir))
 
 #added by palmer for userprofile
 AUTH_PROFILE_MODEL= 'userprofile.UserProfile'
+
+#added REST API
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
