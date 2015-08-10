@@ -1,5 +1,5 @@
 @import url('../css/style.css');
-body { font-family: 'ubuntu';}
+body { font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;}
 body {
 height: 100%;
 /* The html and body elements cannot have any padding or margin. */
@@ -413,7 +413,7 @@ img.alignnone {
 .sf-menu a.sf-with-ul .sf-sub-indicator:before {
 	content:'»';
 	display:block;
-	font:16px/20px 'FontAwesome';
+	font:16px/20px 'FontAwesome',"Helvetica Neue",Helvetica,Arial,sans-serif;;
 }
 .isStuck .sf-menu {
 	box-shadow:0 0 3px #000;
@@ -529,7 +529,7 @@ img.alignnone {
 .content-holder .title-section .breadcrumb.breadcrumb__t li.divider:after {
 	font-size:15px;
 	line-height:22px;
-	font-family:'Ubuntu', sans-serif;
+	font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;;
 	color:#877561;
 }
 .filter-wrapper {
