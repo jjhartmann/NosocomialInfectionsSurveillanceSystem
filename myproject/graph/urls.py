@@ -10,6 +10,6 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-	url(r'^parse/$', views.parse_outtree, name='parse_outtree'),
-	url(r'^$', views.index, name='index'),
+    url(r'^parse/$', views.parse_outtree, name='parse_outtree'),
+    url(r'^(?P<id>[0-9]+)$', views.index, name='index'),
 ]
