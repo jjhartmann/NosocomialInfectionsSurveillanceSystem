@@ -10,10 +10,7 @@ html,body{
 }
 /*Default CSS for pan containers*/
 .pancontainer{
-position:relative; /*keep this intact*/
-overflow:hidden; /*keep this intact*/
-
-border:1px solid black;
+min-height: 100%;
 }
 .pancontainer .zoomcontrols{ /* default CSS class for magnify controls within container */
 position:absolute;
@@ -152,9 +149,9 @@ jQuery(document).ready(function($){ //By default look for DIVs with class="panco
 </script>
 </head>
 <body>
-	<div class="pancontainer" data-orient="center" data-canzoom="yes" style="width:1800px; height:900px;">
-	<!-- <img src="http://i44.tinypic.com/1hezvm.jpg" style="width:700px; height:525px" /> -->
-	<img src="{% static "pic/NISS.jpg" %}" style="width:1000px; height:auto;" alt="NISS"/> 
+	<div class="pancontainer" data-orient="center" data-canzoom="yes" ">
+	<!-- <img src="http://i44.tinypic.com/1hezvm.jpg"/> -->
+	<img src="{% static "pic/NISS.jpg" %}" style="height:100%;" alt="NISS"/> 
 	</div>
 </body>
 </html>
