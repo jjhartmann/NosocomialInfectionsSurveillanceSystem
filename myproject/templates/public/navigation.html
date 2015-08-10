@@ -58,16 +58,11 @@ jQuery(document).ready(function(){
                             <div class="span7">
                                 <div class="login-wrap">
                                     <div class="login-toggle icon-user"></div>
-                           <form id="loginform" >
+                           <div id="loginform" >
                                            <a  class="btn" href="{% url 'index:login' %}">Login</a>
                                             <a  class="btn" href="{% url 'index:register' %}">Register</a>
-<!-- 
-                                        <p class="login-remember">
-                                            <label>
-                                                <input name="rememberme" type="checkbox" id="rememberme" value="forever" tabindex="3" /> Remember password
-                                            </label>
-                                        </p> -->
-                                    </form>
+
+                                    </div>
                                 </div>
                                 <nav class="nav nav__primary clearfix">
                                     <ul id="topnav" class="sf-menu">
@@ -75,31 +70,13 @@ jQuery(document).ready(function(){
                                             <a href="{% url 'index:index' %}">Home</a>
                                         </li>
                                         <li>
-                                            <a href="#">Public Information</a>
-                                            <ul class="sub-menu">
-                                                <li>
-                                                    <a href="#">New1</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">News2</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">News3</a>
-                                                </li>
-                                            </ul>
+                                            <a href="{% url 'index:website_intro' %}">Database</a>
                                         </li>
-                                        <li><a href="#">Features</a>
-                                            <ul class="sub-menu">
-                                                <li>
-                                                    <a href="{% url 'index:website_intro' %}">NCBI Data Search</a>
-                                                </li>
-                                                <li>
-                                                    <a href="{% url 'index:blast' %}">Blast+</a>
-                                                </li>
-                                                <li>
-                                                    <a href="{% url 'index:phylip_intro'%}">Phylip</a>
-                                                </li>
-                                            </ul>
+                                        <li>
+                                            <a href="{% url 'index:blast' %}">BLAST</a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'index:phylip_intro'%}">Phylip</a>
                                         </li>
                                         <li>
                                             <a href="{% url 'index:about' %}">About</a>

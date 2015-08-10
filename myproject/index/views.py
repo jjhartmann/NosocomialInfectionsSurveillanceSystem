@@ -160,7 +160,7 @@ def symptoms(request):
 
 #causes introduction page
 def cause(request):
-  return render_to_response('index/cause.html')
+  return render_to_response('index/statistics.html')
 
 def about(request):
   return render_to_response('index/about.html')
@@ -169,7 +169,7 @@ def tutorial(request):
   return render_to_response('index/tutorial.html')
 
 def website_intro(request):
-  return render_to_response('index/website_intro.html')
+  return render_to_response('index/database.html')
 
 def project_intro(request):
   return render_to_response('index/project_intro.html')
@@ -193,3 +193,7 @@ def contact_us(request):
   args.update(csrf(request))
   args['form'] = contactsForm()
   return render_to_response('index/contact_us.html',args)
+
+def public_resource(request):
+  return render_to_response('index/public_1.html')
+
