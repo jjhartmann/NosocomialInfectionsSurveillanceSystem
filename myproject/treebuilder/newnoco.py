@@ -42,8 +42,8 @@ def run_phylo(user, fasta):
     tree = Phylo.read(fasta_temp_file.name + ".dnd", "newick")
 
     # Phylo.draw_ascii(tree)
-    tree.rooted = True
-    Phylo.draw_graphviz(tree, prog="neato", node_size=0)
+    #tree.rooted = True
+    #Phylo.draw_graphviz(tree, prog="neato", node_size=0)
 
     # pylab.savefig(phylo_dot)
 
