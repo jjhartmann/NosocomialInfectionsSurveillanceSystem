@@ -25,7 +25,7 @@ SECRET_KEY = 'bb&w4(2@0iim=dgqdvj^5e#_y_!ff$3_#yf-4)aa5-=1w#)=cs'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['cmpt470.csil.sfu.ca:8009']
 
 
 # Application definition

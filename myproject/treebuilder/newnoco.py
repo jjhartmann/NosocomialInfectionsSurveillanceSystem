@@ -36,12 +36,10 @@ def run_phylo(user, fasta):
     assert os.path.isfile(clustalw_exe), "Clustal W executable missing"
     stdout, stderr = clustalw_cline()
 
-    align = AlignIO.read(fasta_aln, "clustal")
-    # align = AlignIO.read("./phylocanvas/fasta_temp.aln", "clustal")
+    align = AlignIO.read(fasta_temp_file.name + ".aln", "clustal")
 
     print(align)
-    tree = Phylo.read(fasta_dnd, "newick")
-    # tree = Phylo.read("./phylocanvas/fasta_temp.dnd", "newick")
+    tree = Phylo.read(fasta_temp_file.name + ".dnd", "newick")
 
     # Phylo.draw_ascii(tree)
     tree.rooted = True
@@ -58,3 +56,7 @@ def run_phylo(user, fasta):
     # TODO: Decide if we want to store more dynamic content under the user.
     row = TreebuilderFiles(user=user, newick_file=nwk.getvalue(), phyloxml_file=xml.getvalue())
     row.save()
+
+    # Clean up temp files.
+    os.remove(fasta_temp_file.name + ".aln")
+    os.remove(fasta_temp_file.name + ".dnd")
