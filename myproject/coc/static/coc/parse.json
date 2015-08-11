@@ -1,91 +1,91 @@
 {
   "nodes": [
     {
-      "date": 0, 
+      "date": 3, 
       "host": 0, 
       "group": 0, 
-      "name": "AF046097", 
-      "sequences": 4
+      "name": "ABN50527", 
+      "sequences": 0
     }, 
     {
-      "date": 0, 
+      "date": 1, 
       "host": 0, 
       "group": 0, 
-      "name": "AF256180", 
+      "name": "ABL77037", 
+      "sequences": 0
+    }, 
+    {
+      "date": 2, 
+      "host": 0, 
+      "group": 1, 
+      "name": "ABL84342", 
+      "sequences": 0
+    }, 
+    {
+      "date": 4, 
+      "host": 0, 
+      "group": 2, 
+      "name": "ABL77169", 
       "sequences": 0
     }, 
     {
       "date": 0, 
       "host": 0, 
       "group": 0, 
-      "name": "AF255746", 
-      "sequences": 2
-    }, 
-    {
-      "date": 0, 
-      "host": 0, 
-      "group": 0, 
-      "name": "AF255371", 
-      "sequences": 1
-    }, 
-    {
-      "date": 0, 
-      "host": 0, 
-      "group": 0, 
-      "name": "AF255750", 
-      "sequences": 2
+      "name": "ABN50637", 
+      "sequences": 0
     }
   ], 
   "links": [
     {
       "source": 0, 
       "target": 1, 
+      "value": 2
+    }, 
+    {
+      "source": 0, 
+      "target": 2, 
+      "value": 2
+    }, 
+    {
+      "source": 0, 
+      "target": 3, 
+      "value": 2
+    }, 
+    {
+      "source": 0, 
+      "target": 4, 
+      "value": 5
+    }, 
+    {
+      "source": 1, 
+      "target": 2, 
       "value": 3
     }, 
     {
-      "source": 0, 
-      "target": 2, 
-      "value": 2
-    }, 
-    {
-      "source": 0, 
-      "target": 3, 
-      "value": 2
-    }, 
-    {
-      "source": 0, 
-      "target": 4, 
-      "value": 2
-    }, 
-    {
       "source": 1, 
-      "target": 2, 
-      "value": 4
-    }, 
-    {
-      "source": 1, 
-      "target": 3, 
-      "value": 4
-    }, 
-    {
-      "source": 1, 
-      "target": 4, 
-      "value": 4
-    }, 
-    {
-      "source": 2, 
       "target": 3, 
       "value": 5
     }, 
     {
+      "source": 1, 
+      "target": 4, 
+      "value": 2
+    }, 
+    {
+      "source": 2, 
+      "target": 3, 
+      "value": 3
+    }, 
+    {
       "source": 2, 
       "target": 4, 
-      "value": 6
+      "value": 2
     }, 
     {
       "source": 3, 
       "target": 4, 
-      "value": 5
+      "value": 2
     }
   ]
 }
